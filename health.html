@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="scroll-behavior:smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="集和·大健康——国牌品牌基因的发现者与焕新者。以品牌基因六要素国家版权模型为核芯武器，帮助大健康企业发现独一无二的精神基因，完成从传统话语到现代品牌信号的系统翻译。四线·九子类·同仁堂·越秀康养·振德·汤臣倍健旗舰案例。">
+<title>集和·大健康——国牌品牌基因的发现者与焕新者 | BICOBRAND</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"集和品牌咨询-大健康板块",
+  "description":"集和是大健康领域国牌品牌基因的发现者与焕新者。以品牌基因六要素国家版权模型为核芯武器，帮助大健康企业发现独一无二的精神基因，完成传统话语到现代品牌信号的系统翻译。覆盖国牌中医药、康养、医疗器械、保健及健康消费四条战略业务线。",
+  "foundingDate":"2003",
+  "url":"https://bicobrand.com/health",
+  "address":{"@type":"PostalAddress","addressLocality":"广州","addressRegion":"海珠同创汇"}
+}
+</script>
+
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Inter","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  color:#1D1D1F;background:#FFF;
+  line-height:1.7;-webkit-font-smoothing:antialiased
+}
+
+/* ===== Design Tokens ===== */
+:root{
+  --red:#B01E23;--red-hover:#8B1519;--red-light:#FFF5F5;
+  --dark:#1D1D1F;--gray:#86868B;--gray-light:#6E6E73;
+  --bg-light:#F5F5F7;--border:#E8E8ED;--white:#FFF;
+  --green:#2E7D32;--green-bg:#E8F5E9;
+  --blue:#1565C0;--blue-bg:#E3F2FD;
+  --gold:#8B6914;--gold-bg:#FFF8E1
+}
+
+/* ===== Typography ===== */
+h1{font-size:clamp(28px,4vw,48px);font-weight:900;line-height:1.15;letter-spacing:-0.02em}
+h2{font-size:clamp(22px,3vw,30px);font-weight:800;line-height:1.25}
+h3{font-size:clamp(18px,2.5vw,22px);font-weight:700;line-height:1.3}
+
+/* ===== Layout ===== */
+.container{max-width:1000px;margin:0 auto;padding:0 24px}
+.section{padding:40px 0}
+@media(min-width:768px){.section{padding:56px 0}}
+.bg-light{background:var(--bg-light)}
+.bg-dark{background:var(--dark);color:var(--white)}
+
+/* ===== Navbar ===== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border)
+}
+.nav-inner{
+  max-width:1000px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;height:60px
+}
+.nav-logo{font-size:1rem;font-weight:700;color:var(--dark);text-decoration:none}
+.nav-logo span{color:var(--red)}
+.nav-links{display:none;align-items:center;gap:28px;list-style:none}
+@media(min-width:768px){.nav-links{display:flex}}
+.nav-links a{text-decoration:none;color:var(--dark);font-size:.82rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--red)}
+.nav-cta{
+  padding:8px 20px;background:var(--red);color:#FFF!important;
+  border-radius:999px;font-size:.78rem;font-weight:600;
+  text-decoration:none;transition:filter .2s
+}
+.nav-cta:hover{filter:brightness(1.1)}
+
+/* ===== Hero ===== */
+.hero{padding:100px 0 0;overflow:hidden}
+.hero-top{
+  background:linear-gradient(160deg,#0D0D0D 0%,#1A1A2E 40%,#16213E 100%);
+  padding:64px 0;position:relative;overflow:hidden
+}
+.hero-top::before{
+  content:'';position:absolute;top:-30%;right:-10%;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(176,30,35,0.15) 0%,transparent 70%);
+  border-radius:50%
+}
+.hero-top::after{
+  content:'';position:absolute;bottom:-20%;left:-5%;
+  width:300px;height:300px;
+  background:radial-gradient(circle,rgba(176,30,35,0.08) 0%,transparent 70%);
+  border-radius:50%
+}
+.hero-top-inner{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:0 24px}
+.hero-label{
+  display:inline-block;font-size:.7rem;font-weight:600;color:rgba(255,255,255,.5);
+  letter-spacing:.15em;margin-bottom:16px;text-transform:uppercase
+}
+.hero-title-main{
+  font-size:clamp(26px,4vw,44px);font-weight:900;color:#FFF;line-height:1.2;margin-bottom:8px
+}
+.hero-title-main em{font-style:normal;color:var(--red)}
+.hero-title-sub{
+  font-size:clamp(17px,2.5vw,26px);font-weight:700;color:rgba(255,255,255,.75);line-height:1.4;margin-bottom:20px
+}
+.hero-diff{
+  display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px
+}
+.hero-diff span{
+  padding:7px 16px;border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;font-size:.75rem;color:rgba(255,255,255,.6);
+  font-weight:500
+}
+.hero-diff span.highlight{border-color:var(--red);color:var(--red);background:rgba(176,30,35,.1)}
+
+/* Hero bottom - identity statement */
+.hero-bottom{padding:48px 0 0;border-bottom:1px solid var(--border)}
+.hero-bottom .container{max-width:1000px}
+.hero-identity{margin-bottom:32px}
+.hero-identity .tag{
+  display:inline-block;font-size:.68rem;font-weight:700;color:var(--red);
+  background:var(--red-light);padding:4px 12px;border-radius:6px;
+  letter-spacing:.08em;margin-bottom:16px
+}
+.hero-identity h1{font-size:clamp(24px,3.5vw,38px);margin-bottom:12px}
+.hero-identity h1 span{color:var(--red)}
+.hero-identity .lead{
+  font-size:clamp(.9rem,1.5vw,1.05rem);color:var(--gray);
+  max-width:680px;line-height:1.8
+}
+.hero-identity .lead strong{color:var(--dark)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;padding:13px 28px;
+  background:var(--red);color:#FFF;text-decoration:none;
+  border-radius:999px;font-size:.9rem;font-weight:700;
+  transition:all .25s
+}
+.btn-primary:hover{background:var(--red-hover);transform:translateY(-1px)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;padding:13px 28px;
+  border:1.5px solid var(--dark);color:var(--dark);text-decoration:none;
+  border-radius:999px;font-size:.9rem;font-weight:700;
+  transition:all .25s
+}
+.btn-secondary:hover{background:var(--dark);color:#FFF}
+
+/* Trust bar */
+.trust-bar{
+  display:flex;border-top:1px solid var(--border);padding:32px 0
+}
+.trust-item{flex:1;text-align:center}
+.trust-item+.trust-item{border-left:1px solid var(--border)}
+.trust-num{
+  display:flex;align-items:baseline;justify-content:center;gap:2px;margin-bottom:6px
+}
+.trust-num .big{font-size:clamp(28px,4vw,48px);font-weight:800;color:var(--red);line-height:1}
+.trust-num .suffix{font-size:clamp(16px,2.5vw,28px);font-weight:700;color:var(--red);line-height:1}
+.trust-label{font-size:.75rem;color:var(--gray)}
+
+/* ===== Section Header ===== */
+.sec-header{
+  display:flex;align-items:center;gap:16px;margin-bottom:36px
+}
+.sec-header .line{flex:1;height:1px;background:var(--border)}
+.sec-header .title{
+  font-size:clamp(20px,2.8vw,30px);font-weight:800;color:var(--red);
+  letter-spacing:.04em;white-space:nowrap
+}
+
+/* ===== Problem Section ===== */
+.problem-grid{
+  display:grid;grid-template-columns:1fr;gap:16px;max-width:800px;margin:0 auto 28px
+}
+@media(min-width:640px){.problem-grid{grid-template-columns:1fr 1fr}}
+.problem-card{
+  padding:24px;border:1px solid var(--border);border-radius:10px;
+  transition:border-color .3s
+}
+.problem-card:hover{border-color:var(--red)}
+.problem-card .icon{font-size:1.3rem;margin-bottom:8px}
+.problem-card h4{font-size:.9rem;margin-bottom:4px;color:var(--dark)}
+.problem-card p{font-size:.8rem;color:var(--gray);margin:0}
+.problem-insight{
+  text-align:center;max-width:680px;margin:0 auto;
+  padding:28px;background:var(--red-light);border-radius:10px
+}
+.problem-insight p{font-size:.95rem;color:var(--dark);margin:0;line-height:1.8;font-weight:500}
+.problem-insight p strong{color:var(--red)}
+
+/* ===== Process Flow ===== */
+.process-flow{max-width:800px;margin:0 auto}
+.process-step{
+  display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)
+}
+.process-step:first-child{padding-top:0}
+.process-step:last-child{border-bottom:none;padding-bottom:0}
+.process-num{
+  font-size:3rem;font-weight:900;color:var(--red);line-height:1;
+  min-width:60px;text-align:center;opacity:.25
+}
+.process-body h3{font-size:1.1rem;margin-bottom:4px;color:var(--dark)}
+.process-body .q{font-size:.82rem;color:var(--red);font-weight:600;margin-bottom:6px}
+.process-body p{font-size:.85rem;color:var(--gray);margin:0;line-height:1.7}
+.process-body .output{
+  display:inline-block;margin-top:10px;padding:4px 10px;
+  background:var(--bg-light);border-radius:6px;
+  font-size:.72rem;color:var(--gray);font-weight:500
+}
+.process-body .output strong{color:var(--dark)}
+
+/* ===== Business Lines Accordion ===== */
+.line-row{border-bottom:1px solid var(--border)}
+.line-row:first-child{border-top:1px solid var(--border)}
+.line-btn{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  padding:18px 10px;background:none;border:none;cursor:pointer;
+  font-family:inherit;transition:background .2s;text-align:left
+}
+.line-btn:hover{background:rgba(245,245,247,0.6)}
+.line-btn-left{display:flex;align-items:center;gap:14px}
+.line-num{font-size:clamp(20px,2vw,26px);font-weight:800;color:var(--red);min-width:32px}
+.line-title{font-size:clamp(16px,1.8vw,22px);font-weight:700;color:var(--dark)}
+.line-tag{
+  font-size:.62rem;font-weight:700;padding:3px 8px;
+  border-radius:999px;margin-left:8px;vertical-align:middle
+}
+.line-tag.l1{background:var(--red-light);color:var(--red)}
+.line-tag.l2{background:var(--green-bg);color:var(--green)}
+.line-tag.l3{background:var(--blue-bg);color:var(--blue)}
+.line-tag.l4{background:var(--gold-bg);color:var(--gold)}
+.line-arrow{
+  width:30px;height:30px;border-radius:50%;background:var(--bg-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;color:var(--gray);transition:all .3s;flex-shrink:0
+}
+.line-row.open .line-arrow{transform:rotate(45deg);background:var(--red);color:#FFF}
+.line-detail{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.line-row.open .line-detail{max-height:600px}
+.line-detail-inner{padding:0 10px 28px 56px}
+.line-detail-inner p{font-size:.85rem;color:var(--gray);margin-bottom:12px;line-height:1.8}
+.line-subtags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.line-subtags span{
+  padding:4px 12px;background:var(--bg-light);border-radius:6px;
+  font-size:.75rem;color:var(--dark);font-weight:500
+}
+.line-cases{font-size:.78rem;color:var(--red);font-weight:600}
+
+/* ===== Comparison Table ===== */
+.compare-table{
+  width:100%;max-width:800px;margin:0 auto;border-collapse:collapse;
+  font-size:.85rem
+}
+.compare-table th{
+  text-align:left;padding:14px 16px;font-weight:700;
+  border-bottom:2px solid var(--border);font-size:.75rem;color:var(--gray)
+}
+.compare-table td{
+  padding:12px 16px;border-bottom:1px solid var(--border);color:var(--gray)
+}
+.compare-table td:first-child{font-weight:600;color:var(--dark)}
+.compare-table tr:last-child td{color:var(--red);font-weight:700;border-bottom:2px solid var(--red)}
+.compare-table tr:last-child td:first-child{color:var(--red)}
+
+/* ===== Case Cards ===== */
+.case-card{padding:32px 0;border-bottom:1px solid var(--border)}
+.case-card:first-child{border-top:1px solid var(--border)}
+.case-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.case-badge{
+  font-size:.62rem;font-weight:700;padding:3px 10px;
+  border-radius:999px;white-space:nowrap
+}
+.case-badge.l1{background:var(--red-light);color:var(--red)}
+.case-badge.l2{background:var(--green-bg);color:var(--green)}
+.case-badge.l3{background:var(--blue-bg);color:var(--blue)}
+.case-badge.l4{background:var(--gold-bg);color:var(--gold)}
+.case-top h3{font-size:1.15rem;font-weight:700}
+.case-desc{font-size:.85rem;color:var(--gray);line-height:1.8;max-width:720px;margin-bottom:14px}
+.case-metrics{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:12px}
+.case-metric{text-align:center}
+.case-metric .before{font-size:.78rem;color:var(--gray);margin-bottom:4px}
+.case-metric .arrow{color:var(--red);font-weight:700;font-size:1rem;margin:3px 0}
+.case-metric .after{font-size:.82rem;color:var(--dark);font-weight:700}
+.case-link{font-size:.78rem;color:var(--red);font-weight:600;text-decoration:none}
+.case-link:hover{text-decoration:underline}
+
+/* ===== Method Cards ===== */
+.method-grid{
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;flex-wrap:wrap;max-width:800px;margin:0 auto
+}
+.method-card{
+  text-align:center;padding:32px 24px;border-radius:12px;
+  min-width:170px;flex:1;max-width:240px
+}
+.method-card.start{background:var(--red-light);border:2px solid var(--red)}
+.method-card.mid{background:#FFF0F5;border:2px solid rgba(176,30,35,.35)}
+.method-card.end{background:var(--green-bg);border:2px solid var(--green)}
+.method-arrow{font-size:1.5rem;color:var(--gray);font-weight:300}
+.method-card .step{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin-bottom:8px}
+.method-card h4{font-size:.95rem;font-weight:700;margin-bottom:4px;color:var(--dark)}
+.method-card p{font-size:.75rem;color:var(--gray);margin:0;line-height:1.5}
+.method-card .extra{font-size:.65rem;margin-top:8px}
+.method-card.start .extra{color:var(--red);font-weight:600}
+.method-card.mid .extra{color:rgba(176,30,35,.7)}
+.method-card.end .extra{color:var(--green);font-weight:600}
+
+/* ===== Service Ladder ===== */
+.service-row{display:flex;flex-direction:column;gap:10px;max-width:720px;margin:0 auto}
+.service-step{
+  display:flex;align-items:center;gap:18px;padding:22px 24px;
+  border-radius:10px;transition:transform .3s
+}
+.service-step:hover{transform:translateX(5px)}
+.service-step.s1{background:var(--bg-light);border:1px solid var(--border)}
+.service-step.s2{background:#FFF5F5;border:1px solid rgba(176,30,35,.15)}
+.service-step.s3{background:#FFF0F0;border:1px solid rgba(176,30,35,.3)}
+.service-step.s4{background:var(--dark);border:1px solid var(--red)}
+.service-step .lv{font-size:2rem;font-weight:900;min-width:48px;text-align:center}
+.service-step.s1 .lv{color:var(--gray)}
+.service-step.s2 .lv{color:rgba(176,30,35,.6)}
+.service-step.s3 .lv{color:var(--red)}
+.service-step.s4 .lv{color:var(--red)}
+.service-step h4{font-size:.95rem;margin-bottom:2px;color:var(--dark)}
+.service-step.s4 h4{color:#FFF}
+.service-step p{font-size:.8rem;margin:0;color:var(--gray)}
+.service-step.s4 p{color:rgba(255,255,255,.6)}
+.service-step .price{font-size:.95rem;font-weight:700;color:var(--red);margin-top:4px}
+.service-step.s4 .price{color:var(--red)}
+
+/* ===== AI Section ===== */
+.ai-split{display:grid;grid-template-columns:1fr;gap:20px;max-width:800px;margin:0 auto}
+@media(min-width:768px){.ai-split{grid-template-columns:1fr 1fr}}
+.ai-box{padding:32px;border-radius:12px}
+.ai-danger{background:#FFF5F5;border:2px solid #FFD0D0}
+.ai-danger .big-num{font-size:2.4rem;font-weight:900;color:var(--red);line-height:1.2}
+.ai-danger h4{color:var(--red);margin-bottom:8px;font-size:.95rem}
+.ai-danger p{font-size:.82rem;color:var(--gray);margin:0;line-height:1.7}
+.ai-solution{background:#F0FFF4;border:2px solid #C6F6D5}
+.ai-solution h4{color:var(--green);margin-bottom:10px;font-size:.95rem}
+.ai-solution p{font-size:.82rem;color:var(--gray);margin:0 0 12px;line-height:1.7}
+.ai-solution ul{list-style:none;padding:0}
+.ai-solution li{font-size:.82rem;color:var(--gray);padding:5px 0;line-height:1.6}
+.ai-solution li::before{content:'✓ ';color:var(--green);font-weight:700}
+
+/* ===== CTA ===== */
+.cta-section{background:var(--dark);color:#FFF;text-align:center}
+.cta-section h2{color:#FFF}
+.cta-section>div>p{color:rgba(255,255,255,.55);font-size:.9rem;max-width:500px;margin:16px auto 0}
+.cta-form{
+  display:flex;gap:10px;max-width:640px;margin:32px auto 0;
+  flex-wrap:wrap;justify-content:center
+}
+.cta-form input,.cta-form select{
+  padding:12px 16px;border:1px solid rgba(255,255,255,.18);
+  border-radius:8px;background:rgba(255,255,255,.06);
+  color:#FFF;font-size:.88rem;outline:none;min-width:120px;
+  font-family:inherit;transition:border-color .2s
+}
+.cta-form input::placeholder{color:rgba(255,255,255,.3)}
+.cta-form input:focus,.cta-form select:focus{border-color:var(--red)}
+.cta-form select option{color:var(--dark);background:#FFF}
+.cta-form button{
+  padding:12px 32px;background:var(--red);color:#FFF;
+  border:none;border-radius:8px;font-size:.88rem;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:all .25s
+}
+.cta-form button:hover{background:var(--red-hover)}
+
+/* ===== Footer ===== */
+.footer{padding:40px 0;background:var(--dark);color:rgba(255,255,255,.45);font-size:.78rem}
+.footer-grid{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between}
+.footer-col{min-width:140px}
+.footer-col h4{color:#FFF;font-size:.85rem;margin-bottom:12px;font-weight:600}
+.footer-col p{margin-bottom:4px;line-height:2}
+.footer-col a{color:rgba(255,255,255,.45);text-decoration:none}
+.footer-col a:hover{color:var(--red)}
+.footer-bottom{
+  margin-top:32px;padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.08);text-align:center;
+  color:rgba(255,255,255,.2);font-size:.7rem
+}
+
+/* ===== Responsive ===== */
+@media(max-width:767px){
+  .trust-bar{flex-wrap:wrap}
+  .trust-item{flex:1 1 50%}
+  .trust-item:nth-child(3){border-left:none}
+  .method-grid{flex-direction:column}
+  .method-arrow{transform:rotate(90deg)}
+  .cta-form{flex-direction:column}
+  .cta-form input,.cta-form select,.cta-form button{width:100%}
+  .process-num{font-size:2.2rem;min-width:40px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">集和<span>·</span>大健康</a>
+    <ul class="nav-links">
+      <li><a href="#problem">大健康之困</a></li>
+      <li><a href="#how">集和怎么做</a></li>
+      <li><a href="#lines">四线业务</a></li>
+      <li><a href="#cases">案例</a></li>
+      <li><a href="#services">服务</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">预约诊断</a>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <!-- Dark hero -->
+  <div class="hero-top">
+    <div class="hero-top-inner">
+      <div class="hero-label">JIHE · BIG HEALTH</div>
+      <div class="hero-title-main">进入品牌最底层，<br>找到它<em>独一无二</em>的精神基因</div>
+      <div class="hero-title-sub">帮助大健康领域的国牌，完成品牌基因的系统焕新</div>
+      <div class="hero-diff">
+        <span>品牌基因六要素 · 国家版权</span>
+        <span class="highlight">国牌中医药</span>
+        <span>康养</span>
+        <span>医疗器械</span>
+        <span>保健及健康消费</span>
+        <span>23年深耕</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Identity statement -->
+  <div class="hero-bottom">
+    <div class="container">
+      <div class="hero-identity">
+        <span class="tag">【 我们的身份 】</span>
+        <h1>集和在大健康领域，是<span>国牌品牌基因的发现者与焕新者</span></h1>
+        <p class="lead">
+          大多数品牌咨询做的是<strong>"外面"</strong>——换 LOGO、换包装、换口号。集和做的是<strong>"里面"</strong>——进入品牌的最底层，找到它独一无二的精神基因，然后用系统的方法，帮它在新的时代重新发光。这是集和与所有品牌公司的本质区别。
+        </p>
+        <div class="hero-btns">
+          <a href="#how" class="btn-primary">
+            看集和怎么做
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#cta" class="btn-secondary">
+            预约品牌基因诊断
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust bar -->
+  <div class="container">
+    <div class="trust-bar">
+      <div class="trust-item">
+        <div class="trust-num"><span class="big">23</span><span class="suffix">年</span></div>
+        <span class="trust-label">品牌咨询深耕</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num"><span class="big">100</span><span class="suffix">+</span></div>
+        <span class="trust-label">上市集团 & 500强</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num"><span class="big">国家</span><span class="suffix">版权</span></div>
+        <span class="trust-label">品牌基因六要素</span>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num"><span class="big">40</span><span class="suffix">+</span></div>
+        <span class="trust-label">大健康完整案例</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Problem ===== -->
+<section class="section" id="problem">
+  <div class="container">
+    <div class="sec-header">
+      <span class="line"></span>
+      <span class="title">14万亿的大健康产业，最珍贵的资产正在沉睡</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">🏛️</div>
+        <h4>百年老字号，年轻人不认识</h4>
+        <p>祖训和口碑都在，但新一代消费者说"那是我奶奶吃的"。品牌信任还在，精神基因却传不下去。</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">🏥</div>
+        <h4>医院标杆，出了医院没人知道</h4>
+        <p>8000+医院信赖你的产品，但 C 端消费者不认识你的品牌。B端专业能力，翻译不成 C 端品牌选择。</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">🏘️</div>
+        <h4>50亿投了，客户问"跟隔壁有什么区别"</h4>
+        <p>康养社区硬件一流、服务扎实，但品牌身份立不起来。好服务缺了一个好名字、好故事。</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📦</div>
+        <h4>品类前三，但消费者搜的是品类名不是你</h4>
+        <p>天猫卖得好，但消费者搜"保健品""养胃粉"——从来不搜你的品牌名。有销量，没有品牌资产。</p>
+      </div>
+    </div>
+
+    <div class="problem-insight">
+      <p>问题出在哪？<strong>不是缺信任——大健康企业最不缺的就是信任。</strong>百年老字号的祖训、8000+医院的临床验证、15年的持续服务——这些信任早已存在。<br><br>真正的问题是：<strong>品牌的精神基因没有被系统发现和表达。</strong>信任散落在产品、渠道、口碑里，没有被翻译成一套可感知、可传播、可增值的品牌资产系统。<br><br>集和在大健康的身份，就是进入这些品牌的最底层，找到那份独一无二的精神基因——然后帮它焕新。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== How We Do It (Process Flow) ===== -->
+<section class="section bg-light" id="how">
+  <div class="container">
+    <div class="sec-header">
+      <span class="line"></span>
+      <span class="title">集和的品牌焕新——从基因发现到资产系统</span>
+      <span class="line"></span>
+    </div>
+    <p style="text-align:center;color:var(--gray);font-size:.88rem;margin-bottom:32px;max-width:640px;margin-left:auto;margin-right:auto">
+      品牌焕新不是"外面换一件新衣服"，是"从基因层开始的系统重建"。以下是集和帮助一个大健康品牌完成焕新的完整过程。
+    </p>
+
+    <div class="process-flow">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-body">
+          <div class="q">"你的品牌，到底是谁？"</div>
+          <h3>品牌基因解码 —— 进入底层，发现身份</h3>
+          <p>我们从创始人深度访谈、企业历史研究、产品证据审计、消费者洞察四个维度，进入品牌的最底层。找到那份独一无二的精神基因——不是我们"创造"的，是品牌本来就有的，等待被发现的。</p>
+          <div class="output">📋 输出：<strong>品牌基因序列图谱（一页纸）</strong>——品牌的定义、定位、人格，结构化呈现</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-body">
+          <div class="q">"这份基因，如何被世界看懂？"</div>
+          <h3>精神提炼与信任构建 —— 把骨子里的信念翻译出来</h3>
+          <p>品牌的精神基因是"骨子里的东西"——同仁堂"必不敢"的品质信念、越秀康养"让每一位长者有尊严地老去"——这些不是口号，是身份声明。我们把它提炼为可感知的品牌精神，并构建完整的信任证据链。</p>
+          <div class="output">📋 输出：<strong>品牌精神系统 + 信任金字塔 + 品牌架构图</strong></div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-body">
+          <div class="q">"新一代消费者，怎么感受到你？"</div>
+          <h3>现代转译 —— 用新一代能懂、能信的方式表达</h3>
+          <p>百年品牌要说当代的话。医疗器械要从"医用标准"翻译成"家庭信赖"。康养服务要从"硬件参数"翻译成"温暖体验"。我们用 VI 系统、话语体系、数字内容，完成品牌信号的重建。</p>
+          <div class="output">📋 输出：<strong>VI 识别系统 + 话语体系 + 品牌识别手册</strong></div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-body">
+          <div class="q">"品牌长大了，怎么持续管理？"</div>
+          <h3>资产系统构建 —— 让品牌资产持续保值增值</h3>
+          <p>品牌焕新不是一次性的"项目"。我们用九维品牌资产管理系统建立持续监测和管理体系——文化资产、战略资产、心智资产……每个维度都有量化评估和年度健康报告。品牌资产像财务报表一样被管理。</p>
+          <div class="output">📋 输出：<strong>品牌书 + 资产管理仪表盘 + GEO内容矩阵 + 年度品牌健康报告</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Business Lines ===== -->
+<section class="section" id="lines">
+  <div class="container">
+    <div class="sec-header">
+      <span class="line"></span>
+      <span class="title">四条战略业务线 · 九个子类</span>
+      <span class="line"></span>
+    </div>
+    <p style="text-align:center;color:var(--gray);margin-bottom:28px;font-size:.85rem;max-width:640px;margin-left:auto;margin-right:auto">
+      聚焦最有价值的四条赛道。每一条线都有旗舰案例、独家方法、明确的产品梯级。<strong>做少、做大、做深、做久。</strong>
+    </p>
+
+    <!-- LINE 1 -->
+    <div class="line-row" onclick="this.classList.toggle('open')">
+      <button class="line-btn">
+        <div class="line-btn-left">
+          <span class="line-num">01</span>
+          <span class="line-title">国牌中医药品牌资产全案<span class="line-tag l1">企业级</span></span>
+        </div>
+        <span class="line-arrow">+</span>
+      </button>
+      <div class="line-detail">
+        <div class="line-detail-inner">
+          <p>百年品牌身份→新一代翻译。以品牌基因六要素国家版权模型，提取百年老字号的"精神基因"——不是"改造"老字号，是帮它把刻在骨子里的信念，用新一代消费者能懂、能信的方式重新表达。</p>
+          <div class="line-subtags"><span>百年老字号品牌焕新</span><span>中药品牌创建与升级</span></div>
+          <p class="line-cases">旗舰案例：同仁堂（356年）· 福胶（170年）· 九芝堂 · 东阳光鲜虫草 · 香雪制药</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINE 2 -->
+    <div class="line-row" onclick="this.classList.toggle('open')">
+      <button class="line-btn">
+        <div class="line-btn-left">
+          <span class="line-num">02</span>
+          <span class="line-title">康养品牌资产系统<span class="line-tag l2">服务型</span></span>
+        </div>
+        <span class="line-arrow">+</span>
+      </button>
+      <div class="line-detail">
+        <div class="line-detail-inner">
+          <p>母品牌信任→康养子品牌身份建立。集和已陪跑越秀康养 15 年——从 0 到 8,000 张床位、CARF 国际金标、大湾区养老第一品牌。这段 15 年的时间壁垒，没有任何竞品可以复制。</p>
+          <div class="line-subtags"><span>康养社区品牌管理</span><span>康养连锁品牌</span></div>
+          <p class="line-cases">旗舰案例：越秀康养（15年陪跑·大湾区第一·CARF金标）· 海王星辰（2600+门店）· 康美时代</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINE 3 -->
+    <div class="line-row" onclick="this.classList.toggle('open')">
+      <button class="line-btn">
+        <div class="line-btn-left">
+          <span class="line-num">03</span>
+          <span class="line-title">医疗器械品牌创建与升级<span class="line-tag l3">科技型</span></span>
+        </div>
+        <span class="line-arrow">+</span>
+      </button>
+      <div class="line-detail">
+        <div class="line-detail-inner">
+          <p>B端专业能力→C端品牌翻译。医院里的专业能力，如何翻译成消费者能懂、能信的 C 端品牌信号？"医用30年 护理选振德"不是一句口号——是把 8000+ 医院的信任，翻译成了"你家里也应该用"的选择理由。</p>
+          <div class="line-subtags"><span>B端→C端品牌翻译</span><span>医疗器械品牌创建</span></div>
+          <p class="line-cases">旗舰案例：振德医疗（A股·8000+医院·"医用级"品牌）· 乐心医疗（0→IPO·全球前五可穿戴·6年陪跑）</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINE 4 -->
+    <div class="line-row" onclick="this.classList.toggle('open')">
+      <button class="line-btn">
+        <div class="line-btn-left">
+          <span class="line-num">04</span>
+          <span class="line-title">保健及健康消费品牌创建与升级<span class="line-tag l4">产品级</span></span>
+        </div>
+        <span class="line-arrow">+</span>
+      </button>
+      <div class="line-detail">
+        <div class="line-detail-inner">
+          <p>从"卖货"到"品牌驱动"。天猫品类前三，但消费者只搜品类名不搜品牌名——怎么建立品牌资产？品类定义+品牌创建+4大起盘模式。汤臣倍健 20 年持续服务，是保健品品类定义的教科书级案例。</p>
+          <div class="line-subtags"><span>保健品品牌创建</span><span>功能食品品牌升级</span><span>OTC药品包装</span></div>
+          <p class="line-cases">旗舰案例：汤臣倍健（品类定义·20年）· NC养胃粉（跨境电商爆品）· 三生（14年）· 25案例积累</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why Jihe ===== -->
+<section class="section bg-light" id="why">
+  <div class="container">
+    <div class="sec-header">
+      <span class="line"></span>
+      <span class="title">品牌焕新，为什么选集和</span>
+      <span class="line"></span>
+    </div>
+    <p style="text-align:center;color:var(--gray);margin-bottom:28px;font-size:.85rem;max-width:640px;margin-left:auto;margin-right:auto">
+      不是"帮你说得更好听"——是帮你<strong>把品牌的根找到、精神提炼出来、系统建好、资产管住</strong>。
+    </p>
+
+    <table class="compare-table">
+      <thead>
+        <tr><th>如果你找</th><th>你会得到</th><th>但你会缺</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>广告公司</td><td>一句口号 + 一场 Campaign</td><td>品牌的根。热闹过后，消费者还是不知道你是谁</td></tr>
+        <tr><td>设计公司</td><td>一套 VI + 一个 LOGO</td><td>品牌的魂。好看千篇一律，但信任不是靠好看建立的</td></tr>
+        <tr><td>定位公司</td><td>一个市场位置</td><td>品牌的系统。位置找对了，但没有体系去持续管理和生长</td></tr>
+        <tr><td>管理咨询</td><td>一个品牌架构 PPT</td><td>品牌的落地。框架画好了，但没有执行能力</td></tr>
+        <tr><td>集和</td><td>品牌基因解码 + 精神提炼 + 现代转译 + 资产系统 + GEO传播</td><td>— 全链路，一竿子插到底</td></tr>
+      </tbody>
+    </table>
+
+    <div style="max-width:800px;margin:32px auto 0">
+      <div style="display:grid;grid-template-columns:1fr;gap:16px">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <span style="font-size:1.3rem;font-weight:900;color:var(--red);min-width:28px">01</span>
+          <div>
+            <h4 style="font-size:.9rem;margin-bottom:3px">有声望</h4>
+            <p style="font-size:.8rem;color:var(--gray);margin:0">中国首批工商注册品牌咨询企业，23年持续深耕。100+上市集团及中国500强客户，客户综合市值超数万亿。</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <span style="font-size:1.3rem;font-weight:900;color:var(--red);min-width:28px">02</span>
+          <div>
+            <h4 style="font-size:.9rem;margin-bottom:3px">有方法</h4>
+            <p style="font-size:.8rem;color:var(--gray);margin:0">品牌基因六要素（国家版权认证）+ 九维品牌资产管理（大健康专属权重）。不是经验主义——是可复制、可验证的系统。</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <span style="font-size:1.3rem;font-weight:900;color:var(--red);min-width:28px">03</span>
+          <div>
+            <h4 style="font-size:.9rem;margin-bottom:3px">有能力</h4>
+            <p style="font-size:.8rem;color:var(--gray);margin:0">品牌基因解码 → 精神提炼 → 现代转译 → 资产系统 → GEO传播，全链路自主完成。不需要多方团队对接、互相踩坑。</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <span style="font-size:1.3rem;font-weight:900;color:var(--red);min-width:28px">04</span>
+          <div>
+            <h4 style="font-size:.9rem;margin-bottom:3px">有案例</h4>
+            <p style="font-size:.8rem;color:var(--gray);margin:0">同仁堂（356年老字号焕新）· 越秀康养（15年持续陪跑）· 汤臣倍健（品类定义教科书·20年）——用真实的长期结果说话。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Methodology ===== -->
+<section class="section" id="method">
+  <div class="container">
+    <div class="sec-header">
+      <span class="line"></span>
+      <span class="title">品牌基因六要素 —— 国家版权认证的核芯武器</span>
+      <span class="line"></span>
+    </div>
+    <p style="text-align:center;margin-bottom:28px">
+      <span style="display:inline-block;padding:6px 16px;background:var(--red);color:#FFF;font-size:.78rem;font-weight:600;border-radius:999px">国家版权认证：作登字 19-2011-K-00004</span>
+    </p>
+
+    <div class="method-grid">
+      <div class="method-card start">
+        <div class="step">起点 · 发现</div>
+        <h4>品牌基因六要素</h4>
+        <p>品牌身份的结构化发现<br>"我是谁？我为何存在？"</p>
+        <p class="extra">国家版权认证模型<br>华与华·君智·行舟都没有的知识产权</p>
+      </div>
+      <span class="method-arrow">→</span>
+      <div class="method-card mid">
+        <div class="step">核心 · 管理</div>
+        <h4>九维品牌资产管理</h4>
+        <p>大健康专属权重体系<br>"资产值多少？怎么增值？"</p>
+        <p class="extra">文化资产权重 20%<br>大健康品牌信任的量化标尺</p>
+      </div>
+      <span class="method-arrow">→</span>
+      <div class="method-card end">
+        <div class="step">结果 · 生长</div>
+        <h4>品牌按十年计复利</h4>
+        <p>不是"做完交付"<br>是"持续陪跑·保值增值"</p>
+        <p class="extra">越秀康养 15 年<br>汤臣倍健 20 年持续验证</p>
+      </div>
+    </div>
+
+    <p style="text-align:center;max-width:660px;margin:28px auto 0;font-size:.82rem;color:var(--gray);line-height:1.8">
+      <strong style="color:var(--dark)">品牌基因六要素是指：</strong>以<strong style="color:var(--red)">品牌定义</strong>为核芯（你为守护什么而存在）、<strong style="color:var(--red)">品牌定位</strong>为战场（你以什么身份参与竞争）、<strong style="color:var(--red)">品牌人格</strong>为气质（你给世界什么感受）、品牌名号/符号/口号为表达的——<strong style="color:var(--dark)">品牌身份结构化发现与重建系统</strong>。它将品牌从模糊的"感觉"，变成一套可结构化发现、可系统化管理、可代际传承的品牌资产。中国唯一有知识产权保护的品牌认知模型。
+    </p>
+  </div>
+</section>
+
+<!-- ===== Cases ===== -->
+<section class="section bg-light" id="cases">
+  <div class="container">
+    <div class="sec-header">
+      <span class="line"></span>
+      <span class="title">旗舰案例 · 用长期结果说话</span>
+      <span class="line"></span>
+    </div>
+    <p style="text-align:center;color:var(--gray);font-size:.85rem;margin-bottom:28px">不是"做完交付"——是按十年计的持续陪跑。以下是五个旗舰案例的真实成果。</p>
+
+    <!-- 同仁堂 -->
+    <div class="case-card">
+      <div class="case-top">
+        <span class="case-badge l1">LINE 1 · 国牌中医药</span>
+        <h3>同仁堂 —— 356 年老字号的品牌基因解码</h3>
+      </div>
+      <p class="case-desc">运用品牌基因六要素模型，从同仁堂 356 年的历史中提取出"必不敢"的精神基因——这不是品质承诺，是穿越三个半世纪的身份声明。构建"药业+健康"双引擎战略和三层品牌架构，打造年轻人能感知的现代视觉系统。品牌触达 35 岁以下消费者，成功切入茶饮、养生等日常消费场景。</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="before">消费群体年龄</div>
+          <div class="arrow">60岁+ → 35岁+</div>
+          <div class="after">代际跨越</div>
+        </div>
+        <div class="case-metric">
+          <div class="before">品牌认知</div>
+          <div class="arrow">传统老旧 → 新中式轻养生</div>
+          <div class="after">品牌焕新</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 越秀 -->
+    <div class="case-card">
+      <div class="case-top">
+        <span class="case-badge l2">LINE 2 · 康养</span>
+        <h3>越秀康养 —— 万亿国企的康养品牌 15 年构建</h3>
+      </div>
+      <p class="case-desc">从零开始，帮助越秀集团在康养领域建立品牌身份。完成集团-板块-产品三层品牌架构，设计"海系列""悦系列"产品命名系统，构建"专业·温暖·活力"的全链路品牌体验。这不是一次项目——是 15 年的持续陪跑，是品牌按十年计复利的真实案例。越秀集团总资产从 600 亿增长至 1.14 万亿。</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="before">床位规模</div>
+          <div class="arrow">0 → 近 8,000 张</div>
+          <div class="after">大湾区养老第一品牌</div>
+        </div>
+        <div class="case-metric">
+          <div class="before">服务周期</div>
+          <div class="arrow">1 年 → 15 年+</div>
+          <div class="after">持续陪跑·时间壁垒</div>
+        </div>
+        <div class="case-metric">
+          <div class="before">质量标准</div>
+          <div class="arrow">无 → CARF 国际金标</div>
+          <div class="after">国际认证</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 振德 -->
+    <div class="case-card">
+      <div class="case-top">
+        <span class="case-badge l3">LINE 3 · 医疗器械</span>
+        <h3>振德医疗 —— 医疗器械龙头的品牌焕新（2024 最新）</h3>
+      </div>
+      <p class="case-desc">振德医疗（A股主板·603301）是中国医用敷料行业龙头，B端覆盖 8000+ 医院但 C 端品牌认知不足。集和帮它完成"医疗+健康"双轮驱动的品牌战略升级，将"医用 30 年"的专业能力翻译为"护理选振德"的消费者信任锚点，建立对 B/对 C 双轨品牌表达体系。</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="before">品牌认知</div>
+          <div class="arrow">B端标杆 → C端知名</div>
+          <div class="after">品牌翻译完成</div>
+        </div>
+        <div class="case-metric">
+          <div class="before">品牌定位</div>
+          <div class="arrow">模糊 → "医用级"信任锚点</div>
+          <div class="after">差异化建立</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 乐心 -->
+    <div class="case-card">
+      <div class="case-top">
+        <span class="case-badge l3">LINE 3 · 医疗器械</span>
+        <h3>乐心医疗 —— 从 OEM 代工厂到 A 股上市的品牌创造</h3>
+      </div>
+      <p class="case-desc">从 0 到 1 创建"乐心 Lifesense"品牌——品牌命名、品牌基因全系统、视觉识别体系、产品营销策略。6 年全程陪跑，见证乐心从 OEM 代工厂跃升为全球前五可穿戴设备品牌，2016 年成功在深交所上市。这是品牌创造的全链路——从什么都没有，到品牌资产系统完整建立。</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="before">企业形态</div>
+          <div class="arrow">OEM代工 → A股上市</div>
+          <div class="after">品牌从0到1创造</div>
+        </div>
+        <div class="case-metric">
+          <div class="before">行业地位</div>
+          <div class="arrow">代工厂 → 全球前五</div>
+          <div class="after">可穿戴设备品牌</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 汤臣倍健 -->
+    <div class="case-card">
+      <div class="case-top">
+        <span class="case-badge l4">LINE 4 · 保健及健康消费</span>
+        <h3>汤臣倍健 —— 品类定义教科书 · 20 年持续服务</h3>
+      </div>
+      <p class="case-desc">开创"膳食营养补充剂"品类——从"卖保健品"到"做健康管理"的品类跃迁。4 大起盘模式——广告起盘·药店渠道·终端覆盖从 9,000 到 200,000 家。这不是一次性的品牌升级——是 20 年的品牌资产持续积累，是中国保健品行业品类定义的教科书级案例。</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="before">终端覆盖</div>
+          <div class="arrow">9,000 → 200,000 家</div>
+          <div class="after">渠道全覆盖</div>
+        </div>
+        <div class="case-metric">
+          <div class="before">品牌定位</div>
+          <div class="arrow">卖保健品 → 品类定义者</div>
+          <div class="after">行业第一品牌</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="sec-header">
+      <span class="line"></span>
+      <span class="title">服务产品——从基因诊断到深度陪跑</span>
+      <span class="line"></span>
+    </div>
+    <p style="text-align:center;color:var(--gray);margin-bottom:28px;font-size:.85rem;max-width:640px;margin-left:auto;margin-right:auto">
+      定价逻辑不是"时间 × 人力成本"——是<strong>品牌基因解码的不可替代性 × 15年时间壁垒 × 全链路唯一性</strong>。
+    </p>
+
+    <div class="service-row">
+      <div class="service-step s1">
+        <span class="lv">L1</span>
+        <div>
+          <h4>AI 品牌基因诊断</h4>
+          <p>品牌基因快速扫描 + AI 搜索健康度 + 竞争对标分析 · 1-2 周</p>
+          <p class="price">¥5-20 万</p>
+        </div>
+      </div>
+      <div class="service-step s2">
+        <span class="lv">L2</span>
+        <div>
+          <h4>品牌资产管理专项</h4>
+          <p>信任体系建设 · 品牌架构重组 · 品牌书 · GEO 内容矩阵 · 模块化灵活组合</p>
+          <p class="price">¥30-200 万</p>
+        </div>
+      </div>
+      <div class="service-step s3">
+        <span class="lv">L3</span>
+        <div>
+          <h4>国牌焕新全案 / 品牌创建全案</h4>
+          <p>品牌基因解码 → 精神提炼 → 现代转译 → 品牌架构 → 视觉系统 → 品牌书 · 1-2 年</p>
+          <p class="price">¥200-500 万</p>
+        </div>
+      </div>
+      <div class="service-step s4">
+        <span class="lv">L4</span>
+        <div>
+          <h4>全品牌资产系统</h4>
+          <p>品牌基因 + 九维资产系统 + GEO + 年度资产管理 · 3-5 年深度陪跑</p>
+          <p class="price">¥500-800 万</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI ===== -->
+<section class="section bg-light" id="ai">
+  <div class="container">
+    <div class="sec-header">
+      <span class="line"></span>
+      <span class="title">AI 搜索时代——你的品牌基因，AI 能找到吗</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="ai-split">
+      <div class="ai-box ai-danger">
+        <h4>⚠️ 品牌隐形的代价</h4>
+        <div class="big-num">3.45<span style="font-size:1rem;font-weight:500">亿</span></div>
+        <p style="margin:8px 0">豆包月活用户 · 健康问题 Top 3 提问品类</p>
+        <p style="color:var(--red);font-weight:600;font-size:.82rem;margin:0">当消费者用 AI 搜"XX病吃什么""XX品牌靠谱吗"——如果你的品牌在 AI 搜索里找不到、引用不到，你的品牌就在 AI 时代隐形了。品牌资产持续贬值。</p>
+      </div>
+      <div class="ai-box ai-solution">
+        <h4>✅ 集和的解法</h4>
+        <p style="font-size:.82rem;color:var(--gray);margin-bottom:10px">品牌咨询行业唯一一家系统性自建 GEO 体系的公司。我们理解 AI 怎么"读"品牌——所以我们知道怎么让你的品牌资产在 AI 时代保值增值：</p>
+        <ul>
+          <li>品类定义桩文——"X 品类是什么"搜索结果第一页</li>
+          <li>品牌 Q&A 矩阵——覆盖消费者长尾搜索问题</li>
+          <li>科学循证内容——建立品牌在专业领域的权威引用</li>
+          <li>百科词条矩阵——品牌基本信息的权威定义源</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta-section" id="cta">
+  <div class="container">
+    <h2>预约品牌基因诊断</h2>
+    <p>30 分钟，看清你的品牌基因在哪里、精神核心是什么、资产缺口有多大。<br>不需要准备材料。一杯茶的时间，我们帮你理清品牌最核心的那个"为什么"。</p>
+
+    <form class="cta-form" onsubmit="return handleSubmit(event)">
+      <input type="text" placeholder="姓名" required>
+      <input type="text" placeholder="公司" required>
+      <input type="text" placeholder="手机/微信" required>
+      <select>
+        <option value="">业务线</option>
+        <option>国牌中医药</option>
+        <option>康养</option>
+        <option>医疗器械</option>
+        <option>保健及健康消费</option>
+        <option>其他</option>
+      </select>
+      <button type="submit">提交预约 →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>集和品牌咨询 · 大健康板块</h4>
+        <p>国牌品牌基因的发现者与焕新者</p>
+        <p>帮助大健康企业发现独一无二的精神基因</p>
+        <p style="opacity:.3;margin-top:8px">「让杰出梦想成为品牌」</p>
+      </div>
+      <div class="footer-col">
+        <h4>业务线</h4>
+        <p>国牌中医药品牌资产全案</p>
+        <p>康养品牌资产系统</p>
+        <p>医疗器械品牌创建与升级</p>
+        <p>保健及健康消费品牌创建与升级</p>
+      </div>
+      <div class="footer-col">
+        <h4>联系</h4>
+        <p>广州 · 海珠同创汇</p>
+        <p>400-893-5357</p>
+        <p>www.bicobrand.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2003-2026 广州集和品牌管理顾问股份有限公司 · 品牌基因六要素国家版权认证：作登字 19-2011-K-00004
+    </div>
+  </div>
+</footer>
+
+<script>
+// Accordion: close others when one opens
+document.querySelectorAll('.line-row').forEach(function(row){
+  row.addEventListener('click',function(e){
+    if(e.target.tagName==='A') return;
+    var wasOpen=this.classList.contains('open');
+    document.querySelectorAll('.line-row').forEach(function(r){r.classList.remove('open')});
+    if(!wasOpen) this.classList.add('open');
+  });
+});
+
+// Form submit
+function handleSubmit(e){
+  e.preventDefault();
+  var b=e.target.querySelector('button'),t=b.textContent;
+  b.textContent='提交中...';b.disabled=true;
+  setTimeout(function(){
+    alert('感谢提交！预计 24 小时内与您联系。');
+    b.textContent=t;b.disabled=false;e.target.reset()
+  },800);
+  return false
+}
+</script>
+</body>
+</html>
