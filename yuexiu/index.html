@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="从600亿到一万亿：越秀集团品牌架构15年战略护航。集和品牌咨询——品牌基因六要素·国家版权认证。">
+<meta name="keywords" content="越秀集团,品牌资产管理,集团品牌架构,品牌升级,集和品牌咨询">
+<meta name="author" content="集和品牌咨询">
+<title>从600亿到一万亿：越秀集团品牌架构15年战略护航 | 集和</title>
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;color:#1e293b;background:#fafbfc;line-height:1.8;overflow-x:hidden}
+
+/* ===== DESIGN TOKENS – 集和品牌色 ===== */
+:root{
+  --text:#1a1a1a;
+  --text-secondary:#555555;
+  --text-tertiary:#999999;
+  --white:#ffffff;
+  --bg:#fafafa;
+  --bg-alt:#f5f5f5;
+  --border:#e0e0e0;
+  --red:#C41E3A;
+  --red-light:#fdf5f5;
+  --gold:#C9A96E;
+  --gold-light:#fdfaf5;
+  --section-gap:clamp(60px,10vh,120px);
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1{font-size:clamp(2rem,4.5vw,3.6rem);font-weight:900;letter-spacing:-0.015em;line-height:1.15;color:#0f172a}
+h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;line-height:1.25;color:#0f172a}
+h3{font-size:clamp(1.05rem,1.5vw,1.3rem);font-weight:700;line-height:1.4;color:#1e293b}
+.eyebrow{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;color:var(--red);margin-bottom:0.6rem}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 clamp(20px,5vw,80px);height:60px;display:flex;align-items:center;justify-content:space-between}
+nav .nav-links{display:flex;gap:28px;list-style:none}
+nav .nav-links a{text-decoration:none;color:var(--text-secondary);font-size:0.84rem;font-weight:500;transition:color 0.2s}
+nav .nav-links a:hover{color:var(--red)}
+
+/* ===== SECTIONS ===== */
+section{padding:var(--section-gap) clamp(20px,5vw,80px)}
+section.alt{background:var(--bg-alt)}
+
+/* ===== SECTION HEADER ===== */
+.section-header{margin-bottom:clamp(40px,8vh,80px)}
+.section-header.centered{text-align:center}
+.section-header .divider{width:36px;height:2px;background:var(--red);margin-top:0.8rem;border-radius:2px}
+.section-header.centered .divider{margin-left:auto;margin-right:auto}
+.section-header .sub{font-size:1rem;color:var(--text-secondary);margin-top:0.5rem;max-width:560px}
+.section-header.centered .sub{margin-left:auto;margin-right:auto}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(170deg,var(--white) 0%,var(--red-light) 30%,var(--gold-light) 60%,var(--white) 100%);position:relative;overflow:hidden;padding-top:80px}
+.hero::before{content:'';position:absolute;top:-30%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,rgba(196,30,58,0.04) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,169,110,0.04) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:860px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:5px 18px;font-size:0.78rem;letter-spacing:0.05em;font-weight:600;color:var(--text-secondary);margin-bottom:2rem;box-shadow:0 1px 4px rgba(0,0,0,0.03)}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--red)}
+.hero h1{font-size:clamp(2.2rem,5vw,4rem);margin-bottom:1.2rem;line-height:1.1}
+.hero h1 .em{color:var(--red);position:relative;display:inline-block}
+.hero h1 .em::after{content:'';position:absolute;bottom:2px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),transparent);border-radius:2px}
+.hero-subtitle{font-size:1.15rem;color:var(--text-secondary);margin-bottom:1rem;font-weight:600}
+.hero-desc{font-size:1rem;color:var(--text-tertiary);max-width:520px;margin-bottom:3rem;line-height:1.85}
+.hero-stats{display:flex;gap:clamp(20px,5vw,48px);flex-wrap:wrap}
+.hero-stat{padding:16px 24px;background:var(--white);border-radius:12px;border:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,0.03);transition:transform 0.3s,box-shadow 0.3s}
+.hero-stat:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.06)}
+.hero-stat-num{font-size:2rem;font-weight:900;line-height:1.1;color:var(--red)}
+.hero-stat-gold{color:var(--gold)}
+.hero-stat-label{font-size:0.8rem;color:var(--text-tertiary);margin-top:3px}
+
+/* ===== BEFORE/AFTER ===== */
+.ba-wrap{max-width:1000px;margin:0 auto}
+.ba-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center}
+.ba-card{border-radius:16px;padding:clamp(24px,4vw,40px)}
+.ba-card.before{background:var(--white);border:1px solid var(--border)}
+.ba-card.after{background:var(--white);border:2px solid var(--red);box-shadow:0 4px 24px rgba(216,64,64,0.06)}
+.ba-card h3{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:16px;font-weight:700}
+.ba-card.before h3{color:var(--text-tertiary)}
+.ba-card.after h3{color:var(--red)}
+.ba-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--border)}
+.ba-row:last-child{border-bottom:none}
+.ba-label{font-size:0.88rem;color:var(--text-secondary)}
+.ba-val{font-weight:700;font-size:1rem;text-align:right}
+.ba-after-val{font-size:1.15rem;color:var(--red)}
+.ba-vs{font-size:1.3rem;font-weight:900;color:var(--text-tertiary)}
+@media(max-width:768px){.ba-grid{grid-template-columns:1fr}.ba-vs{text-align:center}}
+
+/* ===== PROBLEM FLOW ===== */
+.flow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:960px;margin:0 auto}
+.flow-card{background:var(--white);border-radius:14px;padding:28px 24px;border:1px solid var(--border);position:relative;overflow:hidden;transition:all 0.3s}
+.flow-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,0.05)}
+.flow-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.flow-card:nth-child(odd)::before{background:var(--red)}
+.flow-card:nth-child(even)::before{background:var(--gold)}
+.flow-card .flow-icon{font-size:1.8rem;margin-bottom:12px}
+.flow-card h4{font-size:0.95rem;font-weight:700;margin-bottom:6px}
+.flow-card p{font-size:0.86rem;color:var(--text-secondary);line-height:1.7}
+
+/* ===== DATA RIBBON ===== */
+.data-ribbon{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:1000px;margin:0 auto}
+.data-tile{text-align:center;padding:24px 16px;border-radius:12px;transition:all 0.3s}
+.data-tile:hover{transform:translateY(-2px)}
+.data-tile:nth-child(odd){background:var(--red-light)}
+.data-tile:nth-child(even){background:var(--gold-light)}
+.data-tile .num{font-size:2rem;font-weight:900;line-height:1.1}
+.data-tile:nth-child(odd) .num{color:var(--red)}
+.data-tile:nth-child(even) .num{color:var(--gold)}
+.data-tile .label{font-size:0.8rem;color:var(--text-tertiary);margin-top:4px}
+
+/* ===== PHASE CARDS ===== */
+.phase{max-width:880px;margin:0 auto 48px}
+.phase:last-child{margin-bottom:0}
+.phase-header{display:flex;align-items:baseline;gap:16px;margin-bottom:20px}
+.phase-tag{font-size:0.76rem;font-weight:800;letter-spacing:0.1em;padding:3px 12px;border-radius:4px;white-space:nowrap}
+.phase:nth-child(odd) .phase-tag{background:var(--red-light);color:var(--red)}
+.phase:nth-child(even) .phase-tag{background:var(--gold-light);color:var(--gold)}
+.phase-title{font-size:1.25rem;font-weight:800;color:#0f172a}
+.phase-body{background:var(--white);border-radius:14px;border:1px solid var(--border);padding:32px 28px}
+.phase-body p{font-size:0.92rem;color:var(--text-secondary);line-height:1.85;margin-bottom:16px}
+.phase-body p:last-child{margin-bottom:0}
+.phase-body .highlight{background:linear-gradient(180deg,transparent 60%,rgba(216,64,64,0.1) 60%);padding:0 2px}
+
+/* ===== TABLE ===== */
+.comp-table{max-width:900px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;border:1px solid var(--border);background:var(--white);box-shadow:0 2px 16px rgba(0,0,0,0.03)}
+.comp-table table{width:100%;border-collapse:collapse;font-size:0.88rem}
+.comp-table th{background:#f8fafc;padding:14px 18px;font-weight:700;font-size:0.82rem;color:var(--text-secondary);text-align:left;border-bottom:2px solid var(--border);white-space:nowrap}
+.comp-table th:last-child{color:var(--red)}
+.comp-table td{padding:14px 18px;border-bottom:1px solid var(--border);color:var(--text-secondary);line-height:1.5}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table td:first-child{font-weight:700;color:#0f172a;white-space:nowrap}
+
+/* ===== ARCH DIAGRAM ===== */
+.arch{max-width:780px;margin:0 auto}
+.arch-level{text-align:center;padding:18px 24px;margin-bottom:8px;border-radius:10px;font-weight:700}
+.arch-l0{background:linear-gradient(135deg,#fef5f5,#fff8f0);border:2px solid var(--red);color:var(--red);font-size:1.15rem;max-width:360px;margin:0 auto 14px}
+.arch-l1{background:var(--white);border:2px solid var(--border);max-width:620px;margin:0 auto 10px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-weight:500}
+.arch-l1 .chip{background:#f8fafc;padding:8px 16px;border-radius:6px;font-size:0.84rem;border:1px solid var(--border);color:var(--text)}
+.arch-l2{background:#fafbfc;border:1px dashed var(--border);max-width:700px;margin:0 auto;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;font-weight:400}
+.arch-l2 .chip{background:var(--white);padding:8px 16px;border-radius:6px;font-size:0.82rem;color:var(--text-secondary);border:1px solid var(--border)}
+.arch-connector{text-align:center;color:var(--text-tertiary);margin:2px 0;font-size:1rem}
+.arch-hint{text-align:center;font-size:0.78rem;color:var(--text-tertiary);margin-top:16px}
+
+/* ===== METHOD GRID ===== */
+.method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1000px;margin:0 auto}
+.method-card{background:var(--white);border-radius:14px;padding:30px 26px;border:1px solid var(--border);transition:all 0.3s;position:relative}
+.method-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,0.05)}
+.method-card .m-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px}
+.method-card:nth-child(odd) .m-icon{background:var(--red-light);color:var(--red)}
+.method-card:nth-child(even) .m-icon{background:var(--gold-light);color:var(--gold)}
+.method-card h4{font-size:1rem;margin-bottom:8px}
+.method-card p{font-size:0.86rem;color:var(--text-secondary);line-height:1.75}
+
+/* ===== 9-DIM GRID ===== */
+.dim-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;max-width:1100px;margin:0 auto}
+.dim-card{background:var(--white);border-radius:12px;padding:24px 22px;border:1px solid var(--border);border-left-width:3px;transition:all 0.2s}
+.dim-card:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.dim-card:nth-child(odd){border-left-color:var(--red)}
+.dim-card:nth-child(even){border-left-color:var(--gold)}
+.dim-card .dim-n{font-size:1.6rem;font-weight:900;color:var(--text-tertiary);line-height:1;opacity:0.3}
+.dim-card h4{font-size:0.95rem;font-weight:700;margin:6px 0 4px}
+.dim-card p{font-size:0.84rem;color:var(--text-secondary);line-height:1.65}
+
+/* ===== QUOTE ===== */
+blockquote.pull{max-width:700px;margin:2rem auto;padding:1.5rem 2rem;border-left:3px solid var(--red);background:var(--red-light);border-radius:0 8px 8px 0;font-weight:600;font-size:1.1rem;color:var(--text);line-height:1.7}
+blockquote.pull b{color:var(--red)}
+
+/* ===== ACCORDION ===== */
+.accordion{max-width:780px;margin:0 auto}
+.acc-item{border-bottom:1px solid var(--border)}
+.acc-trigger{width:100%;text-align:left;padding:20px 0;background:none;border:none;cursor:pointer;font-size:0.95rem;font-weight:600;color:#0f172a;display:flex;justify-content:space-between;align-items:center;font-family:inherit;transition:color 0.2s}
+.acc-trigger:hover{color:var(--red)}
+.acc-trigger::after{content:'+';font-size:1.3rem;font-weight:300;color:var(--text-tertiary);transition:all 0.3s;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--bg-alt)}
+.acc-item.open .acc-trigger{color:var(--red)}
+.acc-item.open .acc-trigger::after{transform:rotate(45deg);background:var(--red-light);color:var(--red)}
+.acc-content{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.35s}
+.acc-item.open .acc-content{max-height:400px;padding-bottom:20px}
+.acc-content p{font-size:0.88rem;color:var(--text-secondary);line-height:1.8}
+
+/* ===== CHECKLIST ===== */
+.checklist{list-style:none;max-width:580px;margin:0 auto}
+.checklist li{padding:14px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:12px;font-size:0.95rem;color:#0f172a}
+.checklist li::before{content:'';width:20px;height:20px;border:2px solid var(--text-tertiary);border-radius:4px;flex-shrink:0;margin-top:2px}
+.section-red .checklist li{color:var(--white);border-bottom-color:rgba(255,255,255,0.2)}
+.section-red .checklist li::before{border-color:rgba(255,255,255,0.5)}
+
+/* ===== CTA ===== */
+.section-red{background:var(--red);color:var(--white)}
+.section-red .eyebrow{color:rgba(255,255,255,0.8)}
+.section-red h2{color:var(--white)}
+.section-red .divider{background:var(--white)}
+.section-red .sub{color:rgba(255,255,255,0.8)}
+.cta-steps{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:2.5rem 0}
+.cta-step{background:rgba(255,255,255,0.12);border-radius:14px;padding:28px 24px;flex:1;min-width:220px;max-width:280px;backdrop-filter:blur(4px);transition:all 0.3s}
+.cta-step:hover{background:rgba(255,255,255,0.18);transform:translateY(-2px)}
+.cta-step .n{width:34px;height:34px;border-radius:50%;background:var(--white);color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;margin:0 auto 14px}
+.cta-step h4{font-size:0.9rem;margin-bottom:6px;color:var(--white)}
+.cta-step p{font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 34px;font-size:0.93rem;font-weight:700;text-decoration:none;border-radius:8px;transition:all 0.3s;font-family:inherit;cursor:pointer;border:none}
+.btn-white{background:var(--white);color:var(--red)}
+.btn-white:hover{background:#f5f5f5;transform:translateY(-1px);box-shadow:0 4px 18px rgba(0,0,0,0.12)}
+.btn-outline{background:transparent;color:var(--red);border:2px solid var(--red)}
+.btn-outline:hover{background:var(--red);color:var(--white)}
+
+/* ===== FOOTER ===== */
+footer{background:#f8fafc;border-top:1px solid var(--border);padding:56px clamp(20px,5vw,80px) 36px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;max-width:1000px;margin:0 auto}
+.footer-brand{font-size:1.05rem;font-weight:800;color:#0f172a;margin-bottom:10px}
+.footer-brand .accent{color:var(--red)}
+.footer-desc{font-size:0.83rem;color:var(--text-secondary);line-height:1.75;max-width:380px}
+.footer-links h4{color:#0f172a;font-size:0.82rem;margin-bottom:10px;font-weight:600}
+.footer-links a{display:block;color:var(--text-secondary);text-decoration:none;font-size:0.8rem;margin-bottom:7px;transition:color 0.2s}
+.footer-links a:hover{color:var(--red)}
+.footer-bottom{border-top:1px solid var(--border);margin-top:36px;padding-top:20px;text-align:center;font-size:0.76rem;color:var(--text-tertiary)}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:24px}}
+
+/* ===== ANIMATIONS ===== */
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ===== SCROLL BAR ===== */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--text-tertiary);border-radius:3px}
+
+@media print{
+  nav{position:static}
+  .hero{min-height:auto;padding:40px}
+  section{padding:40px;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="https://www.bicobrand.com" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" height="26" style="height:26px;width:auto"><rect x="0" y="4" width="40" height="40" rx="6" fill="#C41E3A"/><text x="20" y="32" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="22" font-weight="800" fill="#ffffff">集</text><text x="52" y="34" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="24" font-weight="800" fill="#1a1a1a">和</text><circle cx="182" cy="24" r="3" fill="#C9A96E"/></svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#problem">困境</a></li>
+    <li><a href="#solution">解法</a></li>
+    <li><a href="#journey">历程</a></li>
+    <li><a href="#data">全景</a></li>
+    <li><a href="#you">同构</a></li>
+    <li><a href="#cta">行动</a></li>
+  </ul>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-badge fade-in">
+      <span class="dot"></span> 集和品牌咨询 · 旗舰案例
+    </div>
+    <h1 class="fade-in">从 <span class="em">600亿</span> 到一万亿<br>越秀集团品牌架构 15 年战略护航</h1>
+    <div class="hero-subtitle fade-in">集和品牌咨询 · 品牌基因六要素 国家版权认证号 19-2011-K-00004</div>
+    <p class="hero-desc fade-in">一个横跨六大产业的国企集团，如何在15年间实现总资产近19倍增长，品牌不散架、架构不推倒、精神不改写？这不是品牌设计的故事——这是品牌资产管理的实证。</p>
+    <div class="hero-stats fade-in">
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="19">0<span style="font-size:0.6em;font-weight:600">×</span></div>
+        <div class="hero-stat-label">总资产增长倍数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num hero-stat-gold" data-count="15">0</div>
+        <div class="hero-stat-label">年持续陪跑</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="6">0</div>
+        <div class="hero-stat-label">家上市平台</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num hero-stat-gold" data-count="209">0</div>
+        <div class="hero-stat-label">中国企业500强排名</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BEFORE/AFTER ==================== -->
+<section>
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">15 年 · 同一套品牌架构</div>
+    <h2>不是换了 Logo，是建了系统</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="ba-wrap fade-in">
+    <div class="ba-grid">
+      <div class="ba-card before">
+        <h3>2010 · 品牌资产管理前</h3>
+        <div class="ba-row"><span class="ba-label">集团总资产</span><span class="ba-val">约 600 亿</span></div>
+        <div class="ba-row"><span class="ba-label">上市平台</span><span class="ba-val">1 家</span></div>
+        <div class="ba-row"><span class="ba-label">产业板块</span><span class="ba-val">~3 个</span></div>
+        <div class="ba-row"><span class="ba-label">品牌精神</span><span class="ba-val" style="color:var(--text-tertiary)">不确定</span></div>
+        <div class="ba-row"><span class="ba-label">品牌架构</span><span class="ba-val" style="color:var(--text-tertiary)">无统一架构</span></div>
+      </div>
+      <div class="ba-vs">→</div>
+      <div class="ba-card after">
+        <h3>2025 · 15 年后</h3>
+        <div class="ba-row"><span class="ba-label">集团总资产</span><span class="ba-val ba-after-val">10,596 亿</span></div>
+        <div class="ba-row"><span class="ba-label">上市平台</span><span class="ba-val ba-after-val">6 家</span></div>
+        <div class="ba-row"><span class="ba-label">产业板块</span><span class="ba-val ba-after-val">"3+3"六大产业</span></div>
+        <div class="ba-row"><span class="ba-label">品牌精神</span><span class="ba-val">"不断超越，更加优秀"</span></div>
+        <div class="ba-row"><span class="ba-label">品牌架构</span><span class="ba-val">三层架构·数百子品牌统一</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== THE PROBLEM ==================== -->
+<section class="alt" id="problem">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">问题的起点</div>
+    <h2>产业版图扩张领先于品牌架构建设</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="flow-grid fade-in">
+    <div class="flow-card">
+      <div class="flow-icon">🔀</div>
+      <h4>各自为战</h4>
+      <p>金融叫"越秀"，地产叫"城建"，交通叫"越秀交通"——同一集团，三个名字，三套视觉。每个板块对外讲各自的故事，集团层面无统一品牌叙事。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-icon">📉</div>
+      <h4>越扩越散</h4>
+      <p>产业越多，品牌越散；规模越大，共识越弱。约600亿资产看起来不小——但品牌力量分散在每条业务线里，集团品牌存在感极弱。每次并购，品牌更乱一分。</p>
+    </div>
+    <div class="flow-card">
+      <div class="flow-icon">🔄</div>
+      <h4>品牌待系统化</h4>
+      <p>此前品牌升级偏重视觉层面。需要从品牌精神梳理和品牌架构设计入手——将品牌从"自然生长状态"提升为"系统化管理状态"。</p>
+    </div>
+  </div>
+
+  <blockquote class="pull fade-in">
+    2010年，越秀集团业务体量已具规模——4大产业板块、数百家子企业、总资产约600亿。此时面临的核心课题是：<b>如何在高速增长的同时，将品牌从"自然生长状态"提升为"系统化管理状态"。</b>
+  </blockquote>
+</section>
+
+<!-- ==================== DATA RIBBON ==================== -->
+<section>
+  <div class="data-ribbon fade-in">
+    <div class="data-tile"><div class="num"><span data-count="10596">0</span>亿</div><div class="label">集团总资产 2025</div></div>
+    <div class="data-tile"><div class="num"><span data-count="1277">0</span>亿</div><div class="label">年营收 2025</div></div>
+    <div class="data-tile"><div class="num">~<span data-count="95">0</span>%</div><div class="label">资产证券化率</div></div>
+    <div class="data-tile"><div class="num"><span data-count="65">0</span>亿</div><div class="label">利润 2025（+30%）</div></div>
+    <div class="data-tile"><div class="num">MSCI A</div><div class="label">ESG 国际评级</div></div>
+    <div class="data-tile"><div class="num">五星级</div><div class="label">ESG 连续三年</div></div>
+  </div>
+</section>
+
+<!-- ==================== THE SOLUTION ==================== -->
+<section class="alt" id="solution">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">解决问题的工具</div>
+    <h2>品牌资产管理：不是设计，是操作系统</h2>
+    <p class="sub">品牌资产管理（Brand Asset Management）——以品牌资产的保值增值为目标，通过品牌基因解码、品牌架构搭建、品牌操作系统三大工具，对品牌进行从精神定义到长期治理的系统化管理。</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="method-grid fade-in">
+    <div class="method-card">
+      <div class="m-icon">🧬</div>
+      <h4>品牌基因六要素</h4>
+      <p>内核层（定义+定位）→ 人格层（风格+人格）→ 识别层（标识·名称·广告语）。<strong>先定义再定位，先有意义才有符号。</strong>国家版权局认证号 19-2011-K-00004。</p>
+    </div>
+    <div class="method-card">
+      <div class="m-icon">📊</div>
+      <h4>九维品牌资产体系</h4>
+      <p>文化·战略·产权·识别·心智·体验·社群·商业·社会 —— 九个资产维度全景管理。品牌资产不再是抽象概念，而是可量化、可审计、可增值的战略资产。</p>
+    </div>
+    <div class="method-card">
+      <div class="m-icon">⚙️</div>
+      <h4>品牌操作系统（Brand OS）</h4>
+      <p>品牌书（宪法）+ 品牌手册（法律）+ 品牌培训（执法）。法治替代人治——品牌规则写入系统，不因领导换届而漂移，不因人事变动而走样。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== VS TABLE ==================== -->
+<section>
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">集和的差异化</div>
+    <h2>我们做什么，不做什么</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="comp-table fade-in">
+    <table>
+      <thead>
+        <tr><th></th><th>设计公司</th><th>定位咨询</th><th>战略咨询</th><th>集和品牌资产管理</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>出发层</td><td>识别层</td><td>心智层</td><td>战略层</td><td><strong>内核层 → 识别层</strong></td></tr>
+        <tr><td>核心交付</td><td>VI 手册</td><td>定位陈述</td><td>战略报告</td><td><strong>品牌操作系统</strong></td></tr>
+        <tr><td>时间尺度</td><td>项目制</td><td>项目+年度</td><td>项目制</td><td><strong>长期陪跑（15年+）</strong></td></tr>
+        <tr><td>解决问题</td><td>"长什么样"</td><td>"怎么被记住"</td><td>"怎么配战略"</td><td><strong>"我是谁·为什么存在·怎么管"</strong></td></tr>
+        <tr><td>覆盖维度</td><td>视觉单维</td><td>心智单维</td><td>战略单维</td><td><strong>九维资产全景</strong></td></tr>
+        <tr><td>治理机制</td><td>无</td><td>无</td><td>无</td><td><strong>宪法—法律—执法</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================== JOURNEY ==================== -->
+<section class="alt" id="journey">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">15 年四阶段</div>
+    <h2>从解码到复利：每个阶段解决一个根本问题</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="phase fade-in">
+    <div class="phase-header">
+      <span class="phase-tag">PHASE 1 · 2010</span>
+      <span class="phase-title">品牌精神解码：回答"越秀为什么存在"</span>
+    </div>
+    <div class="phase-body">
+      <p><strong>解决的问题：</strong>一个600亿规模的企业，在高速成长期需要将品牌精神从"自然形成的业务直觉"梳理为"清晰的战略表达"。</p>
+      <p><strong>我们做了什么：</strong>没有从"应该怎么说"出发——从"事实上是什么"开始追问。追溯越秀山两千年文化源头，还原创始基因（1985年香港成立·广州改革开放的窗口企业），从城市建造者的基因中解码出<span class="highlight">"不断超越，更加优秀"</span>的品牌精神。</p>
+      <p><strong>为什么这有效：</strong>品牌精神是解码出来的，不是创造出来的。集和没有给越秀一个"好听的话"——帮越秀找到了它自己。基因不变，表达可以进化。这句话后来扛过了<strong>5轮领导换届</strong>，至今一字未改。</p>
+    </div>
+  </div>
+
+  <div class="phase fade-in">
+    <div class="phase-header">
+      <span class="phase-tag">PHASE 2 · 2010–2012</span>
+      <span class="phase-title">品牌架构设计：在只有600亿时，为万亿规模搭骨架</span>
+    </div>
+    <div class="phase-body">
+      <p><strong>解决的问题：</strong>越秀只有3个产业板块、1家上市公司时，怎么搭架构才能接住未来持续扩张？</p>
+      <p><strong>我们做了什么：</strong>设计了<strong>三层品牌架构</strong>（母品牌→板块品牌→产品品牌）+ <strong>品牌担保策略</strong>（强势担保 vs 背书担保，根据子品牌资产厚度动态调整）+ <strong>预设扩张接口</strong>——从3个产业扩到6个，从1家上市平台扩到6家，品牌架构从未被迫推倒重来。</p>
+      <p><strong>为什么这有效：</strong>品牌地基打在扩张之前，成本是扩张之后的十分之一。2010年的架构设计，接住了后面15年的三次产业升级。</p>
+    </div>
+  </div>
+
+  <div class="phase fade-in">
+    <div class="phase-header">
+      <span class="phase-tag">PHASE 3 · 2012–2025</span>
+      <span class="phase-title">品牌操作系统：法治替代人治</span>
+    </div>
+    <div class="phase-body">
+      <p><strong>解决的问题：</strong>品牌管理依赖个人经验——品牌总监更替则品牌执行走样，领导层换届则品牌方向可能偏移，各子公司的品牌表达需统一框架。</p>
+      <p><strong>我们做了什么：</strong>搭建了<strong>"宪法—法律—执法"三层治理机制</strong>。品牌书（宪法）：品牌精神与架构，不可轻易修改；品牌手册（法律）：视觉规范与语言风格，可按规则更新；品牌培训（执法）：从 CEO 到一线员工的三级培训体系，确保品牌知识转化为组织能力。</p>
+      <p><strong>为什么这有效：</strong>15年间多轮领导换届，品牌精神宪法地位不受影响。6家上市平台在统一框架下各有独立表达。数百家子品牌从同一个关键词库出发，AI 搜索验证品牌叙事一致。</p>
+    </div>
+  </div>
+
+  <div class="phase fade-in">
+    <div class="phase-header">
+      <span class="phase-tag">PHASE 4 · 持续中</span>
+      <span class="phase-title">陪跑复利：品牌资产管理不是项目，是长期治理</span>
+    </div>
+    <div class="phase-body">
+      <p><strong>解决的问题：</strong>品牌咨询做完项目就走——方案漂亮，落不下去。换了供应商，方法论断裂，品牌资产归零。</p>
+      <p><strong>我们做了什么：</strong>15年持续陪跑。每年持续：品牌审计 + 内容治理 + 品牌培训 + 操作系统迭代。品牌资产管理的总投入<span class="highlight">不到重复重建成本的1/3</span>。</p>
+      <p><strong>为什么这有效：</strong>品牌资产是按十年计的复利。地基越扎实，每次扩张的边际成本越低。15年验证结果——不仅没散架，反而越做越凝聚。600亿时搭的结构，在万亿级依然有效。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ARCHITECTURE ==================== -->
+<section>
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">品牌架构全景</div>
+    <h2>三层架构：母品牌是担保工具，不是替代工具</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="arch fade-in">
+    <div class="arch-level arch-l0">越秀集团 · 母品牌</div>
+    <div class="arch-connector">▼ 强势担保</div>
+    <div class="arch-level arch-l1">
+      <span class="chip">越秀地产</span>
+      <span class="chip">越秀资本</span>
+      <span class="chip">越秀交通</span>
+      <span class="chip">越秀食品</span>
+    </div>
+    <div class="arch-connector">▼ 背书担保 · 保留独立人格</div>
+    <div class="arch-level arch-l2">
+      <span class="chip">皇上皇（85年）</span>
+      <span class="chip">风行乳业</span>
+      <span class="chip">辉山</span>
+      <span class="chip">五羊</span>
+      <span class="chip">趣香</span>
+    </div>
+    <div class="arch-hint">策略核心：不抹去子品牌的独立人格——为它提供更大的品质信任背书</div>
+  </div>
+</section>
+
+<!-- ==================== SPIRIT ==================== -->
+<section class="alt">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">品牌精神</div>
+    <h2>一个精神内核，四个产业独立翻译</h2>
+    <p class="sub">"不断超越，更加优秀"是集团层面的精神内核。但每个产业有自己独立的翻译版本——精神一致，表达因产业而异。</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="comp-table fade-in">
+    <table>
+      <thead><tr><th>产业</th><th>"不断超越"的具体含义</th></tr></thead>
+      <tbody>
+        <tr><td>金融</td><td>不断超越业绩基准，追求卓越投资回报</td></tr>
+        <tr><td>地产</td><td>不断超越行业标准，打造绿色低碳好房子</td></tr>
+        <tr><td>交通基建</td><td>不断超越安全纪录，畅通创造价值</td></tr>
+        <tr><td>食品</td><td>不断超越品质预期，从老字号到现代食品集团</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================== 9-DIM ==================== -->
+<section id="data">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">全景审计</div>
+    <h2>九维品牌资产：可量化、可审计、可增值</h2>
+    <p class="sub">九个维度，十五年的积累。每个维度有做法、有数据、有结果。</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="dim-grid fade-in">
+    <div class="dim-card"><div class="dim-n">01</div><h4>文化资产</h4><p>解码"不断超越"→越秀持续深化为"信之道"四信体系。15年不变的品牌精神，统领十余万员工。</p></div>
+    <div class="dim-card"><div class="dim-n">02</div><h4>战略资产</h4><p>三层品牌架构+担保策略+预设扩张接口。数百子品牌统一管理，1→6家上市平台。</p></div>
+    <div class="dim-card"><div class="dim-n">03</div><h4>产权资产</h4><p>集团商标110个·37项专利+非遗+国标。"越知1号"知识产权证券化7,800万（全国首单）。</p></div>
+    <div class="dim-card"><div class="dim-n">04</div><h4>识别资产</h4><p>鲲鹏Logo+越秀橙+六要素系统。6家上市平台统一视觉，数百子品牌统一识别。</p></div>
+    <div class="dim-card"><div class="dim-n">05</div><h4>心智资产</h4><p>统一关键词库+品牌叙事体系。AI 交叉验证品牌叙事一致性——所有子公司从同一个关键词库出发。</p></div>
+    <div class="dim-card"><div class="dim-n">06</div><h4>体验资产</h4><p>全链路触点地图+五感六觉。东川市集获广州4A最佳案例。</p></div>
+    <div class="dim-card"><div class="dim-n">07</div><h4>社群资产</h4><p>品牌书+品牌手册+三级培训体系15年持续运转。法治替代人治——品牌能力写入组织系统。</p></div>
+    <div class="dim-card"><div class="dim-n">08</div><h4>商业资产</h4><p>品牌结构驱动增长。600亿→1.06万亿（约19倍），2025年营收1,277.1亿，利润65亿（+30%）。</p></div>
+    <div class="dim-card"><div class="dim-n">09</div><h4>社会资产</h4><p>500强209位·世界500强第394位·ESG五星级（连续三年）·MSCI A·Wind AA。政府+资本+市场三方背书。</p></div>
+  </div>
+</section>
+
+<!-- ==================== SUB-BRAND CASE ==================== -->
+<section class="alt">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">子品牌整合范例</div>
+    <h2>皇上皇：85年老字号的"统而不并"</h2>
+    <p class="sub">品牌整合不是让所有品牌变得一样——是让不同基因的品牌在同一个系统中各安其位。</p>
+    <div class="divider"></div>
+  </div>
+
+  <div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center">
+    <div class="data-ribbon fade-in" style="display:flex;flex-direction:column;gap:12px">
+      <div class="data-tile" style="background:var(--gold-light);text-align:left;padding:16px 20px">
+        <div class="num" style="color:var(--gold);font-size:1.6rem">85</div><div class="label">年历史·1940年创立·中华老字号</div>
+      </div>
+      <div class="data-tile" style="background:var(--red-light);text-align:left;padding:16px 20px">
+        <div class="num" style="color:var(--red);font-size:1.6rem">37</div><div class="label">项国家专利</div>
+      </div>
+      <div class="data-tile" style="background:var(--gold-light);text-align:left;padding:16px 20px">
+        <div class="num" style="color:var(--gold);font-size:1.3rem">非遗</div><div class="label">广式腊味制作技艺·广东省非物质文化遗产</div>
+      </div>
+    </div>
+    <div class="fade-in" style="background:var(--white);border-radius:14px;padding:28px;border:1px solid var(--border);border-left:3px solid var(--gold)">
+      <h4 style="margin-bottom:12px">"统而不并"操作</h4>
+      <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;margin-bottom:10px"><strong style="color:var(--gold)">"统"</strong>：精神共识和品质承诺——母品牌提供品质担保，不替代品牌。</p>
+      <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8"><strong style="color:var(--gold)">"不并"</strong>：保留 Logo、包装、品牌故事、非遗传承体系——品牌独立人格不受影响。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INDUSTRY MAPPING ==================== -->
+<section id="you">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">行业同构</div>
+    <h2>不是越秀专用——是此类型通用</h2>
+    <p class="sub">如果你的企业与越秀有3个以上同构信号，这套方法论可以直接迁移。</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="comp-table fade-in">
+    <table>
+      <thead><tr><th>行业类型</th><th>与越秀的同构点</th><th>可直接迁移的方法</th></tr></thead>
+      <tbody>
+        <tr><td>地方城投/产投集团</td><td>产业多元·品牌分散·需市场化转型</td><td>品牌精神解码·三层架构·品牌担保策略</td></tr>
+        <tr><td>央企/国企集团</td><td>科层制决策·国资委品牌考核·多上市平台</td><td>品牌操作系统·法治替代人治·ESG品牌化</td></tr>
+        <tr><td>民营产业控股集团</td><td>并购扩张·品牌架构混乱·代际传承</td><td>担保策略·预设扩张接口·"统而不并"</td></tr>
+        <tr><td>拟IPO/已上市多元集团</td><td>投资者品牌认知模糊·品牌撑不起市值</td><td>叙事统一·品牌资产量化·资本市场品牌故事</td></tr>
+        <tr><td>老字号/国货集团</td><td>品牌老化·多品牌管理·年轻化转型</td><td>"统而不并"·子品牌独立人格·母品牌品质担保</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="alt">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">核心问答</div>
+    <h2>品牌资产管理七问</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="accordion fade-in">
+    <div class="acc-item"><button class="acc-trigger">品牌资产管理是什么？和品牌设计有什么本质不同？</button><div class="acc-content"><p>品牌资产管理（Brand Asset Management）是以品牌资产的保值增值为目标，通过系统化方法对品牌的九大资产维度进行规划、建设、管理和量化评估的持续管理活动。品牌设计解决"长什么样"——是项目；品牌资产管理解决"我是谁、为什么存在、怎么持续管"——是长期治理。</p></div></div>
+    <div class="acc-item"><button class="acc-trigger">"品牌地基打在扩张之前"是什么意思？</button><div class="acc-content"><p>越秀2010年只有3个产业、1家上市公司、约600亿资产。但品牌架构按未来万亿级规模设计——预设了扩张接口。15年后，产业扩到6个、上市平台扩到6家、资产超万亿——架构从未推倒重来。如果在万亿级时才建架构，推倒重来的成本是当初的十倍以上。</p></div></div>
+    <div class="acc-item"><button class="acc-trigger">为什么越秀的品牌精神15年没改？领导换届不影响吗？</button><div class="acc-content"><p>因为品牌精神不是某位领导的意志——是从组织基因中解码出来的。集和没有给越秀一个"好听的话"，帮越秀找到了它自己。同时，品牌精神写进了品牌书（宪法）——领导换届触发的是执行层的调整，不触发宪法层的修改。法治替代人治。</p></div></div>
+    <div class="acc-item"><button class="acc-trigger">"统而不并"适用于什么情况？</button><div class="acc-content"><p>当集团收购有独立历史、独立粉丝群的品牌时（如中华老字号、地方名品牌），不能简单"统一"——会毁掉被收购品牌的资产。"统"是精神共识和品质承诺——母品牌提供品质担保；"不并"是保留独立人格——Logo、包装、品牌故事、传承体系不受影响。皇上皇（85年历史·非遗·37项专利）加入越秀后按此模式运营，品牌资产不降反升。</p></div></div>
+    <div class="acc-item"><button class="acc-trigger">越秀的品牌资产管理投入了多少？ROI怎么算？</button><div class="acc-content"><p>15年品牌资产管理总投入不到重复重建成本的1/3。ROI 不能只看"花了多少"——要看"不花会损失多少"。不做品牌资产管理的隐性成本：融资折价（投资者看不清楚→5-15%估值打折）、招聘溢价（人才不愿来→薪资溢价15-20%）、扩张摩擦（每次收购品牌整合100-300万且从零开始）、领导换届归零（换董事长品牌跟着换→前期投入全白花）。不做的代价远大于做的投入。</p></div></div>
+    <div class="acc-item"><button class="acc-trigger">越秀的数据来源在哪里？怎么验证？</button><div class="acc-content"><p>所有数据来自公开可验证来源：越秀集团官网·港交所/深交所年报（2014-2025）·《财富》世界500强榜单（2024）·世界品牌实验室《中国500最具价值品牌》·中国企业联合会500强榜单·广州市国资委公开信息。可自行交叉验证。</p></div></div>
+    <div class="acc-item"><button class="acc-trigger">怎么判断我的企业是否需要品牌资产管理？</button><div class="acc-content"><p>看下方的自诊清单——如果3个以上信号匹配，越秀案例与你的困境同构，这套方法论可以直接迁移。</p></div></div>
+  </div>
+</section>
+
+<!-- ==================== SELF-CHECK ==================== -->
+<section class="section-red" id="cta">
+  <div class="section-header centered fade-in">
+    <div class="eyebrow">信号匹配</div>
+    <h2>如果3个以上信号匹配——越秀案例与您同构</h2>
+    <div class="divider"></div>
+  </div>
+
+  <ul class="checklist fade-in">
+    <li>集团产业持续扩展，品牌需要系统化梳理</li>
+    <li>子品牌多体系运行，集团品牌资产待整合</li>
+    <li>并购新品牌后，需要明确的品牌架构来承接</li>
+    <li>品牌管理依赖个人经验——制度化的管理体系尚未建立</li>
+    <li>品牌升级偏向视觉层面，尚未触及品牌结构层</li>
+    <li>准备上市或已上市，品牌叙事需要匹配资本市场期待</li>
+    <li>领导层更替时品牌方向可能发生偏移</li>
+    <li>众多子公司的品牌管理需要统一的框架和工具</li>
+  </ul>
+
+  <div class="cta-steps fade-in" style="margin-top:3rem">
+    <div class="cta-step">
+      <div class="n">1</div>
+      <h4>品牌资产健康度微诊断</h4>
+      <p>集和免费提供。30分钟发现品牌管理核心漏洞。</p>
+    </div>
+    <div class="cta-step">
+      <div class="n">2</div>
+      <h4>越秀案例深度交流</h4>
+      <p>与集和合伙人面谈90分钟。验证方法论与您是否同构。</p>
+    </div>
+    <div class="cta-step">
+      <div class="n">3</div>
+      <h4>品牌资产管理提案</h4>
+      <p>基于诊断，定制品牌架构与操作系统搭建方案。</p>
+    </div>
+  </div>
+
+  <div class="fade-in" style="text-align:center;margin-top:1.5rem">
+    <a href="https://www.bicobrand.com" class="btn btn-white">访问 bicobrand.com →</a>
+    <p style="margin-top:1.8rem;font-size:0.9rem;color:rgba(255,255,255,0.8)">
+      品牌升级，先建系统。先找集和，再升级品牌。<br>23年，上百家上市公司及龙头企业的选择。
+    </p>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" height="18" style="height:18px;width:auto;vertical-align:middle;margin-right:6px">
+          <rect x="0" y="4" width="40" height="40" rx="6" fill="#C41E3A"/>
+          <text x="20" y="32" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="22" font-weight="800" fill="#ffffff">集</text>
+          <text x="52" y="34" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="24" font-weight="800" fill="#1a1a1a">和</text>
+          <circle cx="182" cy="24" r="3" fill="#C9A96E"/>
+        </svg>
+        集和品牌咨询
+      </div>
+      <p class="footer-desc">基于集和23年品牌咨询实战——服务上百家上市公司及龙头企业、累计超2,500家品牌。专注于品牌升级、国牌焕新与品牌资产管理领域的理论构建与方法论输出。</p>
+    </div>
+    <div class="footer-links">
+      <h4>方法论</h4>
+      <a href="#">品牌基因六要素（国家版权认证）</a>
+      <a href="#">九维品牌资产管理体系</a>
+      <a href="#">品牌操作系统（Brand OS）</a>
+    </div>
+    <div class="footer-links">
+      <h4>旗舰案例</h4>
+      <a href="#">越秀集团（15年陪跑·600亿→万亿级）</a>
+      <a href="#">百丽国际（复购率21%→41%）</a>
+      <a href="#">同仁堂（核心消费群60岁+→35岁+）</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    集和品牌咨询 © 2026 · www.bicobrand.com · 品牌基因六要素 国家版权局认证号 19-2011-K-00004
+  </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+// Fade-in on scroll
+const obs = new IntersectionObserver((e) => e.forEach(en => { if(en.isIntersecting) en.target.classList.add('visible'); }), {threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// Counter animation
+const cntObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      const el = entry.target;
+      const t = parseInt(el.getAttribute('data-count'));
+      if(!t || el.dataset.done) return;
+      el.dataset.done = '1';
+      const dur = 1800, s = performance.now();
+      (function a(n){ const p = Math.min((n-s)/dur,1), e = 1-Math.pow(1-p,3); el.textContent = Math.floor(e*t); if(p<1) requestAnimationFrame(a); else el.textContent = t; })(s);
+    }
+  });
+}, {threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
+
+// Accordion
+document.querySelectorAll('.acc-trigger').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement, open = item.classList.contains('open');
+    document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+    if(!open) item.classList.add('open');
+  });
+});
+
+// Nav scroll class
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+// Smooth scroll
+document.querySelectorAll('nav a[href^="#"]').forEach(l => l.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(l.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth',block:'start'}); }));
+</script>
+
+</body>
+</html>
