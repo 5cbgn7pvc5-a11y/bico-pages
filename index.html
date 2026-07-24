@@ -360,11 +360,11 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
     <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
       <li><a id="nav-home" class="active" onclick="showPage('home')" href="javascript:">首页</a></li>
-      <li><a id="nav-system" onclick="showPage('system')" href="javascript:">品牌银行系统</a></li>
-      <li><a id="nav-business" onclick="showPage('business')" href="javascript:">业务体系</a></li>
       <li><a id="nav-cases" onclick="showPage('cases')" href="javascript:">代表案例</a></li>
-      <li><a id="nav-knowledge" onclick="showPage('knowledge')" href="javascript:">知识中心</a></li>
+      <li><a id="nav-business" onclick="showPage('business')" href="javascript:">业务体系</a></li>
+      <li><a id="nav-system" onclick="showPage('system')" href="javascript:">品牌银行系统</a></li>
       <li><a id="nav-invest" onclick="showPage('invest')" href="javascript:">投资方案</a></li>
+      <li><a id="nav-knowledge" onclick="showPage('knowledge')" href="javascript:">知识中心</a></li>
       <li><a id="nav-about" onclick="showPage('about')" href="javascript:">关于集和</a></li>
     </ul>
     <div class="nav-cta"><a href="javascript:" onclick="showPage('invest')">预约咨询</a></div>
@@ -391,7 +391,7 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
         </div>
         <div class="hero-btns">
           <a class="btn btn-primary" href="javascript:" onclick="showPage('invest')">预约咨询</a>
-          <a class="btn btn-outline" href="javascript:" onclick="showSub('system','overview')">了解品牌银行</a>
+          <a class="btn btn-outline" href="javascript:" onclick="showPage('business')">了解业务体系</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -477,13 +477,13 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
       <div class="section-tag">Core Services</div>
       <h2>核心业务</h2>
       <div class="section-rule"></div>
-      <p>企业遇到的四个核心问题，集和一套系统全局解决</p>
+      <p>三级阶梯 + 三步走 + 持续服务——一套完整的品牌资产管理体系</p>
     </div>
     <div class="svc-grid">
-      <div class="svc-card" onclick="showSub('business','upgrade')"><div class="sc-num">01</div><h3>品牌升级</h3><p>从品牌诊断到系统构建，为企业提供全面的品牌升级解决方案。不只是换标识，而是建立可管理的品牌资产系统。</p><div class="sc-tag">品牌诊断 · 系统构建 · 落地实施</div></div>
-      <div class="svc-card" onclick="showSub('business','strategy')"><div class="sc-num">02</div><h3>品牌战略</h3><p>以品牌基因为核心，帮助企业定义品牌定位、战略方向与发展路径。先定义再定位，先有意义才有符号。</p><div class="sc-tag">品牌定义 · 战略定位 · 品牌架构</div></div>
-      <div class="svc-card" onclick="showSub('business','management')"><div class="sc-num">03</div><h3>品牌管理</h3><p>通过九维资产库、双锥价值链、五层信任塔、BCI 资产表，实现品牌资产的可量化、可管理、可增值、可入账。</p><div class="sc-tag">九维管理 · 信任资产 · BCI 评估</div></div>
-      <div class="svc-card" onclick="showSub('business','growth')"><div class="sc-num">04</div><h3>品牌增长</h3><p>AI 驱动的品牌增长引擎，通过 GEO 智能内容、AI 品牌基建、信任资产裂变，实现品牌资产的持续增值。</p><div class="sc-tag">GEO 内容 · AI 基建 · 资产裂变</div></div>
+      <div class="svc-card" onclick="showSub('business','tiers')"><div class="sc-num">01</div><h3>三级阶梯</h3><p>L1 品牌统一 · L2 品牌系统 · L3 全面管理——同一个"品牌升级"需求，不同企业需要的深度完全不同。先诊断，再决定做多深。</p><div class="sc-tag">匹配企业真实规模 · 按需选择</div></div>
+      <div class="svc-card" onclick="showSub('business','process')"><div class="sc-num">02</div><h3>三步走方法论</h3><p>诊断洞察 → 系统构建 → 落地实施。23 年验证的系统建设方法论——区别不是流程不同，是在每一步做多深、覆盖多广。</p><div class="sc-tag">诊断 · 构建 · 落地</div></div>
+      <div class="svc-card" onclick="showSub('business','ongoing')"><div class="sc-num">03</div><h3>持续服务</h3><p>品牌资产管理系统建成交付，不是终点——是起点。年度品牌资产运维，确保系统不退化、持续产生复利。</p><div class="sc-tag">基础启动 + 可选模块</div></div>
+      <div class="svc-card" onclick="showSub('system','ai')"><div class="sc-num">04</div><h3>AI 品牌基建</h3><p>Brand OS AI 原生运维系统——智能资产入库、合规风控、内容生产、资产体检。AI 时代品牌信息主权的基础设施。</p><div class="sc-tag">智能入库 · 内容生产 · 资产体检</div></div>
     </div>
   </div>
 </section>
@@ -535,82 +535,21 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
   </div>
 </section>
 
-<!-- 投资 -->
-<section>
-  <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Investment</div>
-      <h2>投资透明</h2>
-      <div class="section-rule"></div>
-      <p>品牌资产投资是透明的，有标准定价。价值可以被看见。</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="pricing-card"><div class="pc-tier">L1</div><h3>品牌统一</h3><p class="pc-sub">品牌诊断 + 基础系统构建</p><div class="pc-price"><span class="pc-currency">¥</span>150<span class="pc-currency">万起</span></div><a class="btn btn-outline-dark" href="javascript:" onclick="showPage('invest')" style="width:100%;text-align:center">了解详情</a></div>
-      <div class="pricing-card featured"><div class="pc-tier">推荐 · L2</div><h3>品牌系统</h3><p class="pc-sub">完整品牌资产管理系统</p><div class="pc-price"><span class="pc-currency">¥</span>300<span class="pc-currency">万起</span></div><a class="btn btn-primary" href="javascript:" onclick="showPage('invest')" style="width:100%;text-align:center">了解详情</a></div>
-      <div class="pricing-card"><div class="pc-tier">L3</div><h3>全面管理</h3><p class="pc-sub">全面品牌资产管理 + 持续服务</p><div class="pc-price"><span class="pc-currency">¥</span>600<span class="pc-currency">万起</span></div><a class="btn btn-outline-dark" href="javascript:" onclick="showPage('invest')" style="width:100%;text-align:center">了解详情</a></div>
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
     <h2>让品牌成为可量化的核心资产</h2>
-    <p>预约品牌资产诊断，了解您的品牌资产价值</p>
+    <p>预约品牌资产诊断，了解适合您的服务方案</p>
     <div class="btn-group">
       <a class="btn btn-primary" href="javascript:" onclick="showPage('invest')" style="background:#fff;color:var(--red)">预约咨询</a>
-      <a class="btn btn-outline" href="javascript:" onclick="showSub('knowledge','whitepaper')">下载白皮书</a>
+      <a class="btn btn-outline" href="javascript:" onclick="showPage('business')">了解业务体系</a>
     </div>
   </div>
 </section>
 
 </div><!-- /page-home -->
 
-<!-- ============ PAGE 2–7 与 v4.2 一致，仅颜色变量跟随 :root 更新 ============ -->
-<div id="page-system" class="page">
-<div class="page-hero"><div class="container"><h1>BICO 企业品牌银行</h1><p>品牌银行 = 九维资产库 + 双锥价值链 + 五层信任塔 + BCI 资产表 + AI 品牌基建</p><div class="page-rule"></div></div></div>
-<div class="sub-nav"><div class="sub-nav-inner">
-<a class="active" href="javascript:" onclick="showSub('system','overview')">系统总览</a>
-<a href="javascript:" onclick="showSub('system','nine-d')">九维资产库</a>
-<a href="javascript:" onclick="showSub('system','dual-cone')">双锥价值链</a>
-<a href="javascript:" onclick="showSub('system','trust-tower')">五层信任塔</a>
-<a href="javascript:" onclick="showSub('system','bci')">BCI 资产表</a>
-<a href="javascript:" onclick="showSub('system','ai')">AI 品牌基建</a>
-</div></div>
-<div id="sub-system-overview" class="sub-page active"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Brand Bank System</div><h2>企业品牌银行 · 全景</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">像经营银行一样经营品牌资产。每个企业都有品牌资产，只是被散落在各处、被经验管理、被时间消耗。企业品牌银行——把品牌资产从"说不清的无形资产"转化为可量化、可管理、可增值、可入账的核心资产。</p><div class="two-col mt-32"><div><h3>三步逻辑</h3><p style="font-family:var(--font-serif);font-size:22px;color:var(--gray-deep);font-weight:600;margin-bottom:16px">先摸清家底 → 再建系统 → 持续增值</p><p>第一步摸清企业的品牌资产现状；第二步建立品牌资产管理系统；第三步让品牌资产持续增长。</p></div><div><h3>三个层级</h3><p style="font-family:var(--font-serif);font-size:22px;color:var(--gray-deep);font-weight:600;margin-bottom:16px">战略根基 · 品牌表达 · 增长裂变</p><p>从根基到表达再到裂变，三层递进，不可跳跃。</p></div></div></div></section><section class="content-section bg-light"><div class="container"><h2>六大系统模块</h2><p style="font-size:14px;color:var(--gray-mid);margin-bottom:32px;max-width:600px">每一套都是集和方法论的结晶，但对客户而言，只关心它能解决什么实际问题。</p><div class="two-col mt-16" style="grid-template-columns:1fr 1fr 1fr;gap:20px"><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">01 全面诊断</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌资产体检</h4><p style="font-size:13px;color:var(--gray-mid)">从企业文化到社会责任，9 个维度摸清企业品牌资产的家底——哪里值钱、哪里漏了、哪里该投。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">02 价值转化</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">从战略到市场</h4><p style="font-size:13px;color:var(--gray-mid)">把企业战略转化为消费者可感知的品牌价值。收拢战略方向、铸核品牌 DNA、放大市场增长。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">03 信任建设</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">消费者信任体系</h4><p style="font-size:13px;color:var(--gray-mid)">从产品功能到信念共鸣，五层递进——让消费者从"试试看"变成"非你不可"，品牌溢价来自信任存款。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">04 量化评估</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌价值仪表盘</h4><p style="font-size:13px;color:var(--gray-mid)">把品牌资产从"感觉"变成"数据"——品牌值多少钱、增长了多少、哪里有风险，一张表看清楚。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">05 智能运维</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">AI 品牌管理系统</h4><p style="font-size:13px;color:var(--gray-mid)">AI 自动管理品牌资产——智能入库、合规风控、内容生产、资产体检，品牌管理从人工升级为智能。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">06 全景管理</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌资产驾驶舱</h4><p style="font-size:13px;color:var(--gray-mid)">六面板全景看板——品牌资产、信任健康、AI 可见性、竞争对标，一把手的品牌决策驾驶舱。</p></div></div></div></section></div>
-<div id="sub-system-nine-d" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Nine Dimensions</div><h2>九维资产库</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">九维资产库是企业的"品牌对公总账本"——从 9 个维度全面评估品牌资产。</p><div class="tb-wrap mt-32"><table><thead><tr><th>账户</th><th>层级</th><th>维度</th><th>说明</th></tr></thead><tbody>
-<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">本金账户</td><td rowspan="3">核战略层·沉淀根基</td><td>① 文化资产</td><td>企业文化基因·精神底色·价值观体系</td></tr>
-<tr><td>② 战略资产</td><td>战略定位·发展蓝图·品类占位</td></tr>
-<tr><td>③ 产权资产</td><td>商标·专利·知识产权·品牌法律保护</td></tr>
-<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">储蓄账户</td><td rowspan="3">核引擎层·沉淀表达</td><td>④ 识别资产</td><td>品牌识别系统·视觉符号·感官体验</td></tr>
-<tr><td>⑤ 心智资产</td><td>消费者认知·品牌联想·心智份额</td></tr>
-<tr><td>⑥ 体验资产</td><td>产品体验·服务体验·触点管理</td></tr>
-<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">复利账户</td><td rowspan="3">核裂变层·沉淀价值</td><td>⑦ 社群资产</td><td>用户社群·粉丝经济·口碑传播</td></tr>
-<tr><td>⑧ 商业资产</td><td>渠道网络·商业模式·生态伙伴</td></tr>
-<tr><td>⑨ 社会资产</td><td>社会影响力·公众信任·AI可见性</td></tr>
-</tbody></table></div></div></section></div>
-<div id="sub-system-dual-cone" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Dual-Cone Value Chain</div><h2>双锥价值链</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">内外价值转化的主轴——前段收拢锥，中段铸核区，后段放大锥。</p><div class="process-grid mt-32"><div class="process-step"><div class="ps-step">前段</div><div class="ps-bar"></div><h4>收拢锥</h4><p>收拢战略 · 洞察市场 · 聚焦核心</p></div><div class="process-step" style="border-left:2px solid var(--red)"><div class="ps-step">中段 · 核心</div><div class="ps-bar"></div><h4>品牌 DNA</h4><p>定义·定位·人格·名号·符号·口号</p></div><div class="process-step"><div class="ps-step">后段</div><div class="ps-bar"></div><h4>放大锥</h4><p>放大增长 · 裂变传播 · 价值释放</p></div></div></div></section></div>
-<div id="sub-system-trust-tower" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Trust Tower</div><h2>五层信任塔</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">消费者的"信任储蓄账户"——从功能满足到信念共鸣，五层递进。</p><div class="process-grid mt-32"><div class="process-step"><div class="ps-step">L1</div><div class="ps-bar"></div><h4>功能层</h4><p>产品满足基本需求</p></div><div class="process-step"><div class="ps-step">L2</div><div class="ps-bar"></div><h4>稳定层</h4><p>持续一致的交付</p></div><div class="process-step"><div class="ps-step">L3</div><div class="ps-bar"></div><h4>信任层</h4><p>品牌成为安全选择</p></div><div class="process-step"><div class="ps-step">L4</div><div class="ps-bar"></div><h4>共识层</h4><p>价值观共鸣</p></div><div class="process-step" style="border:1px solid var(--red)"><div class="ps-step" style="color:var(--red)">L5</div><div class="ps-bar" style="background:var(--red)"></div><h4>信念层</h4><p style="color:var(--gray-deep);font-weight:500">品牌成为信仰</p></div></div></div></section></div>
-<div id="sub-system-bci" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">BCI Asset Table</div><h2>BCI 资产表</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">品牌资产评估的量化工具——将品牌资产从"说不清的无形资产"转化为可量化、可追踪的指标体系。</p></div></section></div>
-<div id="sub-system-ai" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">AI Brand Infrastructure</div><h2>AI 品牌基建</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">Brand OS AI 原生运维系统——智能资产入库、智能合规风控、智能内容生产、BCI 资产体检。</p></div></section></div>
-</div><!-- /page-system -->
-
-<div id="page-business" class="page">
-<div class="page-hero"><div class="container"><h1>业务体系</h1><p>企业遇到的四个核心问题，集和一套系统全局解决</p><div class="page-rule"></div></div></div>
-<div class="sub-nav"><div class="sub-nav-inner">
-<a class="active" href="javascript:" onclick="showSub('business','upgrade')">品牌升级</a>
-<a href="javascript:" onclick="showSub('business','strategy')">品牌战略</a>
-<a href="javascript:" onclick="showSub('business','management')">品牌管理</a>
-<a href="javascript:" onclick="showSub('business','growth')">品牌增长</a>
-<a href="javascript:" onclick="showSub('business','process')">服务流程</a>
-</div></div>
-<div id="sub-business-upgrade" class="sub-page active"><section class="content-section"><div class="container"><h2>品牌升级</h2><p class="intro-text">不只是换标识——从品牌诊断到系统构建。</p><div class="tb-wrap"><table><thead><tr><th>客户常说的</th><th>集和对应的</th><th>背后的系统</th></tr></thead><tbody><tr><td>"我们要做品牌升级"</td><td>品牌资产管理系统升级</td><td>九维诊断→系统构建</td></tr><tr><td>"要做品牌战略"</td><td>品牌DNA定义+战略定位</td><td>双锥·品牌基因六要素</td></tr><tr><td>"要做企业文化"</td><td>品牌文化资产梳理</td><td>九维·文化资产</td></tr><tr><td>"要做品牌VI"</td><td>品牌识别系统构建</td><td>品牌基因·符号+名号</td></tr><tr><td>"要做营销增长"</td><td>品牌信任资产裂变</td><td>五层信任塔</td></tr></tbody></table></div></div></section></div>
-<div id="sub-business-strategy" class="sub-page"><section class="content-section"><div class="container"><h2>品牌战略</h2><p class="intro-text">以品牌基因为核心，先定义再定位，先有意义才有符号。</p></div></section></div>
-<div id="sub-business-management" class="sub-page"><section class="content-section"><div class="container"><h2>品牌管理</h2><p class="intro-text">通过四大体系实现品牌资产的全生命周期管理。</p></div></section></div>
-<div id="sub-business-growth" class="sub-page"><section class="content-section"><div class="container"><h2>品牌增长</h2><p class="intro-text">AI 驱动的品牌增长引擎。</p></div></section></div>
-<div id="sub-business-process" class="sub-page"><section class="content-section"><div class="container"><h2>服务流程</h2><p class="intro-text">三步法——从诊断到系统构建到落地交付。</p><div class="process-grid mt-32"><div class="process-step"><div class="ps-step">Step 01</div><div class="ps-bar"></div><h4>诊断与洞察</h4><p>品牌诊断·行业洞察·竞争分析·消费者研究</p></div><div class="process-step"><div class="ps-step">Step 02</div><div class="ps-bar"></div><h4>系统构建</h4><p>打地基·建系统·立标准</p></div><div class="process-step"><div class="ps-step">Step 03</div><div class="ps-bar"></div><h4>落地交付</h4><p>设计落地·内容落地·AI基建·持续服务</p></div></div></div></section></div>
-</div>
-
+<!-- ============ PAGE 2: REPRESENTATIVE CASES ============ -->
 <div id="page-cases" class="page">
 <div class="page-hero"><div class="container"><h1>代表案例</h1><p>23 年深耕，100+ 上市公司，2500+ 项目实战</p><div class="page-rule"></div></div></div>
 <div class="sub-nav"><div class="sub-nav-inner">
@@ -625,6 +564,341 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 <div id="sub-cases-more" class="sub-page"><section class="content-section"><div class="container"><h2>更多案例</h2><p class="intro-text">23 年 · 100+ 上市公司 · 2500+ 项目</p><div class="svc-grid mt-32"><div class="svc-card"><div class="sc-num" style="opacity:0.3">·</div><h3>广汽埃安</h3><p>新能源 · 品牌资产从零到一的系统构建</p></div><div class="svc-card"><div class="sc-num" style="opacity:0.3">·</div><h3>良品铺子</h3><p>国货品牌 · 品牌资产管理系统升级</p></div></div></div></section></div>
 </div>
 
+<!-- ============ PAGE 3: BUSINESS SYSTEM ============ -->
+<div id="page-business" class="page">
+<div class="page-hero"><div class="container"><h1>业务体系</h1><p>三级阶梯 · 三步走 · 持续服务——完整的品牌资产管理体系</p><div class="page-rule"></div></div></div>
+<div class="sub-nav"><div class="sub-nav-inner">
+<a class="active" href="javascript:" onclick="showSub('business','tiers')">三级阶梯</a>
+<a href="javascript:" onclick="showSub('business','process')">三步走</a>
+<a href="javascript:" onclick="showSub('business','ongoing')">持续服务</a>
+</div></div>
+
+<div id="sub-business-tiers" class="sub-page active">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Service Tiers</div>
+  <h2>三级阶梯 · 匹配企业真实需求</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">同一句"品牌升级"，不同企业的深度完全不同。集和用三级阶梯判断——先诊断企业品牌问题的深度，再决定做多深、谁来做的方案。</p>
+</div>
+
+<div class="tb-wrap">
+<table>
+<thead><tr><th style="width:18%"></th><th style="width:27%">L1 品牌统一</th><th style="width:27%">L2 品牌系统</th><th style="width:28%">L3 全面管理</th></tr></thead>
+<tbody>
+<tr><td>适合企业</td><td>单品牌/成长型企业<br>年营收 5–50 亿</td><td>集团/上市公司<br>年营收 50–200 亿</td><td>大型集团/上市集团<br>年营收 200 亿+</td></tr>
+<tr><td>解决的问题</td><td>品牌形象与企业实力匹配<br>建立基础管理工具</td><td>品牌系统性治理<br>架构·宪法·叙事·管理机制</td><td>全维度品牌资产管理平台<br>文化战略+组织传承+AI信息主权</td></tr>
+<tr><td>核心交付</td><td>品牌诊断+基因六要素<br>+识别系统(VI)</td><td>诊断+内核+架构+九维<br>+VI+治理+培训</td><td>全维度+信任塔+双锥<br>+AI基建+创始人级总控</td></tr>
+<tr><td>创始人参与</td><td>不出场</td><td>关键节点参与<br>（创始人深访·战略工作坊）</td><td>全流程总控</td></tr>
+<tr class="highlight-row"><td style="font-weight:700">基础投资</td><td style="font-weight:700;color:var(--red)">¥150 万起</td><td style="font-weight:700;color:var(--red)">¥300 万起</td><td style="font-weight:700;color:var(--red)">¥600 万起</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="two-col mt-48">
+<div>
+<h3>阶梯不是"产品"</h3>
+<p>——是对企业品牌问题深度的判断。创始人级别团队先做深度诊断，确认企业需要哪个深度的系统，再出方案。</p>
+</div>
+<div>
+<h3>从轻量入口开始</h3>
+<p>免费初检 → 品牌资产全景诊断（20–30万/3–4周），进入核心服务后全额抵扣。不需要先做决策再看见证据。</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-business-process" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Methodology</div>
+  <h2>三步走 · 系统建设方法论</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">集和23年验证的系统建设方法论——L1到L3的区别不是流程不同，而是在每一步做多深、覆盖多广。</p>
+</div>
+
+<div class="process-grid" style="grid-template-columns:repeat(3,1fr)">
+<div class="process-step"><div class="ps-step">Step 01</div><div class="ps-bar"></div><h4>诊断与洞察</h4><p>九维品牌资产体检 · 行业与竞品研究 · 管理层深度访谈 · AI可见性基线 · 消费者洞察</p></div>
+<div class="process-step"><div class="ps-step">Step 02</div><div class="ps-bar"></div><h4>系统构建</h4><p>品牌内核定义 · 战略定位 · 品牌架构 · 基因六要素 · 九维资产库 · 识别系统 · AI基建架构</p></div>
+<div class="process-step"><div class="ps-step">Step 03</div><div class="ps-bar"></div><h4>落地实施</h4><p>VI落地 · 品牌书宣导 · 全触点标准化 · 管理委员会启动 · AI部署 · 组织移交</p></div>
+</div>
+
+<div class="tb-wrap mt-48">
+<table>
+<thead><tr><th>流程</th><th>L1 品牌统一</th><th>L2 品牌系统</th><th>L3 全面管理</th></tr></thead>
+<tbody>
+<tr><td>诊断洞察</td><td>4模块·品牌盘点→DNA初检→触点→竞品</td><td>10模块·含九维体检·市场调研·AI基线</td><td>15模块·含信任塔·双锥·创始人精神萃取</td></tr>
+<tr><td>系统构建</td><td>2模块·定义→基因六要素</td><td>11模块·含架构·宪法·九维·叙事</td><td>12模块·含AI架构·双锥·信任塔</td></tr>
+<tr><td>落地实施</td><td>4模块·VI→物料→导视</td><td>8模块·含子品牌VI·触点·培训·治理</td><td>15模块·含全触点·AI部署·品牌委员会</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-business-ongoing" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Annual Maintenance</div>
+  <h2>持续服务 · 年度品牌资产运维</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">品牌资产管理系统建成交付，不是终点——是起点。系统不运营，就会退化为静态文件。</p>
+</div>
+
+<div class="two-col">
+<div class="pricing-card" style="padding:36px 28px;border:1px solid var(--red);border-radius:var(--radius)">
+  <div class="pc-tier">基础启动</div>
+  <div class="pc-price" style="font-size:32px"><span class="pc-currency">¥</span>20<span class="pc-currency">万 / 年</span></div>
+  <p style="font-size:13px;color:var(--gray-mid);margin-bottom:20px">确保系统运行有对接、有检查、有计划</p>
+  <ul class="pc-features">
+    <li>年度品牌资产管理运营计划制定</li>
+    <li>系统初始化与年度健康检查</li>
+    <li>月度/季度对接机制建立</li>
+    <li>基础技术支持（九维·文件规范·问题响应）</li>
+    <li>年度品牌资产简报</li>
+  </ul>
+  <a class="btn btn-primary" href="javascript:" onclick="showPage('invest')" style="width:100%;text-align:center">了解详情</a>
+</div>
+<div>
+  <h3>可选服务模块</h3>
+  <p style="font-size:14px;color:var(--gray-mid);margin-bottom:16px">按需选择，不为用不上的功能买单</p>
+  <div class="tb-wrap">
+    <table>
+      <thead><tr><th>模块</th><th>频率</th><th>费用参考</th></tr></thead>
+      <tbody>
+        <tr><td>M-01 月度品牌资产报告</td><td>每月1次</td><td>18–24万/年</td></tr>
+        <tr><td>M-02 AI可见性与舆情监测</td><td>7×24+月报</td><td>24–36万/年</td></tr>
+        <tr><td>M-03 七大关系利益人情报</td><td>每周推送+月报</td><td>15–20万/年</td></tr>
+        <tr><td>M-04 品牌内部宣导培训</td><td>每季度1次</td><td>12–18万/年</td></tr>
+        <tr><td>M-05 品牌管理委员会运作</td><td>每季度1次</td><td>15–20万/年</td></tr>
+        <tr><td>M-06 年度品牌战略工作坊</td><td>每年1次</td><td>20–30万/次</td></tr>
+        <tr><td>M-07 AI搜索内容矩阵运营</td><td>每月2–4篇</td><td>18–24万/年</td></tr>
+        <tr><td>M-08 季度品牌资产复评</td><td>每季度1次</td><td>12–18万/年</td></tr>
+        <tr><td>M-09 年度品牌资产白皮书</td><td>每年1次</td><td>12–18万/次</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--gray-text);margin-top:12px"><strong>推荐组合</strong>：L2标准运行 62–80万/年 · L3全面运行 154–212万/年（含AI监测）</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+</div>
+
+<!-- ============ PAGE 4: BRAND BANK SYSTEM ============ -->
+<div id="page-system" class="page">
+<div class="page-hero"><div class="container"><h1>BICO 企业品牌银行</h1><p>品牌银行 = 九维资产库 + 双锥价值链 + 五层信任塔 + BCI 资产表 + AI 品牌基建 → 360 品牌资产驾驶舱</p><div class="page-rule"></div></div></div>
+<div class="sub-nav"><div class="sub-nav-inner">
+<a class="active" href="javascript:" onclick="showSub('system','overview')">系统总览</a>
+<a href="javascript:" onclick="showSub('system','nine-d')">九维资产库</a>
+<a href="javascript:" onclick="showSub('system','dual-cone')">双锥价值链</a>
+<a href="javascript:" onclick="showSub('system','trust-tower')">五层信任塔</a>
+<a href="javascript:" onclick="showSub('system','bci')">BCI 资产表</a>
+<a href="javascript:" onclick="showSub('system','ai')">AI 品牌基建</a>
+</div></div>
+<div id="sub-system-overview" class="sub-page active"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Brand Bank System</div><h2>企业品牌银行 · 全景</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">像经营银行一样经营品牌资产。每个企业都有品牌资产，只是被散落在各处、被经验管理、被时间消耗。企业品牌银行——把品牌资产从"说不清的无形资产"转化为可量化、可管理、可增值、可入账的核心资产。</p><div class="two-col mt-32"><div><h3>三步逻辑</h3><p style="font-family:var(--font-serif);font-size:22px;color:var(--gray-deep);font-weight:600;margin-bottom:16px">先摸清家底 → 再建系统 → 持续增值</p><p class="intro-text" style="max-width:680px">第一步摸清企业的品牌资产现状（九维资产库诊断）；第二步建立品牌资产管理系统（品牌DNA+管理机制）；第三步让品牌资产持续增长（信任建设+AI运维）。</p></div><div><h3>三个层级</h3><p style="font-family:var(--font-serif);font-size:22px;color:var(--gray-deep);font-weight:600;margin-bottom:16px">战略根基 · 品牌表达 · 增长裂变</p><p class="intro-text" style="max-width:680px">从根基到表达再到裂变，三层递进，不可跳跃。对应九维资产库的三大账户：本金账户（根基）、储蓄账户（表达）、复利账户（裂变）。</p></div></div></div></section><section class="content-section bg-light"><div class="container"><h2>六大系统模块</h2><p style="font-size:14px;color:var(--gray-mid);margin-bottom:32px;max-width:600px">每一套都是集和方法论的结晶，但对客户而言，只关心它能解决什么实际问题。</p><div class="two-col" style="grid-template-columns:1fr 1fr 1fr;gap:20px"><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">01 全面诊断</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌资产体检</h4><p style="font-size:13px;color:var(--gray-mid)">从企业文化到社会责任，9 个维度摸清企业品牌资产的家底——哪里值钱、哪里漏了、哪里该投。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">02 价值转化</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">从战略到市场</h4><p style="font-size:13px;color:var(--gray-mid)">把企业战略转化为消费者可感知的品牌价值。收拢战略方向、铸核品牌 DNA、放大市场增长。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">03 信任建设</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">消费者信任体系</h4><p style="font-size:13px;color:var(--gray-mid)">从产品功能到信念共鸣，五层递进——让消费者从"试试看"变成"非你不可"，品牌溢价来自信任存款。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">04 量化评估</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌价值仪表盘</h4><p style="font-size:13px;color:var(--gray-mid)">把品牌资产从"感觉"变成"数据"——品牌值多少钱、增长了多少、哪里有风险，一张表看清楚。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">05 智能运维</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">AI 品牌管理系统</h4><p style="font-size:13px;color:var(--gray-mid)">AI 自动管理品牌资产——智能入库、合规风控、内容生产、资产体检，品牌管理从人工升级为智能。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">06 全景管理</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌资产驾驶舱</h4><p style="font-size:13px;color:var(--gray-mid)">六面板全景看板——品牌资产、信任健康、AI 可见性、竞争对标，一把手的品牌决策驾驶舱。</p></div></div></div></section></div>
+<div id="sub-system-nine-d" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Nine Dimensions</div><h2>九维资产库</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">九维资产库是企业的"品牌对公总账本"——从 9 个维度全面评估品牌资产，按三大账户归类。</p><div class="tb-wrap mt-32"><table><thead><tr><th>账户</th><th>层级</th><th>维度</th><th>说明</th></tr></thead><tbody>
+<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">本金账户</td><td rowspan="3">核战略层·沉淀根基</td><td>① 文化资产</td><td>企业文化基因·精神底色·价值观体系</td></tr>
+<tr><td>② 战略资产</td><td>战略定位·发展蓝图·品类占位</td></tr>
+<tr><td>③ 产权资产</td><td>商标·专利·知识产权·品牌法律保护</td></tr>
+<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">储蓄账户</td><td rowspan="3">核引擎层·沉淀表达</td><td>④ 识别资产</td><td>品牌识别系统·视觉符号·感官体验</td></tr>
+<tr><td>⑤ 心智资产</td><td>消费者认知·品牌联想·心智份额</td></tr>
+<tr><td>⑥ 体验资产</td><td>产品体验·服务体验·触点管理</td></tr>
+<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">复利账户</td><td rowspan="3">核裂变层·沉淀价值</td><td>⑦ 社群资产</td><td>用户社群·粉丝经济·口碑传播</td></tr>
+<tr><td>⑧ 商业资产</td><td>渠道网络·商业模式·生态伙伴</td></tr>
+<tr><td>⑨ 社会资产</td><td>社会影响力·公众信任·AI可见性</td></tr>
+</tbody></table></div></div></section></div>
+<div id="sub-system-dual-cone" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Dual-Cone Value Chain</div><h2>双锥价值链</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">内外价值转化的主轴——前段收拢战略，中段铸核品牌DNA，后段放大增长。核心锚点是品牌基因六要素（定义·定位·人格·名号·符号·口号），居于双锥正中心。</p><div class="process-grid mt-32"><div class="process-step"><div class="ps-step">前段</div><div class="ps-bar"></div><h4>收拢锥</h4><p>收拢战略 · 洞察市场 · 聚焦核心</p></div><div class="process-step" style="border-left:2px solid var(--red)"><div class="ps-step">中段 · 核心</div><div class="ps-bar"></div><h4>品牌 DNA</h4><p>定义·定位·人格·名号·符号·口号</p></div><div class="process-step"><div class="ps-step">后段</div><div class="ps-bar"></div><h4>放大锥</h4><p>放大增长 · 裂变传播 · 价值释放</p></div></div></div></section></div>
+<div id="sub-system-trust-tower" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Trust Tower</div><h2>五层信任塔</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">消费者的"信任储蓄账户"——从功能满足到信念共鸣，五层递进。品牌溢价不是定价策略，是信任存款的利息。</p><div class="process-grid mt-32"><div class="process-step"><div class="ps-step">L1</div><div class="ps-bar"></div><h4>功能层</h4><p>产品满足基本需求</p></div><div class="process-step"><div class="ps-step">L2</div><div class="ps-bar"></div><h4>稳定层</h4><p>持续一致的交付</p></div><div class="process-step"><div class="ps-step">L3</div><div class="ps-bar"></div><h4>信任层</h4><p>品牌成为安全选择</p></div><div class="process-step"><div class="ps-step">L4</div><div class="ps-bar"></div><h4>共识层</h4><p>价值观共鸣</p></div><div class="process-step" style="border:1px solid var(--red)"><div class="ps-step" style="color:var(--red)">L5</div><div class="ps-bar" style="background:var(--red)"></div><h4>信念层</h4><p style="color:var(--gray-deep);font-weight:500">品牌成为信仰</p></div></div></div></section></div>
+<div id="sub-system-bci" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">BCI Asset Table</div><h2>BCI 资产表</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">品牌资产评估的量化工具——将品牌资产从"说不清的无形资产"转化为可量化、可追踪的指标体系。与资产评估标准（ISO 10668）映射，支持品牌价值货币化评估。</p></div></section></div>
+<div id="sub-system-ai" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">AI Brand Infrastructure</div><h2>AI 品牌基建</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">Brand OS AI 原生运维系统——四大智能模块：<strong>聚</strong>（智能资产入库）· <strong>核</strong>（智能合规风控）· <strong>飞</strong>（智能内容生产）· <strong>评</strong>（BCI 资产体检）。对应双锥价值链"收拢→铸核→放大"的执行逻辑。</p></div></section></div>
+</div>
+
+<!-- ============ PAGE 5: INVESTMENT ============ -->
+<div id="page-invest" class="page">
+<div class="page-hero"><div class="container"><h1>投资方案</h1><p>品牌资产投资是透明的，有标准定价。价值可以被看见。</p><div class="page-rule"></div></div></div>
+<div class="sub-nav"><div class="sub-nav-inner">
+<a class="active" href="javascript:" onclick="showSub('invest','plans')">投资方案</a>
+<a href="javascript:" onclick="showSub('invest','value')">价值承诺</a>
+<a href="javascript:" onclick="showSub('invest','inquiry')">在线询价</a>
+</div></div>
+
+<div id="sub-invest-plans" class="sub-page active">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:48px">
+  <div class="section-tag">Investment</div>
+  <h2>标准投资方案</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">三个层级，匹配不同规模企业的品牌资产管理需求。固定总价报价，不按人天计费。</p>
+</div>
+
+<div class="pricing-grid">
+<div class="pricing-card">
+  <div class="pc-tier">L1</div>
+  <h3>品牌统一</h3>
+  <p class="pc-sub">品牌诊断 + 基础系统构建</p>
+  <div class="pc-price"><span class="pc-currency">¥</span>150<span class="pc-currency">万起</span></div>
+  <p style="font-size:12px;color:var(--gray-mid);margin-bottom:20px">适合单品牌/成长型企业 · 年营收5–50亿</p>
+  <ul class="pc-features">
+    <li>品牌资产诊断与评估</li>
+    <li>品牌内核定义与定位</li>
+    <li>品牌基因六要素手册</li>
+    <li>品牌识别系统（VI）</li>
+    <li>项目负责人：总监级别</li>
+  </ul>
+  <a class="btn btn-outline-dark" href="javascript:" onclick="showSub('invest','inquiry')" style="width:100%;text-align:center">询价 →</a>
+</div>
+<div class="pricing-card featured">
+  <div class="pc-tier">推荐 · L2</div>
+  <h3>品牌系统</h3>
+  <p class="pc-sub">完整品牌资产管理系统</p>
+  <div class="pc-price"><span class="pc-currency">¥</span>300<span class="pc-currency">万起</span></div>
+  <p style="font-size:12px;color:var(--gray-mid);margin-bottom:20px">适合集团/上市公司 · 年营收50–200亿</p>
+  <ul class="pc-features">
+    <li>含L1全部内容</li>
+    <li>品牌架构与品牌宪法</li>
+    <li>九维资产库搭建</li>
+    <li>品牌管理委员会机制</li>
+    <li>组织赋能与培训体系</li>
+  </ul>
+  <a class="btn btn-primary" href="javascript:" onclick="showSub('invest','inquiry')" style="width:100%;text-align:center">询价 →</a>
+</div>
+<div class="pricing-card">
+  <div class="pc-tier">L3</div>
+  <h3>全面管理</h3>
+  <p class="pc-sub">全维度品牌资产管理 + AI基建</p>
+  <div class="pc-price"><span class="pc-currency">¥</span>600<span class="pc-currency">万起</span></div>
+  <p style="font-size:12px;color:var(--gray-mid);margin-bottom:20px">适合大型集团/上市集团 · 年营收200亿+</p>
+  <ul class="pc-features">
+    <li>含L2全部内容</li>
+    <li>双锥价值链 + 五层信任塔</li>
+    <li>AI品牌基建（架构+部署）</li>
+    <li>创始人级别全流程总控</li>
+    <li>年度品牌战略工作坊</li>
+  </ul>
+  <a class="btn btn-outline-dark" href="javascript:" onclick="showSub('invest','inquiry')" style="width:100%;text-align:center">询价 →</a>
+</div>
+</div>
+
+<div class="section-header" style="margin-top:60px;margin-bottom:32px">
+  <h3 style="font-size:26px">年度持续服务</h3>
+  <p>系统建成后的年度运行保障</p>
+</div>
+<div class="pricing-grid">
+<div class="pricing-card">
+  <div class="pc-tier">基础运行</div>
+  <div class="pc-price" style="font-size:28px"><span class="pc-currency">¥</span>62<span class="pc-currency">万/年起</span></div>
+  <p style="font-size:12px;color:var(--gray-mid);margin-bottom:16px">基础启动+月度报告+培训+季度复评</p>
+  <p style="font-size:12px;color:var(--gray-text);margin-bottom:0">适合L2企业</p>
+</div>
+<div class="pricing-card featured">
+  <div class="pc-tier">推荐</div>
+  <div class="pc-price" style="font-size:28px"><span class="pc-currency">¥</span>101<span class="pc-currency">万/年起</span></div>
+  <p style="font-size:12px;color:var(--gray-mid);margin-bottom:16px">含AI监测·委员会运作·季度复评</p>
+  <p style="font-size:12px;color:var(--gray-text);margin-bottom:0">适合L3企业</p>
+</div>
+<div class="pricing-card">
+  <div class="pc-tier">全面运行</div>
+  <div class="pc-price" style="font-size:28px"><span class="pc-currency">¥</span>154<span class="pc-currency">万/年起</span></div>
+  <p style="font-size:12px;color:var(--gray-mid);margin-bottom:16px">全部9个模块启用</p>
+  <p style="font-size:12px;color:var(--gray-text);margin-bottom:0">L3全面配置</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-invest-value" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:48px">
+  <div class="section-tag">Value Commitment</div>
+  <h2>价值承诺</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">品牌资产管理系统不是一次性投入——是按十年计的复利投资。</p>
+</div>
+
+<div class="metrics-row">
+<div class="metric-item"><div class="mi-num red">15<span class="mi-unit" style="color:var(--red)">年</span></div><div class="mi-label">越秀集团持续服务</div></div>
+<div class="metric-item"><div class="mi-num red">19<span class="mi-unit" style="color:var(--red)">×</span></div><div class="mi-label">品牌资产规模增长</div></div>
+<div class="metric-item"><div class="mi-num red">600亿<div class="mi-label">服务起点</div></div>
+<div class="metric-item"><div class="mi-num red">万亿<div class="mi-label">今日规模</div></div>
+</div>
+
+<div class="svc-grid mt-48">
+<div class="svc-card"><div class="sc-num" style="opacity:0.3">01</div><h3>品牌内核清晰化</h3><p>管理层对"品牌是谁"有一致认知，创始人精神可传承。品牌决策从"问领导"变成"看系统"。</p></div>
+<div class="svc-card"><div class="sc-num" style="opacity:0.3">02</div><h3>品牌架构体系化</h3><p>多业务有序扩展，新并购品牌"即插即用"。品牌宪法保障方向不随人员更替漂移。</p></div>
+<div class="svc-card"><div class="sc-num" style="opacity:0.3">03</div><h3>品牌资产可量化</h3><p>BCI基线+九维资产表+季度可追踪。品牌从"感觉"进入"数据"管理阶段。</p></div>
+<div class="svc-card"><div class="sc-num" style="opacity:0.3">04</div><h3>AI信息主权建立</h3><p>AI引擎正确定义+标准答案+实时监测。品牌定义权不被AI随意拼凑。</p></div>
+</div>
+
+<div class="tb-wrap mt-48">
+<h3 style="font-size:20px;margin:16px 20px">越秀集团 · 15年验证数据</h3>
+<table>
+<thead><tr><th>指标</th><th>起点</th><th>现状</th><th>增长</th></tr></thead>
+<tbody>
+<tr><td>总资产规模</td><td>600亿</td><td>万亿级</td><td>约19倍</td></tr>
+<tr><td>上市公司数量</td><td>1家</td><td>6家</td><td>跨越式扩张</td></tr>
+<tr><td>品牌系统</td><td>单一品牌</td><td>集团架构+宪法+叙事+管理机制</td><td>系统化</td></tr>
+<tr><td>董事长更替</td><td>—</td><td>历经三任</td><td>品牌方向不漂移</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="two-col mt-48">
+<div>
+<h3>为什么是现在</h3>
+<p>传统品牌管理是"人工循环"（策划→制作→投放→反馈，3–6个月一轮）。AI时代的品牌管理是<strong>系统循环</strong>（AI监测→认知差距发现→内容生成→分发→效果追踪，周级迭代）。这不是效率提升——是认知维度的碾压。</p>
+</div>
+<div>
+<h3>价值保障</h3>
+<p>系统运行第二年，品牌管理成熟度提升带来的组织效率价值、AI可见性提升带来的品牌信息主权价值、品牌资产持续积累带来的复利价值——远超过年度服务费用本身。</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-invest-inquiry" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Contact</div>
+  <h2>在线询价</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text">预约品牌资产诊断，开启品牌资产管理之旅。</p>
+</div>
+<div class="two-col">
+<div>
+<h3>联系方式</h3>
+<p style="font-size:15px;color:var(--gray-dark);margin-bottom:8px">电话：400-XXX-XXXX</p>
+<p style="font-size:15px;color:var(--gray-dark);margin-bottom:24px">邮箱：contact@bicobrand.com</p>
+<h3>从轻量入口开始</h3>
+<p>不确定该选哪个阶梯？可以先从品牌资产全景诊断开始（20–30万/3–4周），进入核心服务后全额抵扣。</p>
+</div>
+<div style="padding:32px;border:1px solid var(--gray-border);border-radius:var(--radius);background:var(--off-white)">
+<p style="font-size:14px;color:var(--gray-mid);text-align:center;margin-bottom:16px">预约品牌资产诊断咨询</p>
+<div class="btn-group center">
+<a class="btn btn-primary" href="javascript:">发送咨询</a>
+<a class="btn btn-outline-dark" href="javascript:" onclick="showSub('invest','plans')">查看投资方案</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+</div>
+
+<!-- ============ PAGE 6: KNOWLEDGE CENTER ============ -->
 <div id="page-knowledge" class="page">
 <div class="page-hero"><div class="container"><h1>知识中心</h1><p>中国品牌资产管理知识中心</p><div class="page-rule"></div></div></div>
 <div class="sub-nav"><div class="sub-nav-inner">
@@ -639,18 +913,7 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 <div id="sub-knowledge-insights" class="sub-page"><section class="content-section"><div class="container"><h2>行业洞察</h2><p class="intro-text">品牌资产管理前沿趋势。</p></div></section></div>
 </div>
 
-<div id="page-invest" class="page">
-<div class="page-hero"><div class="container"><h1>投资方案</h1><p>品牌资产投资是透明的，有标准定价</p><div class="page-rule"></div></div></div>
-<div class="sub-nav"><div class="sub-nav-inner">
-<a class="active" href="javascript:" onclick="showSub('invest','plans')">投资方案</a>
-<a href="javascript:" onclick="showSub('invest','roi')">投资回报</a>
-<a href="javascript:" onclick="showSub('invest','inquiry')">在线询价</a>
-</div></div>
-<div id="sub-invest-plans" class="sub-page active"><section class="content-section"><div class="container"><h2>标准投资方案</h2><p class="intro-text">三个层级，满足不同规模企业的品牌资产管理需求。</p><div class="pricing-grid mt-32"><div class="pricing-card"><div class="pc-tier">L1</div><h3>品牌统一</h3><p class="pc-sub">品牌诊断 + 基础系统构建</p><div class="pc-price"><span class="pc-currency">¥</span>150<span class="pc-currency">万起</span></div><a class="btn btn-outline-dark" href="javascript:" onclick="showSub('invest','inquiry')" style="width:100%;text-align:center">询价 →</a></div><div class="pricing-card featured"><div class="pc-tier">推荐 · L2</div><h3>品牌系统</h3><p class="pc-sub">完整品牌资产管理系统</p><div class="pc-price"><span class="pc-currency">¥</span>300<span class="pc-currency">万起</span></div><a class="btn btn-primary" href="javascript:" onclick="showSub('invest','inquiry')" style="width:100%;text-align:center">询价 →</a></div><div class="pricing-card"><div class="pc-tier">L3</div><h3>全面管理</h3><p class="pc-sub">全面品牌资产管理 + 持续服务</p><div class="pc-price"><span class="pc-currency">¥</span>600<span class="pc-currency">万起</span></div><a class="btn btn-outline-dark" href="javascript:" onclick="showSub('invest','inquiry')" style="width:100%;text-align:center">询价 →</a></div></div></div></section></div>
-<div id="sub-invest-roi" class="sub-page"><section class="content-section"><div class="container"><h2>投资回报</h2><p class="intro-text">品牌资产管理的价值是复利增长的投资。</p></div></section></div>
-<div id="sub-invest-inquiry" class="sub-page"><section class="content-section"><div class="container"><h2>在线询价</h2><p class="intro-text">预约品牌资产诊断咨询。</p><div style="max-width:480px;padding:40px;border:1px solid var(--gray-border);border-radius:var(--radius);margin-top:32px"><p style="color:var(--gray-mid);text-align:center;font-size:14px">请致电或发送邮件咨询</p><div style="text-align:center;margin-top:16px"><p style="font-size:14px;color:var(--gray-dark)">电话：400-XXX-XXXX</p><p style="font-size:14px;color:var(--gray-dark)">邮箱：contact@bicobrand.com</p></div><div style="text-align:center;margin-top:24px"><a class="btn btn-primary" href="javascript:">发送咨询</a></div></div></div></section></div>
-</div>
-
+<!-- ============ PAGE 7: ABOUT ============ -->
 <div id="page-about" class="page">
 <div class="page-hero"><div class="container"><h1>关于集和</h1><p>中国品牌资产管理的开创者与代表者</p><div class="page-rule"></div></div></div>
 <div class="sub-nav"><div class="sub-nav-inner">
@@ -672,9 +935,9 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand"><div class="fb-name">集和 <span class="fb-red">BICO</span> 企业品牌银行</div><p>深耕品牌资产管理咨询 23 年。为中国杰出企业，筑品牌资产长城。</p></div>
-      <div class="footer-col"><h5>品牌银行系统</h5><a href="javascript:" onclick="showSub('system','overview')">系统总览</a><a href="javascript:" onclick="showSub('system','nine-d')">九维资产库</a><a href="javascript:" onclick="showSub('system','dual-cone')">双锥价值链</a><a href="javascript:" onclick="showSub('system','trust-tower')">五层信任塔</a><a href="javascript:" onclick="showSub('system','bci')">BCI 资产表</a></div>
-      <div class="footer-col"><h5>业务体系</h5><a href="javascript:" onclick="showSub('business','upgrade')">品牌升级</a><a href="javascript:" onclick="showSub('business','strategy')">品牌战略</a><a href="javascript:" onclick="showSub('business','management')">品牌管理</a><a href="javascript:" onclick="showSub('business','growth')">品牌增长</a></div>
-      <div class="footer-col"><h5>关于</h5><a href="javascript:" onclick="showSub('about','intro')">集和介绍</a><a href="javascript:" onclick="showSub('about','gongkai')">龚凯</a><a href="javascript:" onclick="showSub('about','contact')">联系我们</a><a href="javascript:" onclick="showPage('invest')">预约咨询</a></div>
+      <div class="footer-col"><h5>业务体系</h5><a href="javascript:" onclick="showSub('business','tiers')">三级阶梯</a><a href="javascript:" onclick="showSub('business','process')">三步走方法论</a><a href="javascript:" onclick="showSub('business','ongoing')">持续服务</a></div>
+      <div class="footer-col"><h5>品牌银行系统</h5><a href="javascript:" onclick="showSub('system','overview')">系统总览</a><a href="javascript:" onclick="showSub('system','nine-d')">九维资产库</a><a href="javascript:" onclick="showSub('system','trust-tower')">五层信任塔</a><a href="javascript:" onclick="showSub('system','bci')">BCI 资产表</a></div>
+      <div class="footer-col"><h5>关于</h5><a href="javascript:" onclick="showPage('cases')">代表案例</a><a href="javascript:" onclick="showSub('about','intro')">集和介绍</a><a href="javascript:" onclick="showSub('about','gongkai')">龚凯</a><a href="javascript:" onclick="showPage('invest')">投资方案</a></div>
     </div>
     <div class="footer-bottom"><span>© 2026 集和品牌咨询 · BICO Brand Bank</span><span>中国品牌资产管理的代表者</span></div>
   </div>
