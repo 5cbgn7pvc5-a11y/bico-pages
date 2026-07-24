@@ -92,29 +92,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);bor
 .sub-nav-inner a:hover{color:var(--gray-deep)}
 .sub-nav-inner a.active{color:var(--red);border-bottom-color:var(--red)}
 
-/* ========== ERA CARDS ========== */
-.era-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:48px 0}
-.era-card{border:1px solid var(--gray-border);border-radius:var(--radius);padding:36px 28px;position:relative;background:#fff;transition:var(--transition)}
-.era-card:hover{border-color:var(--red);box-shadow:var(--shadow-sm)}
-.era-card .ec-era{font-size:11px;font-weight:600;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:4px}
-.era-card .ec-version{font-family:var(--font-serif);font-size:13px;color:var(--gray-mid);margin-bottom:12px;font-style:italic}
-.era-card h4{font-family:var(--font-serif);font-size:20px;margin-bottom:10px}
-.era-card p{font-size:13.5px;color:var(--gray-dark);line-height:1.7;margin-bottom:4px}
-.era-card .ec-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 10px;margin-top:8px}
-.ec-num{font-family:var(--font-serif);font-size:40px;font-weight:700;color:rgba(184,32,36,0.08);position:absolute;top:12px;right:16px;line-height:1;pointer-events:none}
-@media(max-width:900px){.era-grid{grid-template-columns:1fr;gap:16px}}
-.ec-divider{width:100%;height:1px;background:var(--gray-border);margin:8px 0 16px}
-
-/* ========== BUTTONS ========== */
-.btn{display:inline-block;padding:12px 32px;font-size:14px;font-weight:600;border-radius:var(--radius-sm);transition:var(--transition);cursor:pointer;letter-spacing:0.5px;border:none;text-align:center}
-.btn-primary{background:var(--red);color:#fff}
-.btn-primary:hover{background:var(--red-dark)}
-.btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.4)}
-.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.05)}
-.btn-outline-dark{background:transparent;color:var(--gray-deep);border:1px solid var(--gray-border)}
-.btn-outline-dark:hover{border-color:var(--red);color:var(--red)}
-.btn-group{display:flex;gap:12px;flex-wrap:wrap}.btn-group.center{justify-content:center}
-
 /* ========== HERO ========== */
 .hero{position:relative;padding:0;background:var(--red);display:flex;align-items:center;overflow:hidden;min-height:80vh}
 .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 20% 50%,rgba(255,255,255,0.08) 0%,transparent 60%);pointer-events:none}
@@ -124,6 +101,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);bor
 .hero-primary{font-family:var(--font-serif);font-size:72px;font-weight:700;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:12px}
 .hero-subtitle{font-family:var(--font-serif);font-size:42px;font-weight:500;color:rgba(255,255,255,0.8);line-height:1.1;letter-spacing:-0.5px;margin-bottom:24px}
 .hero-rule{width:56px;height:2px;background:rgba(255,255,255,0.3);margin:24px 0}
+.hero-quote{font-family:var(--font-serif);font-size:18px;font-style:italic;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:24px;max-width:520px;padding:16px 20px;border-left:2px solid rgba(255,255,255,0.2)}
 .hero-brand{font-size:15px;color:rgba(255,255,255,0.5);letter-spacing:2px;margin-bottom:32px}
 .hero-brand .brand-highlight{color:#fff;font-weight:600}
 .hero-audience{font-size:15px;color:rgba(255,255,255,0.6);letter-spacing:0.5px;margin-bottom:28px;line-height:1.7}
@@ -163,14 +141,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);bor
 /* ========== ANCHOR QUOTE ========== */
 .anchor-quote{font-family:var(--font-serif);font-size:22px;font-weight:500;color:var(--red);text-align:center;line-height:1.6;max-width:600px;margin:0 auto 40px;font-style:italic}
 
-/* ========== MORE CASES ========== */
-.more-cases{border-top:1px solid var(--gray-border);padding-top:28px;margin-top:36px;text-align:center}
-.more-cases .mc-label{font-size:10px;font-weight:600;letter-spacing:2px;color:var(--gray-light);text-transform:uppercase;margin-bottom:16px}
-.more-cases .mc-list{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px}
-.more-cases .mc-item{font-family:var(--font-serif);font-size:18px;color:var(--gray-mid);font-weight:500;padding:0 4px;cursor:pointer;transition:var(--transition)}
-.more-cases .mc-item:hover{color:var(--red)}
-@media(max-width:600px){.more-cases .mc-list{gap:6px 16px}.more-cases .mc-item{font-size:15px}}
-
 /* ========== CASE CARDS ========== */
 .bg-light{background:var(--off-white)}
 .case-section-intro{text-align:center;margin-bottom:48px}
@@ -195,44 +165,65 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);bor
 .case-card:hover .cc-more{opacity:1}
 @media(max-width:900px){.case-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
 
-/* ========== DIFFERENTIATION ========== */
+/* ========== MORE CASES ========== */
+.more-cases{border-top:1px solid var(--gray-border);padding-top:28px;margin-top:36px;text-align:center}
+.more-cases .mc-label{font-size:10px;font-weight:600;letter-spacing:2px;color:var(--gray-light);text-transform:uppercase;margin-bottom:16px}
+.more-cases .mc-list{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px}
+.more-cases .mc-item{font-family:var(--font-serif);font-size:18px;color:var(--gray-mid);font-weight:500;padding:0 4px;cursor:pointer;transition:var(--transition)}
+.more-cases .mc-item:hover{color:var(--red)}
+@media(max-width:600px){.more-cases .mc-list{gap:6px 16px}.more-cases .mc-item{font-size:15px}}
+
+/* ========== SCENARIO GRID (homepage) ========== */
+.scenario-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.scenario-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:28px 20px;transition:var(--transition);cursor:pointer}
+.scenario-card:hover{border-color:var(--red);box-shadow:var(--shadow-sm)}
+.scenario-card .sc-icon{font-size:24px;margin-bottom:8px;color:var(--red)}
+.scenario-card h4{font-family:var(--font-serif);font-size:16px;margin-bottom:6px;color:var(--gray-deep)}
+.scenario-card .sc-desc{font-size:12px;color:var(--gray-mid);line-height:1.6}
+.scenario-card .sc-asset{font-size:10px;color:var(--red);font-weight:500;margin-top:10px;letter-spacing:0.5px}
+@media(max-width:1024px){.scenario-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.scenario-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.scenario-grid{grid-template-columns:1fr}}
+
+/* ========== INVEST FLOW (homepage) ========== */
+.invest-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.if-step{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:40px 28px;text-align:center;transition:var(--transition);position:relative}
+.if-step:hover{border-color:var(--red);box-shadow:var(--shadow-sm)}
+.if-step .if-num{font-family:var(--font-serif);font-size:56px;font-weight:700;color:rgba(184,32,36,0.08);line-height:1;margin-bottom:-8px}
+.if-step h4{font-family:var(--font-serif);font-size:22px;margin-bottom:10px}
+.if-step p{font-size:13.5px;color:var(--gray-dark);line-height:1.7;max-width:280px;margin:0 auto}
+.if-step .if-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:8px}
+@media(max-width:900px){.invest-flow{grid-template-columns:1fr;max-width:400px;margin:40px auto 0}}
+@media(max-width:768px){.if-step{padding:32px 24px}}
+
+/* ========== ERA CARDS ========== */
+.era-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:48px 0}
+.era-card{border:1px solid var(--gray-border);border-radius:var(--radius);padding:36px 28px;position:relative;background:#fff;transition:var(--transition)}
+.era-card:hover{border-color:var(--red);box-shadow:var(--shadow-sm)}
+.era-card .ec-era{font-size:11px;font-weight:600;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:4px}
+.era-card .ec-version{font-family:var(--font-serif);font-size:13px;color:var(--gray-mid);margin-bottom:12px;font-style:italic}
+.era-card h4{font-family:var(--font-serif);font-size:20px;margin-bottom:10px}
+.era-card p{font-size:13.5px;color:var(--gray-dark);line-height:1.7;margin-bottom:4px}
+.era-card .ec-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 10px;margin-top:8px}
+.ec-num{font-family:var(--font-serif);font-size:40px;font-weight:700;color:rgba(184,32,36,0.08);position:absolute;top:12px;right:16px;line-height:1;pointer-events:none}
+@media(max-width:900px){.era-grid{grid-template-columns:1fr;gap:16px}}
+.ec-divider{width:100%;height:1px;background:var(--gray-border);margin:8px 0 16px}
+
+/* ========== BUTTONS ========== */
+.btn{display:inline-block;padding:12px 32px;font-size:14px;font-weight:600;border-radius:var(--radius-sm);transition:var(--transition);cursor:pointer;letter-spacing:0.5px;border:none;text-align:center}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-dark)}
+.btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.4)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.05)}
+.btn-outline-dark{background:transparent;color:var(--gray-deep);border:1px solid var(--gray-border)}
+.btn-outline-dark:hover{border-color:var(--red);color:var(--red)}
+.btn-group{display:flex;gap:12px;flex-wrap:wrap}.btn-group.center{justify-content:center}
+
+/* ========== DIFFERENTIATION TABLE ========== */
 .diff-header-text{text-align:center;max-width:640px;margin:0 auto 48px}
 .diff-header-text h2{margin-bottom:12px}
 .diff-header-text .diff-lead{font-size:17px;color:var(--gray-dark);line-height:1.7}
 .diff-header-text .diff-lead em{color:var(--red);font-style:normal;font-weight:600}
-.diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.diff-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:32px 24px;transition:var(--transition)}
-.diff-card.featured{border-color:var(--red);background:var(--red-bg);position:relative}
-.diff-card.featured::before{content:'集和';position:absolute;top:-1px;right:24px;font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);background:#fff;padding:4px 10px;border-radius:0 0 4px 4px;border:1px solid var(--red);border-top:none}
-.diff-card .dc-type{font-size:10px;font-weight:600;letter-spacing:2px;color:var(--gray-light);text-transform:uppercase;margin-bottom:8px}
-.diff-card.featured .dc-type{color:var(--red)}
-.diff-card h4{font-family:var(--font-serif);font-size:20px;margin-bottom:12px;color:var(--gray-deep)}
-.diff-card .dc-desc{font-size:13px;color:var(--gray-mid);line-height:1.7}
-.diff-card.featured .dc-desc{color:var(--gray-dark)}
-.diff-card .dc-complexity{font-size:11px;color:var(--gray-light);margin-top:12px;padding-top:12px;border-top:1px solid var(--gray-border)}
-.diff-card.featured .dc-complexity{color:var(--red);font-weight:500}
-@media(max-width:900px){.diff-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.diff-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}}
-
-/* ========== SERVICE CARDS ========== */
-.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.svc-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:36px 32px;transition:var(--transition);cursor:pointer}
-.svc-card:hover{border-color:var(--red);box-shadow:var(--shadow-sm)}
-.svc-card .sc-num{font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--red);line-height:1;margin-bottom:4px;opacity:0.6}
-.svc-card h3{font-family:var(--font-serif);font-size:20px;margin-bottom:8px}
-.svc-card p{font-size:13px;color:var(--gray-mid);line-height:1.7}
-.svc-card .sc-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--gray-light);margin-top:16px}
-@media(max-width:768px){.svc-grid{grid-template-columns:1fr}}
-
-/* ========== PROCESS ========== */
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray-border);border-radius:var(--radius);overflow:hidden}
-.process-step{background:#fff;padding:36px 28px}
-.process-step .ps-step{font-size:10px;font-weight:600;letter-spacing:3px;color:var(--red);margin-bottom:12px;text-transform:uppercase}
-.process-step .ps-bar{width:24px;height:2px;background:var(--red);margin-bottom:16px}
-.process-step h4{font-family:var(--font-serif);font-size:18px;margin-bottom:8px;color:var(--gray-deep)}
-.process-step p{font-size:13px;color:var(--gray-mid);line-height:1.7}
-@media(max-width:900px){.process-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.process-grid{grid-template-columns:1fr}}
 
 /* ========== TABLE ========== */
 .tb-wrap{overflow:hidden;border-radius:var(--radius);border:1px solid var(--gray-border);background:#fff}
@@ -246,6 +237,26 @@ table tbody td:first-child{font-weight:600;color:var(--gray-deep);white-space:no
 table .highlight-row{background:var(--red-bg)}
 table .highlight-row td{color:var(--gray-deep)}
 @media(max-width:768px){table{font-size:13px}table thead th,table tbody td{padding:12px 14px}}
+
+/* ========== SERVICE CARDS ========== */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:36px 32px;transition:var(--transition);cursor:pointer}
+.svc-card:hover{border-color:var(--red);box-shadow:var(--shadow-sm)}
+.svc-card .sc-num{font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--red);line-height:1;margin-bottom:4px;opacity:0.6}
+.svc-card h3{font-family:var(--font-serif);font-size:20px;margin-bottom:8px}
+.svc-card p{font-size:13px;color:var(--gray-mid);line-height:1.7}
+.svc-card .sc-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--gray-light);margin-top:16px}
+@media(max-width:768px){.svc-grid{grid-template-columns:1fr}}
+
+/* ========== PROCESS GRID ========== */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray-border);border-radius:var(--radius);overflow:hidden}
+.process-step{background:#fff;padding:36px 28px}
+.process-step .ps-step{font-size:10px;font-weight:600;letter-spacing:3px;color:var(--red);margin-bottom:12px;text-transform:uppercase}
+.process-step .ps-bar{width:24px;height:2px;background:var(--red);margin-bottom:16px}
+.process-step h4{font-family:var(--font-serif);font-size:18px;margin-bottom:8px;color:var(--gray-deep)}
+.process-step p{font-size:13px;color:var(--gray-mid);line-height:1.7}
+@media(max-width:900px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.process-grid{grid-template-columns:1fr}}
 
 /* ========== METRICS ========== */
 .metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray-border);border-radius:var(--radius);overflow:hidden}
@@ -285,7 +296,7 @@ table .highlight-row td{color:var(--gray-deep)}
 .cta-section p{color:rgba(255,255,255,0.5);margin-bottom:32px;font-size:16px}
 .cta-section .btn-group{justify-content:center}
 
-/* ========== KNOWLEDGE ========== */
+/* ========== KNOWLEDGE CARDS ========== */
 .know-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .know-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:28px 24px;transition:var(--transition);cursor:pointer}
 .know-card:hover{border-color:var(--red)}
@@ -294,6 +305,38 @@ table .highlight-row td{color:var(--gray-deep)}
 .know-card p{font-size:13px;color:var(--gray-mid);line-height:1.6}
 @media(max-width:900px){.know-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.know-grid{grid-template-columns:1fr}}
+
+/* ========== POLICY CARDS ========== */
+.policy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.policy-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:28px 24px;transition:var(--transition)}
+.policy-card:hover{border-color:var(--red)}
+.policy-card .pc-layer{font-size:10px;font-weight:600;letter-spacing:1px;color:var(--red);margin-bottom:8px}
+.policy-card h4{font-size:16px;margin-bottom:6px}
+.policy-card p{font-size:12.5px;color:var(--gray-mid);line-height:1.6}
+@media(max-width:900px){.policy-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.policy-grid{grid-template-columns:1fr}}
+
+/* ========== AGENT CARDS (集智AI) ========== */
+.agent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.agent-card{background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:32px 24px;transition:var(--transition)}
+.agent-card:hover{border-color:var(--red);box-shadow:var(--shadow-sm)}
+.agent-card .ac-icon{font-size:14px;font-weight:600;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:8px}
+.agent-card h4{font-family:var(--font-serif);font-size:18px;margin-bottom:6px}
+.agent-card .ac-question{font-size:12px;color:var(--gray-mid);font-style:italic;margin-bottom:10px}
+.agent-card p{font-size:13px;color:var(--gray-dark);line-height:1.7}
+@media(max-width:900px){.agent-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.agent-grid{grid-template-columns:1fr}}
+
+/* ========== MODULE FLOW ========== */
+.module-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.module-card{text-align:center;background:#fff;border:1px solid var(--gray-border);border-radius:var(--radius);padding:28px 16px;transition:var(--transition)}
+.module-card:hover{border-color:var(--red)}
+.module-card .mc-icon{font-family:var(--font-serif);font-size:32px;font-weight:700;color:var(--red);margin-bottom:4px;line-height:1}
+.module-card .mc-label{font-size:11px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:6px;text-transform:uppercase}
+.module-card h4{font-size:16px;margin-bottom:6px}
+.module-card p{font-size:12px;color:var(--gray-mid);line-height:1.5}
+@media(max-width:900px){.module-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.module-flow{grid-template-columns:1fr}}
 
 /* ========== FOOTER ========== */
 footer{background:var(--gray-deep);padding:56px 0 32px}
@@ -356,6 +399,10 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
   .page-hero{padding:100px 0 40px}.page-hero h1{font-size:32px}
   .content-section{padding:48px 0}
 }
+
+/* ========== IP BADGE (自主知识产权) ========== */
+.ip-badge{display:inline-flex;align-items:center;gap:8px;background:var(--red-bg);border:1px solid var(--red);border-radius:var(--radius);padding:10px 20px;font-size:12px;font-weight:600;color:var(--red);margin:0 auto;justify-content:center}
+.ip-badge .ip-star{font-size:16px}
 </style>
 </head>
 <body>
@@ -372,10 +419,10 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
     <ul class="nav-links">
       <li><a id="nav-home" class="active" onclick="showPage('home')" href="javascript:">首页</a></li>
       <li><a id="nav-cases" onclick="showPage('cases')" href="javascript:">代表案例</a></li>
-      <li><a id="nav-business" onclick="showPage('business')" href="javascript:">业务体系</a></li>
-      <li><a id="nav-system" onclick="showPage('system')" href="javascript:">品牌银行系统</a></li>
+      <li><a id="nav-approach" onclick="showPage('approach')" href="javascript:">解决之道</a></li>
+      <li><a id="nav-aiai" onclick="showPage('aiai')" href="javascript:">集智AI</a></li>
       <li><a id="nav-invest" onclick="showPage('invest')" href="javascript:">投资方案</a></li>
-      <li><a id="nav-knowledge" onclick="showPage('knowledge')" href="javascript:">知识中心</a></li>
+      <li><a id="nav-thinktank" onclick="showPage('thinktank')" href="javascript:">品牌智库</a></li>
       <li><a id="nav-about" onclick="showPage('about')" href="javascript:">关于集和</a></li>
     </ul>
     <div class="nav-cta"><a href="javascript:" onclick="showPage('invest')">预约咨询</a></div>
@@ -385,6 +432,7 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 <!-- ============ PAGE 1: HOME ============ -->
 <div id="page-home" class="page active">
 
+<!-- Hero -->
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
@@ -392,18 +440,19 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
         <h1 class="hero-primary">集和·中国品牌资产管理的<br>代表者</h1>
         <p class="hero-subtitle">万亿级品牌资产管理典范</p>
         <div class="hero-rule"></div>
+        <div class="hero-quote">"让品牌成为可看见、可度量、可传承、可增值的核心资产。"</div>
         <p class="hero-audience">
           为 <span class="aud-em">上市集团 · 行业龙头 · 大规模企业</span><br>
           系统性解决品牌资产管理的复杂难题
         </p>
         <div class="hero-metrics">
           <div class="hm-item"><span class="hm-num">23</span><span class="hm-unit">年</span><span class="hm-label">专注品牌资产管理</span></div>
-          <div class="hm-item"><span class="hm-num">100</span><span class="hm-unit">+</span><span class="hm-label">上市公司信赖选择</span></div>
+          <div class="hm-item"><span class="hm-num">100</span><span class="hm-unit">+</span><div class="hm-label">上市公司信赖选择</div></div>
           <div class="hm-item"><span class="hm-num">2500</span><span class="hm-unit">+</span><span class="hm-label">项目实战验证</span></div>
         </div>
         <div class="hero-btns">
           <a class="btn btn-primary" href="javascript:" onclick="showPage('invest')">预约咨询</a>
-          <a class="btn btn-outline" href="javascript:" onclick="showPage('business')">了解业务体系</a>
+          <a class="btn btn-outline" href="javascript:" onclick="showPage('approach')">了解解决之道</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -474,16 +523,16 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
   </div>
 </section>
 
-<!-- 领先一个时代 -->
+<!-- 有何不同 -->
 <section>
   <div class="container">
-    <div class="section-header">
-      <div class="section-tag">Category Creator</div>
-      <h2>领先一个时代</h2>
-      <p style="max-width:520px;font-size:17px;color:var(--gray-dark);line-height:1.7;margin:0 auto">开创中国品牌资产管理 23 年，为中国杰出企业筑品牌资产长城。</p>
+    <div class="diff-header-text">
+      <div class="section-tag">Differentiation</div>
+      <h2>有何不同</h2>
+      <div class="section-rule" style="margin:16px auto"></div>
+      <p class="diff-lead">与设计公司、广告公司、营销公司、战略咨询公司——<em>完全不同</em>。</p>
     </div>
-    <div class="anchor-quote">让品牌成为可看见、可度量、可传承、可增值的核心资产。</div>
-    <div class="tb-wrap" style="margin-top:32px">
+    <div class="tb-wrap">
       <table>
         <thead><tr><th style="width:14%">类型</th><th style="width:36%">他们做什么</th><th style="width:50%">集和做什么</th></tr></thead>
         <tbody>
@@ -497,67 +546,103 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
   </div>
 </section>
 
-<!-- 核心业务 -->
+<!-- 五大场景 -->
 <section class="bg-light">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Core Services</div>
-      <h2>核心业务</h2>
+      <div class="section-tag">Five Scenarios</div>
+      <h2>五大场景 · 你的品牌面临哪个问题？</h2>
       <div class="section-rule"></div>
-      <p>三级阶梯 + 三步走 + 持续服务——一套完整的品牌资产管理体系</p>
+      <p>企业做到一定规模，都会遇到品牌问题。但问题不只有一种样子。</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc-card" onclick="showSub('business','tiers')"><div class="sc-num">01</div><h3>三级阶梯</h3><p>L1 品牌统一 · L2 品牌系统 · L3 全面管理——同一个"品牌升级"需求，不同企业需要的深度完全不同。先诊断，再决定做多深。</p><div class="sc-tag">匹配企业真实规模 · 按需选择</div></div>
-      <div class="svc-card" onclick="showSub('business','process')"><div class="sc-num">02</div><h3>三步走方法论</h3><p>诊断洞察 → 系统构建 → 落地实施。23 年验证的系统建设方法论——区别不是流程不同，是在每一步做多深、覆盖多广。</p><div class="sc-tag">诊断 · 构建 · 落地</div></div>
-      <div class="svc-card" onclick="showSub('business','ongoing')"><div class="sc-num">03</div><h3>持续服务</h3><p>品牌资产管理系统建成交付，不是终点——是起点。年度品牌资产运维，确保系统不退化、持续产生复利。</p><div class="sc-tag">基础启动 + 可选模块</div></div>
-      <div class="svc-card" onclick="showSub('system','ai')"><div class="sc-num">04</div><h3>AI 品牌基建</h3><p>Brand OS AI 原生运维系统——智能资产入库、合规风控、内容生产、资产体检。AI 时代品牌信息主权的基础设施。</p><div class="sc-tag">智能入库 · 内容生产 · 资产体检</div></div>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="sc-icon">01</div>
+        <h4>品牌跟不上企业的速度</h4>
+        <p class="sc-desc">企业做大了、上市了，品牌形象还停在过去。实力很强但品牌很土，品牌撑不起行业地位。</p>
+        <div class="sc-asset">识别资产滞后</div>
+      </div>
+      <div class="scenario-card">
+        <div class="sc-icon">02</div>
+        <h4>业务扩张了，品牌管不住</h4>
+        <p class="sc-desc">多个业务板块、子公司各做各的品牌。每年花几千万做传播，品牌反而越做越散。</p>
+        <div class="sc-asset">架构与治理资产失序</div>
+      </div>
+      <div class="scenario-card">
+        <div class="sc-icon">03</div>
+        <h4>上市了，市场却不认可品牌价值</h4>
+        <p class="sc-desc">技术全球前三，估值却像制造商。产品不比对手差，溢价能力上不去。</p>
+        <div class="sc-asset">心智与叙事资产滞后</div>
+      </div>
+      <div class="scenario-card">
+        <div class="sc-icon">04</div>
+        <h4>舆情倒逼品牌信任重建</h4>
+        <p class="sc-desc">负面舆情在AI搜索和社交平台持续扩散——品牌的信息主导权和信任资产不在自己手里。</p>
+        <div class="sc-asset">社会资产受损</div>
+      </div>
+      <div class="scenario-card">
+        <div class="sc-icon">05</div>
+        <h4>创始人60岁+，品牌能否传承</h4>
+        <p class="sc-desc">创始人是品牌的灵魂——他退休了怎么办？品牌方向能保持一致吗？</p>
+        <div class="sc-asset">文化资产传承</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a class="btn btn-outline-dark" href="javascript:" onclick="showPage('approach')">查看解决之道 →</a>
     </div>
   </div>
 </section>
 
-<!-- 系统性领先 -->
-<section class="bg-red">
+<!-- 领先一个时代 -->
+<section>
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Systematic Leadership</div>
-      <h2>系统性领先</h2>
-      <div class="section-rule"></div>
-      <p>不是单点服务——品牌资产全生命周期的系统化管理</p>
+      <div class="section-tag">Category Creator</div>
+      <h2>领先一个时代</h2>
+      <p style="max-width:520px;font-size:17px;color:var(--gray-dark);line-height:1.7;margin:0 auto">开创中国品牌资产管理 23 年，为中国杰出企业筑品牌资产长城。</p>
     </div>
-    <div class="process-grid" style="margin-bottom:48px">
-      <div class="process-step"><div class="ps-step">Step 01</div><div class="ps-bar"></div><h4>全面品牌体检</h4><p>九维资产库诊断，从 9 个维度评估品牌资产健康状况</p></div>
-      <div class="process-step"><div class="ps-step">Step 02</div><div class="ps-bar"></div><h4>锚定品牌根基</h4><p>品牌基因六要素——定义品牌 DNA，明确战略锚点</p></div>
-      <div class="process-step"><div class="ps-step">Step 03</div><div class="ps-bar"></div><h4>建立管理系统</h4><p>品牌资产管理系统 + AI 基建，让品牌可管理可复制</p></div>
-      <div class="process-step"><div class="ps-step">Step 04</div><div class="ps-bar"></div><h4>持续裂变增值</h4><p>五层信任塔 + GEO 内容引擎，驱动品牌资产持续增长</p></div>
+    <div style="text-align:center;margin-bottom:32px">
+      <div class="ip-badge"><span class="ip-star">✦</span> 自主独创 · 中国第一套品牌资产管理方法论体系 <span class="ip-star">✦</span></div>
     </div>
-    <div class="tb-wrap">
-      <table>
-        <thead><tr><th>维度</th><th>传统品牌服务</th><th>集和 · 品牌资产管理系统</th></tr></thead>
-        <tbody>
-          <tr><td>视角</td><td>单点（标识·广告·营销）</td><td style="color:var(--gray-deep);font-weight:500">全局（品牌资产全生命周期）</td></tr>
-          <tr><td>方法</td><td>项目制（做完即结案）</td><td style="color:var(--gray-deep);font-weight:500">系统制（持续管理·持续增值）</td></tr>
-          <tr><td>时间</td><td>短期（季度/年度）</td><td style="color:var(--gray-deep);font-weight:500">长期（越秀 15 年持续陪伴）</td></tr>
-          <tr><td>度量</td><td>感性判断</td><td style="color:var(--gray-deep);font-weight:500">九维诊断 · BCI 资产表 · 量化评估</td></tr>
-          <tr class="highlight-row"><td>结果</td><td>品牌"好看"</td><td style="font-weight:600">品牌"值钱 · 可管理 · 可传承"</td></tr>
-        </tbody>
-      </table>
+    <div class="era-grid">
+      <div class="era-card"><span class="ec-num">①</span><span class="ec-era">品牌书时代</span><div class="ec-version">品牌银行 1.0 · 1990s–2000s</div><div class="ec-divider"></div><h4>品牌宪章</h4><p>为三一重工创立品牌书，开创行业先河。从无品牌到"品质改变世界"，奠定全球工程机械领导地位。</p></div>
+      <div class="era-card"><span class="ec-num">②</span><span class="ec-era">系统管理时代</span><div class="ec-version">品牌银行 2.0 · 2000s–2020s</div><div class="ec-divider"></div><h4>资产管理系统</h4><p>创立双锥价值链方法论。15 年陪伴越秀从 600 亿到万亿级，服务 100+ 上市公司、2500+ 项目，定义中国品牌资产管理标准。</p></div>
+      <div class="era-card" style="border-color:var(--red);background:var(--red-light)"><span class="ec-num" style="color:rgba(184,32,36,0.15)">③</span><span class="ec-era" style="color:var(--red)">AI 时代</span><div class="ec-version" style="color:var(--gray-dark)">品牌银行 3.0 · 2020s–</div><div class="ec-divider"></div><h4 style="color:var(--red)">AI 智能品牌资产管理</h4><p>领导研发 Brand OS 2.0——将 23 年方法论编译为 AI 原生品牌资产管理系统。让品牌从"人工维护"升级为"智能运维"，实现品牌资产的自动化管理与持续增值。</p><span class="ec-badge">进行中</span></div>
     </div>
   </div>
 </section>
 
-<!-- 数据 -->
+<!-- 投资与回报 -->
 <section class="bg-light">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">By the Numbers</div>
-      <h2>数据与实力</h2>
+      <div class="section-tag">How We Deliver</div>
+      <h2>投资与回报</h2>
       <div class="section-rule"></div>
+      <p>品牌资产管理系统不是一次性投入——是按十年计的复利投资。</p>
     </div>
-    <div class="metrics-row">
-      <div class="metric-item"><div class="mi-num">23<span class="mi-unit">年</span></div><div class="mi-label">中国最早注册成立的品牌咨询公司之一</div></div>
-      <div class="metric-item"><div class="mi-num">100<span class="mi-unit">+</span></div><div class="mi-label">上市公司品牌资产管理经验</div></div>
-      <div class="metric-item"><div class="mi-num red">2500<span class="mi-unit" style="color:var(--red)">+</span></div><div class="mi-label">项目实战 · 覆盖 30+ 行业</div></div>
-      <div class="metric-item"><div class="mi-num">15<span class="mi-unit">年</span></div><div class="mi-label">越秀集团持续服务 · 行业最长陪伴</div></div>
+    <div class="invest-flow">
+      <div class="if-step">
+        <div class="if-tag">Step 01 · 打地基</div>
+        <div class="if-num">01</div>
+        <h4>定方向·定战略</h4>
+        <p>九维资产库诊断，从 9 个维度评估品牌资产健康状况。战略锚定、文化基因提取、品类定位——先看清问题在哪，再决定做多深。</p>
+      </div>
+      <div class="if-step">
+        <div class="if-tag">Step 02 · 建系统</div>
+        <div class="if-num">02</div>
+        <h4>品牌资产管理系统</h4>
+        <p>品牌基因六要素 · 双锥价值链 · 五层信任塔 · BCI 资产表 · AI 品牌基建。让品牌从"个人经验"变成"组织系统"，可管理、可复制、可传承。</p>
+      </div>
+      <div class="if-step">
+        <div class="if-tag">Step 03 · 立标准</div>
+        <div class="if-num">03</div>
+        <h4>持续裂变增长</h4>
+        <p>产品标准·品牌标准·落地标准→放入 AI 核心大脑。五层信任塔 + GEO 内容引擎，驱动品牌资产持续增值。越秀 15 年，品牌资产 19 倍增长。</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a class="btn btn-primary" href="javascript:" onclick="showPage('invest')">查看投资方案</a>
     </div>
   </div>
 </section>
@@ -569,7 +654,7 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
     <p>预约品牌资产诊断，了解适合您的服务方案</p>
     <div class="btn-group">
       <a class="btn btn-primary" href="javascript:" onclick="showPage('invest')" style="background:#fff;color:var(--red)">预约咨询</a>
-      <a class="btn btn-outline" href="javascript:" onclick="showPage('business')">了解业务体系</a>
+      <a class="btn btn-outline" href="javascript:" onclick="showPage('approach')">了解解决之道</a>
     </div>
   </div>
 </section>
@@ -591,75 +676,77 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 <div id="sub-cases-more" class="sub-page"><section class="content-section"><div class="container"><h2>更多案例</h2><p class="intro-text">23 年 · 100+ 上市公司 · 2500+ 项目</p><div class="svc-grid mt-32"><div class="svc-card"><div class="sc-num" style="opacity:0.3">·</div><h3>广汽埃安</h3><p>新能源 · 品牌资产从零到一的系统构建</p></div><div class="svc-card"><div class="sc-num" style="opacity:0.3">·</div><h3>良品铺子</h3><p>国货品牌 · 品牌资产管理系统升级</p></div></div></div></section></div>
 </div>
 
-<!-- ============ PAGE 3: BUSINESS SYSTEM ============ -->
-<div id="page-business" class="page">
-<div class="page-hero"><div class="container"><h1>业务体系</h1><p>三级阶梯 · 三步走 · 持续服务——完整的品牌资产管理体系</p><div class="page-rule"></div></div></div>
+<!-- ============ PAGE 3: 解决之道 ============ -->
+<div id="page-approach" class="page">
+<div class="page-hero"><div class="container"><h1>解决之道</h1><p>三步走方法论 + 五大场景 + 合作体系——系统解决品牌资产管理难题</p><div class="page-rule"></div></div></div>
 <div class="sub-nav"><div class="sub-nav-inner">
-<a class="active" href="javascript:" onclick="showSub('business','tiers')">三级阶梯</a>
-<a href="javascript:" onclick="showSub('business','process')">三步走</a>
-<a href="javascript:" onclick="showSub('business','ongoing')">持续服务</a>
+<a class="active" href="javascript:" onclick="showSub('approach','method')">三步走方法</a>
+<a href="javascript:" onclick="showSub('approach','scenarios')">五大场景</a>
+<a href="javascript:" onclick="showSub('approach','cooperation')">合作体系</a>
 </div></div>
 
-<div id="sub-business-tiers" class="sub-page active">
-<section class="content-section">
-<div class="container">
-<div class="section-header" style="text-align:left;margin-bottom:40px">
-  <div class="section-tag">Service Tiers</div>
-  <h2>三级阶梯 · 匹配企业真实需求</h2>
-  <div class="section-rule" style="margin:16px 0 12px"></div>
-  <p class="intro-text" style="max-width:680px">同一句"品牌升级"，不同企业的深度完全不同。集和用三级阶梯判断——先诊断企业品牌问题的深度，再决定做多深、谁来做的方案。</p>
-</div>
-
-<div class="tb-wrap">
-<table>
-<thead><tr><th style="width:18%"></th><th style="width:27%">L1 品牌统一</th><th style="width:27%">L2 品牌系统</th><th style="width:28%">L3 全面管理</th></tr></thead>
-<tbody>
-<tr><td>适合企业</td><td>单品牌/成长型企业<br>年营收 5–50 亿</td><td>集团/上市公司<br>年营收 50–200 亿</td><td>大型集团/上市集团<br>年营收 200 亿+</td></tr>
-<tr><td>解决的问题</td><td>品牌形象与企业实力匹配<br>建立基础管理工具</td><td>品牌系统性治理<br>架构·宪法·叙事·管理机制</td><td>全维度品牌资产管理平台<br>文化战略+组织传承+AI信息主权</td></tr>
-<tr><td>核心交付</td><td>品牌诊断+基因六要素<br>+识别系统(VI)</td><td>诊断+内核+架构+九维<br>+VI+治理+培训</td><td>全维度+信任塔+双锥<br>+AI基建+创始人级总控</td></tr>
-<tr><td>创始人参与</td><td>不出场</td><td>关键节点参与<br>（创始人深访·战略工作坊）</td><td>全流程总控</td></tr>
-<tr class="highlight-row"><td style="font-weight:700">基础投资</td><td style="font-weight:700;color:var(--red)">¥150 万起</td><td style="font-weight:700;color:var(--red)">¥300 万起</td><td style="font-weight:700;color:var(--red)">¥600 万起</td></tr>
-</tbody>
-</table>
-</div>
-
-<div class="two-col mt-48">
-<div>
-<h3>阶梯不是"产品"</h3>
-<p>——是对企业品牌问题深度的判断。创始人级别团队先做深度诊断，确认企业需要哪个深度的系统，再出方案。</p>
-</div>
-<div>
-<h3>从轻量入口开始</h3>
-<p>免费初检 → 品牌资产全景诊断（20–30万/3–4周），进入核心服务后全额抵扣。不需要先做决策再看见证据。</p>
-</div>
-</div>
-</div>
-</section>
-</div>
-
-<div id="sub-business-process" class="sub-page">
+<div id="sub-approach-method" class="sub-page active">
 <section class="content-section">
 <div class="container">
 <div class="section-header" style="text-align:left;margin-bottom:40px">
   <div class="section-tag">Methodology</div>
   <h2>三步走 · 系统建设方法论</h2>
   <div class="section-rule" style="margin:16px 0 12px"></div>
-  <p class="intro-text" style="max-width:680px">集和23年验证的系统建设方法论——L1到L3的区别不是流程不同，而是在每一步做多深、覆盖多广。</p>
+  <p class="intro-text" style="max-width:680px">集和 23 年验证的系统建设方法论。L1 到 L3 的区别不是流程不同，是在每一步做多深、覆盖多广。</p>
 </div>
 
-<div class="process-grid" style="grid-template-columns:repeat(3,1fr)">
-<div class="process-step"><div class="ps-step">Step 01</div><div class="ps-bar"></div><h4>诊断与洞察</h4><p>九维品牌资产体检 · 行业与竞品研究 · 管理层深度访谈 · AI可见性基线 · 消费者洞察</p></div>
-<div class="process-step"><div class="ps-step">Step 02</div><div class="ps-bar"></div><h4>系统构建</h4><p>品牌内核定义 · 战略定位 · 品牌架构 · 基因六要素 · 九维资产库 · 识别系统 · AI基建架构</p></div>
-<div class="process-step"><div class="ps-step">Step 03</div><div class="ps-bar"></div><h4>落地实施</h4><p>VI落地 · 品牌书宣导 · 全触点标准化 · 管理委员会启动 · AI部署 · 组织移交</p></div>
+<div class="process-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:48px">
+<div class="process-step"><div class="ps-step">第一步</div><div class="ps-bar"></div><h4>诊断与洞察</h4><p>九维品牌资产体检 · 行业与竞品研究 · 管理层深度访谈 · AI 可见性基线 · 消费者洞察</p><div class="sc-tag" style="margin-top:12px;display:block;font-size:11px;color:var(--gray-light)">"给您的品牌资产做全面体检"</div></div>
+<div class="process-step"><div class="ps-step">第二步</div><div class="ps-bar"></div><h4>系统构建</h4><p>品牌内核定义 · 战略定位 · 品牌架构 · 基因六要素 · 九维资产库 · 识别系统 · AI 基建架构</p><div class="sc-tag" style="margin-top:12px;display:block;font-size:11px;color:var(--gray-light)">"建立品牌的资产管理系统"</div></div>
+<div class="process-step"><div class="ps-step">第三步</div><div class="ps-bar"></div><h4>落地与交付</h4><p>VI 落地 · 品牌书宣导 · 全触点标准化 · 管理委员会启动 · AI 部署 · 年度品牌资产运维</p><div class="sc-tag" style="margin-top:12px;display:block;font-size:11px;color:var(--gray-light)">"让品牌可复制·可管理·可增长"</div></div>
+</div>
+
+<div class="two-col">
+<div>
+<h3>只有标准才有杠杆</h3>
+<p>产品标准 · 品牌标准 · 系列标准 · 物料标准 → 放入 AI 核心大脑 → 持续裂变。品牌资产管理系统建成交付，不是终点——是起点。系统不运营，就会退化为静态文件。</p>
+</div>
+<div>
+<h3>按企业规模匹配</h3>
+<p>L1 品牌统一（¥150万起）· L2 品牌系统（¥300万起）· L3 全面管理（¥600万起）。先诊断，再决定做多深——不为用不上的深度买单。</p>
+</div>
+<div>
+<h3>年度持续服务</h3>
+<p>基础启动（¥20万/年）确保系统运行有对接、有检查、有计划。可选模块按需选择——月度报告·AI监测·品牌委员会·季度复评。</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-approach-scenarios" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Five Scenarios</div>
+  <h2>五大场景 · 你的品牌面临哪个问题？</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">企业做到一定规模，都会遇到品牌问题。但问题不只有一种样子。以下五种场景，是百亿级企业最常见的品牌困境。</p>
+</div>
+
+<div class="svc-grid">
+<div class="svc-card"><div class="sc-num">01</div><h3>品牌跟不上企业的速度</h3><p><strong>企业说</strong>："企业做大了、上市了，品牌形象还停在过去。客户觉得实力很强但品牌很土，资本市场看估值品牌撑不起行业地位。"</p><p><strong>本质</strong>：品牌识别资产滞后。品牌"长相"还停留在早期阶段，与企业今天的行业地位不匹配。</p><div class="sc-tag">对应：品牌系统升级 · L1/L2</div></div>
+<div class="svc-card"><div class="sc-num">02</div><h3>业务扩张了，品牌管不住</h3><p><strong>企业说</strong>："旗下多个业务板块、子公司、区域各做各的品牌。集团层面没有统一的品牌架构，每年花几千万做传播，品牌反而越做越散。"</p><p><strong>本质</strong>：品牌架构与治理资产失序。多品牌、多业务缺乏统一的管理框架。</p><div class="sc-tag">对应：集团品牌治理 · L2/L3</div></div>
+<div class="svc-card"><div class="sc-num">03</div><h3>上市了，但市场不认可品牌价值</h3><p><strong>企业说</strong>："技术全球前三，估值却像制造商。产品不比对手差，但溢价能力上不去。上市了，但品牌价值没有被资本市场正确定价。"</p><p><strong>本质</strong>：品牌心智与叙事资产滞后。企业有真本事，但市场认知跟不上。</p><div class="sc-tag">对应：品牌系统升级 · L2</div></div>
+<div class="svc-card"><div class="sc-num">04</div><h3>舆情倒逼品牌信任重建</h3><p><strong>企业说</strong>："负面舆情在AI搜索和社交平台持续扩散。问题不在某一篇报道——在品牌的信息主导权和信任资产根本不在自己手里。"</p><p><strong>本质</strong>：品牌社会资产受损。上市集团的品牌信任度在被持续侵蚀。</p><div class="sc-tag">对应：品牌资产止损与信任修复 · L2/L3</div></div>
+<div class="svc-card"><div class="sc-num">05</div><h3>创始人60岁+，品牌能否传承</h3><p><strong>企业说</strong>："创始人是品牌的灵魂——他退休了怎么办？三任董事长了，品牌方向能保持一致吗？"</p><p><strong>本质</strong>：品牌文化资产传承。品牌活在创始人个人的权威里，没有活在系统里。</p><div class="sc-tag">对应：品牌传承系统建设 · L2/L3</div></div>
 </div>
 
 <div class="tb-wrap mt-48">
+<h3 style="font-size:18px;margin:16px 20px">场景 × 九维资产库映射</h3>
 <table>
-<thead><tr><th>流程</th><th>L1 品牌统一</th><th>L2 品牌系统</th><th>L3 全面管理</th></tr></thead>
+<thead><tr><th>场景</th><th>核心资产维度</th><th>对应阶梯</th></tr></thead>
 <tbody>
-<tr><td>诊断洞察</td><td>4模块·品牌盘点→DNA初检→触点→竞品</td><td>10模块·含九维体检·市场调研·AI基线</td><td>15模块·含信任塔·双锥·创始人精神萃取</td></tr>
-<tr><td>系统构建</td><td>2模块·定义→基因六要素</td><td>11模块·含架构·宪法·九维·叙事</td><td>12模块·含AI架构·双锥·信任塔</td></tr>
-<tr><td>落地实施</td><td>4模块·VI→物料→导视</td><td>8模块·含子品牌VI·触点·培训·治理</td><td>15模块·含全触点·AI部署·品牌委员会</td></tr>
+<tr><td>品牌跟不上企业速度</td><td>识别资产</td><td>L1 品牌统一 / L2 品牌系统</td></tr>
+<tr><td>业务扩张品牌管不住</td><td>架构资产 · 战略资产</td><td>L2 品牌系统 / L3 全面管理</td></tr>
+<tr><td>市场不认可品牌价值</td><td>心智资产 · 叙事资产</td><td>L2 品牌系统</td></tr>
+<tr><td>舆情倒逼信任重建</td><td>社会资产</td><td>L2 品牌系统 / L3 全面管理</td></tr>
+<tr><td>创始人传承</td><td>文化资产</td><td>L2 品牌系统 / L3 全面管理</td></tr>
 </tbody>
 </table>
 </div>
@@ -667,51 +754,21 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 </section>
 </div>
 
-<div id="sub-business-ongoing" class="sub-page">
+<div id="sub-approach-cooperation" class="sub-page">
 <section class="content-section">
 <div class="container">
 <div class="section-header" style="text-align:left;margin-bottom:40px">
-  <div class="section-tag">Annual Maintenance</div>
-  <h2>持续服务 · 年度品牌资产运维</h2>
+  <div class="section-tag">Collaboration</div>
+  <h2>合作体系</h2>
   <div class="section-rule" style="margin:16px 0 12px"></div>
-  <p class="intro-text" style="max-width:680px">品牌资产管理系统建成交付，不是终点——是起点。系统不运营，就会退化为静态文件。</p>
+  <p class="intro-text" style="max-width:680px">集和拿项目，带交付团队一起做——团队收交付费，集和收商务+品牌资产管理费。生态协作，各司其职。</p>
 </div>
 
-<div class="two-col">
-<div class="pricing-card" style="padding:36px 28px;border:1px solid var(--red);border-radius:var(--radius)">
-  <div class="pc-tier">基础启动</div>
-  <div class="pc-price" style="font-size:32px"><span class="pc-currency">¥</span>20<span class="pc-currency">万 / 年</span></div>
-  <p style="font-size:13px;color:var(--gray-mid);margin-bottom:20px">确保系统运行有对接、有检查、有计划</p>
-  <ul class="pc-features">
-    <li>年度品牌资产管理运营计划制定</li>
-    <li>系统初始化与年度健康检查</li>
-    <li>月度/季度对接机制建立</li>
-    <li>基础技术支持（九维·文件规范·问题响应）</li>
-    <li>年度品牌资产简报</li>
-  </ul>
-  <a class="btn btn-primary" href="javascript:" onclick="showPage('invest')" style="width:100%;text-align:center">了解详情</a>
-</div>
-<div>
-  <h3>可选服务模块</h3>
-  <p style="font-size:14px;color:var(--gray-mid);margin-bottom:16px">按需选择，不为用不上的功能买单</p>
-  <div class="tb-wrap">
-    <table>
-      <thead><tr><th>模块</th><th>频率</th><th>费用参考</th></tr></thead>
-      <tbody>
-        <tr><td>M-01 月度品牌资产报告</td><td>每月1次</td><td>18–24万/年</td></tr>
-        <tr><td>M-02 AI可见性与舆情监测</td><td>7×24+月报</td><td>24–36万/年</td></tr>
-        <tr><td>M-03 七大关系利益人情报</td><td>每周推送+月报</td><td>15–20万/年</td></tr>
-        <tr><td>M-04 品牌内部宣导培训</td><td>每季度1次</td><td>12–18万/年</td></tr>
-        <tr><td>M-05 品牌管理委员会运作</td><td>每季度1次</td><td>15–20万/年</td></tr>
-        <tr><td>M-06 年度品牌战略工作坊</td><td>每年1次</td><td>20–30万/次</td></tr>
-        <tr><td>M-07 AI搜索内容矩阵运营</td><td>每月2–4篇</td><td>18–24万/年</td></tr>
-        <tr><td>M-08 季度品牌资产复评</td><td>每季度1次</td><td>12–18万/年</td></tr>
-        <tr><td>M-09 年度品牌资产白皮书</td><td>每年1次</td><td>12–18万/次</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p style="font-size:13px;color:var(--gray-text);margin-top:12px"><strong>推荐组合</strong>：L2标准运行 62–80万/年 · L3全面运行 154–212万/年（含AI监测）</p>
-</div>
+<div class="svc-grid">
+<div class="svc-card"><div class="sc-num">01</div><h3>品牌资产管理研究院（集和）</h3><p>顶层战略设计 · 方法论核心 · 品牌资产管理体系构建 · AI 品牌基建研发 · 商务对接与签单 · 项目总控</p><div class="sc-tag">顶层设计 + 商务驱动</div></div>
+<div class="svc-card"><div class="sc-num">02</div><h3>交付合作团队</h3><p>策略服务 · 设计交付 · 内容生产 · AI 部署。按项目内部采购定价，按自身市场价值计价，不因项目总价高而溢价。</p><div class="sc-tag">按项目结算 · 长期协作</div></div>
+<div class="svc-card"><div class="sc-num">03</div><h3>生态伙伴网络</h3><p>资本运作伙伴 · 产品战略伙伴 · 行业专业服务伙伴。围绕品牌资产管理生态，为客户提供全维度价值。</p><div class="sc-tag">生态协作 · 专业互补</div></div>
+<div class="svc-card"><div class="sc-num">04</div><h3>合作基本原则</h3><p>原创者署名——对外传播必须标注体系开创者。反抢功——项目成功后不得抢占功劳。越权即收回——未经许可变更范围，收回项目改由平台直管。</p><div class="sc-tag">透明 · 公平 · 长期</div></div>
 </div>
 </div>
 </section>
@@ -719,33 +776,156 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 
 </div>
 
-<!-- ============ PAGE 4: BRAND BANK SYSTEM ============ -->
-<div id="page-system" class="page">
-<div class="page-hero"><div class="container"><h1>BICO 企业品牌银行</h1><p>品牌银行 = 九维资产库 + 双锥价值链 + 五层信任塔 + BCI 资产表 + AI 品牌基建 → 360 品牌资产驾驶舱</p><div class="page-rule"></div></div></div>
+<!-- ============ PAGE 4: 集智AI ============ -->
+<div id="page-aiai" class="page">
+<div class="page-hero"><div class="container"><h1>集智 AI</h1><p>品牌资产管理 3.0 · AI 智能品牌资产管理系统 · Brand OS 2.0</p><div class="page-rule"></div></div></div>
 <div class="sub-nav"><div class="sub-nav-inner">
-<a class="active" href="javascript:" onclick="showSub('system','overview')">系统总览</a>
-<a href="javascript:" onclick="showSub('system','nine-d')">九维资产库</a>
-<a href="javascript:" onclick="showSub('system','dual-cone')">双锥价值链</a>
-<a href="javascript:" onclick="showSub('system','trust-tower')">五层信任塔</a>
-<a href="javascript:" onclick="showSub('system','bci')">BCI 资产表</a>
-<a href="javascript:" onclick="showSub('system','ai')">AI 品牌基建</a>
+<a class="active" href="javascript:" onclick="showSub('aiai','overview')">产品概述</a>
+<a href="javascript:" onclick="showSub('aiai','agents')">三智能体</a>
+<a href="javascript:" onclick="showSub('aiai','modules')">聚核飞评</a>
+<a href="javascript:" onclick="showSub('aiai','cockpit')">360驾驶舱</a>
 </div></div>
-<div id="sub-system-overview" class="sub-page active"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Brand Bank System</div><h2>企业品牌银行 · 全景</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">像经营银行一样经营品牌资产。每个企业都有品牌资产，只是被散落在各处、被经验管理、被时间消耗。企业品牌银行——把品牌资产从"说不清的无形资产"转化为可量化、可管理、可增值、可入账的核心资产。</p><div class="two-col mt-32"><div><h3>三步逻辑</h3><p style="font-family:var(--font-serif);font-size:22px;color:var(--gray-deep);font-weight:600;margin-bottom:16px">先摸清家底 → 再建系统 → 持续增值</p><p class="intro-text" style="max-width:680px">第一步摸清企业的品牌资产现状（九维资产库诊断）；第二步建立品牌资产管理系统（品牌DNA+管理机制）；第三步让品牌资产持续增长（信任建设+AI运维）。</p></div><div><h3>三个层级</h3><p style="font-family:var(--font-serif);font-size:22px;color:var(--gray-deep);font-weight:600;margin-bottom:16px">战略根基 · 品牌表达 · 增长裂变</p><p class="intro-text" style="max-width:680px">从根基到表达再到裂变，三层递进，不可跳跃。对应九维资产库的三大账户：本金账户（根基）、储蓄账户（表达）、复利账户（裂变）。</p></div></div></div></section><section class="content-section bg-light"><div class="container"><h2>六大系统模块</h2><p style="font-size:14px;color:var(--gray-mid);margin-bottom:32px;max-width:600px">每一套都是集和方法论的结晶，但对客户而言，只关心它能解决什么实际问题。</p><div class="two-col" style="grid-template-columns:1fr 1fr 1fr;gap:20px"><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">01 全面诊断</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌资产体检</h4><p style="font-size:13px;color:var(--gray-mid)">从企业文化到社会责任，9 个维度摸清企业品牌资产的家底——哪里值钱、哪里漏了、哪里该投。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">02 价值转化</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">从战略到市场</h4><p style="font-size:13px;color:var(--gray-mid)">把企业战略转化为消费者可感知的品牌价值。收拢战略方向、铸核品牌 DNA、放大市场增长。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">03 信任建设</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">消费者信任体系</h4><p style="font-size:13px;color:var(--gray-mid)">从产品功能到信念共鸣，五层递进——让消费者从"试试看"变成"非你不可"，品牌溢价来自信任存款。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">04 量化评估</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌价值仪表盘</h4><p style="font-size:13px;color:var(--gray-mid)">把品牌资产从"感觉"变成"数据"——品牌值多少钱、增长了多少、哪里有风险，一张表看清楚。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">05 智能运维</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">AI 品牌管理系统</h4><p style="font-size:13px;color:var(--gray-mid)">AI 自动管理品牌资产——智能入库、合规风控、内容生产、资产体检，品牌管理从人工升级为智能。</p></div><div class="pricing-card" style="padding:28px 20px;border:1px solid var(--gray-border);border-radius:var(--radius)"><div style="font-size:10px;font-weight:600;letter-spacing:2px;color:var(--red);margin-bottom:8px">06 全景管理</div><h4 style="font-family:var(--font-serif);font-size:18px;margin-bottom:8px">品牌资产驾驶舱</h4><p style="font-size:13px;color:var(--gray-mid)">六面板全景看板——品牌资产、信任健康、AI 可见性、竞争对标，一把手的品牌决策驾驶舱。</p></div></div></div></section></div>
-<div id="sub-system-nine-d" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Nine Dimensions</div><h2>九维资产库</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">九维资产库是企业的"品牌对公总账本"——从 9 个维度全面评估品牌资产，按三大账户归类。</p><div class="tb-wrap mt-32"><table><thead><tr><th>账户</th><th>层级</th><th>维度</th><th>说明</th></tr></thead><tbody>
-<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">本金账户</td><td rowspan="3">核战略层·沉淀根基</td><td>① 文化资产</td><td>企业文化基因·精神底色·价值观体系</td></tr>
-<tr><td>② 战略资产</td><td>战略定位·发展蓝图·品类占位</td></tr>
-<tr><td>③ 产权资产</td><td>商标·专利·知识产权·品牌法律保护</td></tr>
-<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">储蓄账户</td><td rowspan="3">核引擎层·沉淀表达</td><td>④ 识别资产</td><td>品牌识别系统·视觉符号·感官体验</td></tr>
-<tr><td>⑤ 心智资产</td><td>消费者认知·品牌联想·心智份额</td></tr>
-<tr><td>⑥ 体验资产</td><td>产品体验·服务体验·触点管理</td></tr>
-<tr><td rowspan="3" style="font-weight:700;color:var(--gray-deep)">复利账户</td><td rowspan="3">核裂变层·沉淀价值</td><td>⑦ 社群资产</td><td>用户社群·粉丝经济·口碑传播</td></tr>
-<tr><td>⑧ 商业资产</td><td>渠道网络·商业模式·生态伙伴</td></tr>
-<tr><td>⑨ 社会资产</td><td>社会影响力·公众信任·AI可见性</td></tr>
-</tbody></table></div></div></section></div>
-<div id="sub-system-dual-cone" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Dual-Cone Value Chain</div><h2>双锥价值链</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">内外价值转化的主轴——前段收拢战略，中段铸核品牌DNA，后段放大增长。核心锚点是品牌基因六要素（定义·定位·人格·名号·符号·口号），居于双锥正中心。</p><div class="process-grid mt-32"><div class="process-step"><div class="ps-step">前段</div><div class="ps-bar"></div><h4>收拢锥</h4><p>收拢战略 · 洞察市场 · 聚焦核心</p></div><div class="process-step" style="border-left:2px solid var(--red)"><div class="ps-step">中段 · 核心</div><div class="ps-bar"></div><h4>品牌 DNA</h4><p>定义·定位·人格·名号·符号·口号</p></div><div class="process-step"><div class="ps-step">后段</div><div class="ps-bar"></div><h4>放大锥</h4><p>放大增长 · 裂变传播 · 价值释放</p></div></div></div></section></div>
-<div id="sub-system-trust-tower" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">Trust Tower</div><h2>五层信任塔</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">消费者的"信任储蓄账户"——从功能满足到信念共鸣，五层递进。品牌溢价不是定价策略，是信任存款的利息。</p><div class="process-grid mt-32"><div class="process-step"><div class="ps-step">L1</div><div class="ps-bar"></div><h4>功能层</h4><p>产品满足基本需求</p></div><div class="process-step"><div class="ps-step">L2</div><div class="ps-bar"></div><h4>稳定层</h4><p>持续一致的交付</p></div><div class="process-step"><div class="ps-step">L3</div><div class="ps-bar"></div><h4>信任层</h4><p>品牌成为安全选择</p></div><div class="process-step"><div class="ps-step">L4</div><div class="ps-bar"></div><h4>共识层</h4><p>价值观共鸣</p></div><div class="process-step" style="border:1px solid var(--red)"><div class="ps-step" style="color:var(--red)">L5</div><div class="ps-bar" style="background:var(--red)"></div><h4>信念层</h4><p style="color:var(--gray-deep);font-weight:500">品牌成为信仰</p></div></div></div></section></div>
-<div id="sub-system-bci" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">BCI Asset Table</div><h2>BCI 资产表</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">品牌资产评估的量化工具——将品牌资产从"说不清的无形资产"转化为可量化、可追踪的指标体系。与资产评估标准（ISO 10668）映射，支持品牌价值货币化评估。</p></div></section></div>
-<div id="sub-system-ai" class="sub-page"><section class="content-section"><div class="container"><div class="section-header" style="text-align:left;margin-bottom:40px"><div class="section-tag">AI Brand Infrastructure</div><h2>AI 品牌基建</h2><div class="section-rule" style="margin:16px 0"></div></div><p class="intro-text">Brand OS AI 原生运维系统——四大智能模块：<strong>聚</strong>（智能资产入库）· <strong>核</strong>（智能合规风控）· <strong>飞</strong>（智能内容生产）· <strong>评</strong>（BCI 资产体检）。对应双锥价值链"收拢→铸核→放大"的执行逻辑。</p></div></section></div>
+
+<div id="sub-aiai-overview" class="sub-page active">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Brand Asset Management 3.0</div>
+  <h2>品牌资产管理进入 AI 时代</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">传统品牌管理是"人工循环"——策划→制作→投放→反馈，3–6 个月一轮。AI 时代的品牌管理是<strong>系统循环</strong>——AI 监测→认知差距发现→内容生成→分发→效果追踪，周级迭代。这不是效率提升——是认知维度的升级。</p>
+</div>
+
+<div style="text-align:center;margin-bottom:40px">
+  <div class="ip-badge"><span class="ip-star">✦</span> 自主知识产权 · 中国第一套 AI 品牌资产管理系统 <span class="ip-star">✦</span></div>
+</div>
+
+<div class="two-col" style="margin-bottom:40px">
+<div>
+<h3>集智 = 集和 + 智能</h3>
+<p style="font-size:15px;color:var(--gray-dark);margin-bottom:16px">集聚智慧，和而不同。</p>
+<p class="intro-text">集智 AI 是集和 23 年品牌资产管理方法论与 AI 技术的深度融合。它将龚凯老师提出的双锥价值链、九维资产库、五层信任塔等核心方法论，编译为可自动运行的 AI 智能体系统——让品牌管理从"人工维护"升级为"智能运维"。</p>
+</div>
+<div>
+<h3>Brand OS 2.0</h3>
+<p class="intro-text">BICO 企业品牌银行·AI 智能品牌资产管理系统。核心理念：<strong>像经营银行一样经营品牌资产</strong>。总系统公式：品牌银行 = 九维资产库 + 双锥价值链 + 五层信任塔 → 360 品牌资产驾驶舱。</p>
+<p style="font-size:14px;color:var(--gray-text);margin-top:12px">执行逻辑：收拢战略 → 铸核 DNA → 放大增长。双账闭环：企业九维资产投入 ↔ 用户五层信任储蓄。</p>
+</div>
+</div>
+
+<div class="svc-grid">
+<div class="svc-card"><div class="sc-num">3</div><h3>三智能体 · 面向客户的 AI 诊断</h3><p>品牌基因智能体 · 品牌资产智能体 · 品牌AI资产智能体——三组智能体覆盖从品牌定义到AI可见性的全维度诊断。输入企业信息，输出专业品牌资产报告。</p><div class="sc-tag">品牌诊断 · 量化评估 · 行动建议</div></div>
+<div class="svc-card"><div class="sc-num">4</div><h3>聚核飞评 · AI 品牌基建四模块</h3><p>智能资产入库 → 智能合规风控 → 智能内容生产 → BCI 资产体检。对应双锥价值链"收拢→铸核→放大→验收"的执行逻辑。</p><div class="sc-tag">资产入库 · 风控 · 内容 · 体检</div></div>
+<div class="svc-card"><div class="sc-num">12</div><h3>全栈智能体群 · 内部能力层</h3><p>12 个专业智能体覆盖品牌升级、资产管理、增长风控三大阶段——精神提炼、竞争诊断、基因编码、资产建档、合规风控、品牌监测、GEO 内容生产等。</p><div class="sc-tag">全链路 AI 原生运维</div></div>
+<div class="svc-card"><div class="sc-num">∞</div><h3>GEO 内容引擎 · AI 可见性管理</h3><p>语义库匹配 257+ 品牌相关问题，多平台风格自适应，18 平台 25+ 账号自动分发。让品牌在 AI 搜索结果中被正确定义、优先引用。</p><div class="sc-tag">AI 搜索引擎优化 · 品牌信息主权</div></div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-aiai-agents" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Three Intelligent Agents</div>
+  <h2>三智能体 · 从诊断到行动</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">三位 AI 品牌诊断专家，分别从品牌定义、品牌价值、AI 可见性三个维度，为您的品牌做全面"体检"。</p>
+</div>
+
+<div class="agent-grid">
+<div class="agent-card">
+<div class="ac-icon">Agent 01</div>
+<h4>品牌基因智能体</h4>
+<p class="ac-question">"品牌到底是谁？定义清晰吗？"</p>
+<p>20 道创始人视角问题，评估品牌 DNA 清晰度。输出 DNA 清晰度评分（0-100）和一语定义。锚定价值观、品类、人格、名称、符号、主张六大维度。</p>
+<div class="sc-tag" style="margin-top:12px">方法论：品牌基因六要素 · 双定法则</div>
+</div>
+<div class="agent-card">
+<div class="ac-icon">Agent 02</div>
+<h4>品牌资产智能体</h4>
+<p class="ac-question">"品牌值多少钱？储金健康吗？"</p>
+<p>15 道品牌管理者视角问题，评估 BCI 等效评分（0-1000）和储金诊断树。覆盖精神文化、形象识别、产品体验、内容叙事、商业价值、自评六大维度。</p>
+<div class="sc-tag" style="margin-top:12px">方法论：BCI 资产表 · 五层信任塔</div>
+</div>
+<div class="agent-card">
+<div class="ac-icon">Agent 03</div>
+<h4>品牌 AI 资产智能体</h4>
+<p class="ac-question">"AI 认识你吗？数字存在感够强吗？"</p>
+<p>输入品牌名 + 域名 + 3 个关键词，自动扫描 AI 引擎收录状态。输出 GEO 就绪度评分（0-100）和内容差距分析。覆盖 AI 收录、内容覆盖、技术 SEO、品牌声量四大维度。</p>
+<div class="sc-tag" style="margin-top:12px">方法论：GEO 写作方法论 · 语义库</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-aiai-modules" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">AI Brand Infrastructure</div>
+  <h2>聚核飞评 · AI 品牌基建四模块</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">对应双锥价值链执行逻辑——收拢 → 铸核 → 放大 → 验收。四个模块构成完整的 AI 品牌资产运维闭环。</p>
+</div>
+
+<div class="module-flow" style="margin-bottom:48px">
+<div class="module-card"><div class="mc-icon">聚</div><div class="mc-label">收拢</div><h4>智能资产入库</h4><p>自动化采集与归类品牌资产，将散落在各处的品牌资产入账九维资产库。</p></div>
+<div class="module-card"><div class="mc-icon">核</div><div class="mc-label">铸核</div><h4>智能合规风控</h4><p>全格式内容对照品牌宪法审核，偏差评分、修正建议——确保每一次表达都不偏离品牌核心。</p></div>
+<div class="module-card"><div class="mc-icon">飞</div><div class="mc-label">放大</div><h4>智能内容生产</h4><p>多平台 GEO 内容自动生成，适配知乎/公众号/36氪/头条号等 18 平台 25+ 账号风格，自动分发。</p></div>
+<div class="module-card"><div class="mc-icon">评</div><div class="mc-label">验收</div><h4>BCI 资产体检</h4><p>九维加权自动评分，0-1000 BCI 报告，行业对标。让品牌资产从"感觉"变成"数据"。</p></div>
+</div>
+
+<div class="two-col">
+<div>
+<h3>GEO 内容引擎</h3>
+<p class="intro-text">集和自主研发的 GEO（Generative Engine Optimization）内容生产系统。基于 257+ 语义库问题和 7 大场景标签，自动匹配目标受众关切、生成四层三明治结构的优质内容。不是传统 SEO——是为 AI 引用而生的内容体系。</p>
+</div>
+<div>
+<h3>六大数据管道</h3>
+<p class="intro-text">六条自动化数据管道实时喂养驾驶舱：实在 Agent（国内 AI 可见性·周级）· Apify GEO（国际 AI 可见性·月级）· YouGov（消费者认知）· Merciv（社交/搜索信号）· Valona（竞品动态）· 人工评分（季度）。数据融合→自动计算→趋势发现→异常预警→AI 分析师建议。</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-aiai-cockpit" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">360 Brand Asset Cockpit</div>
+  <h2>360 品牌资产驾驶舱</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">六面板全景评估系统——一把手的品牌决策驾驶舱。两大贯穿指标：AI 可见性指数 + 承诺兑现偏差率。</p>
+</div>
+
+<div class="process-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:40px">
+<div class="process-step"><div class="ps-step">屏1</div><div class="ps-bar"></div><h4>健康总览</h4><p>CEO 30 秒扫读——BCI 大数、九维迷你雷达、趋势线、Top 3 预警</p></div>
+<div class="process-step"><div class="ps-step">屏2</div><div class="ps-bar"></div><h4>九维雷达</h4><p>CMO 深度探查——九维雷达图 0-100，下钻到子项，CEP 心智优势矩阵</p></div>
+<div class="process-step"><div class="ps-step">屏3</div><div class="ps-bar"></div><h4>信任水塔</h4><p>五层信任塔储蓄水位，存取事件时间线——品牌溢价是信任存款的利息</p></div>
+</div>
+<div class="process-grid" style="grid-template-columns:repeat(3,1fr)">
+<div class="process-step"><div class="ps-step">屏4</div><div class="ps-bar"></div><h4>AI 可见性</h4><p>6 引擎 × 30 关键词可见性矩阵，语义缺口热力图——品牌在 AI 世界里的存在感</p></div>
+<div class="process-step"><div class="ps-step">屏5</div><div class="ps-bar"></div><h4>竞争对标</h4><p>竞争定位矩阵、竞品动态时间线——你不仅要知道自己好不好，还要知道对手在做什么</p></div>
+<div class="process-step"><div class="ps-step">屏6</div><div class="ps-bar"></div><h4>预警中心</h4><p>P0/P1/P2 三级预警，根因分析+推荐行动——异常优先，绿色代表无需关注</p></div>
+</div>
+
+<div class="two-col mt-48">
+<div>
+<h3>AI 分析师</h3>
+<p class="intro-text">不是把 AI 加在 dashboard 上——是把分析师放进测量系统里。每月自动诊断、自然语言查询、异常预警、建议生成。像 McKinsey 合伙人向 CEO 汇报——有判断、有数据、有建议。</p>
+</div>
+<div>
+<h3>品牌数字孪生</h3>
+<p class="intro-text">五层数字孪生：品牌身份孪生·品牌感知孪生·品牌 AI 孪生·品牌竞争孪生·品牌体验孪生。"如果心智资产下降 20%，BCI 会跌多少？"——决策前先仿真，再行动。</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
 </div>
 
 <!-- ============ PAGE 5: INVESTMENT ============ -->
@@ -856,8 +1036,8 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 <div class="metrics-row">
 <div class="metric-item"><div class="mi-num red">15<span class="mi-unit" style="color:var(--red)">年</span></div><div class="mi-label">越秀集团持续服务</div></div>
 <div class="metric-item"><div class="mi-num red">19<span class="mi-unit" style="color:var(--red)">×</span></div><div class="mi-label">品牌资产规模增长</div></div>
-<div class="metric-item"><div class="mi-num red">600亿<div class="mi-label">服务起点</div></div>
-<div class="metric-item"><div class="mi-num red">万亿<div class="mi-label">今日规模</div></div>
+<div class="metric-item"><div class="mi-num red">600亿</div><div class="mi-label">服务起点</div></div>
+<div class="metric-item"><div class="mi-num red">万亿</div><div class="mi-label">今日规模</div></div>
 </div>
 
 <div class="svc-grid mt-48">
@@ -925,19 +1105,116 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 
 </div>
 
-<!-- ============ PAGE 6: KNOWLEDGE CENTER ============ -->
-<div id="page-knowledge" class="page">
-<div class="page-hero"><div class="container"><h1>知识中心</h1><p>中国品牌资产管理知识中心</p><div class="page-rule"></div></div></div>
+<!-- ============ PAGE 6: 品牌智库 ============ -->
+<div id="page-thinktank" class="page">
+<div class="page-hero"><div class="container"><h1>品牌智库</h1><p>中国品牌资产管理知识中心 · 白皮书 · 政策洞察 · 品牌问答 · 行业知识库</p><div class="page-rule"></div></div></div>
 <div class="sub-nav"><div class="sub-nav-inner">
-<a class="active" href="javascript:" onclick="showSub('knowledge','brandpedia')">品牌百科</a>
-<a href="javascript:" onclick="showSub('knowledge','ai-qa')">AI 问答</a>
-<a href="javascript:" onclick="showSub('knowledge','whitepaper')">白皮书</a>
-<a href="javascript:" onclick="showSub('knowledge','insights')">行业洞察</a>
+<a class="active" href="javascript:" onclick="showSub('thinktank','whitepapers')">白皮书</a>
+<a href="javascript:" onclick="showSub('thinktank','policy')">政策洞察</a>
+<a href="javascript:" onclick="showSub('thinktank','qa')">品牌问答</a>
+<a href="javascript:" onclick="showSub('thinktank','knowledge')">行业知识库</a>
 </div></div>
-<div id="sub-knowledge-brandpedia" class="sub-page active"><section class="content-section"><div class="container"><h2>品牌百科</h2><p class="intro-text">中国品牌资产管理知识库。</p><div class="know-grid mt-32"><div class="know-card"><div class="kc-type">概念</div><h4>什么是品牌资产管理</h4><p>将品牌从个人直觉升级为组织系统的持续过程。</p></div><div class="know-card"><div class="kc-type">概念</div><h4>企业品牌银行</h4><p>像经营银行一样经营品牌资产。</p></div><div class="know-card"><div class="kc-type">方法</div><h4>品牌基因六要素</h4><p>定义·定位·人格·名号·符号·口号。</p></div></div></div></section></div>
-<div id="sub-knowledge-ai-qa" class="sub-page"><section class="content-section"><div class="container"><h2>AI 问答</h2><p class="intro-text">基于知识库的 AI 智能问答。</p><div class="faq-item open" style="margin-top:32px"><div class="faq-q"><span>什么是品牌资产管理？</span><span class="faq-toggle">+</span></div><div class="faq-a">品牌资产管理是指将品牌视为企业核心资产，通过系统化的诊断、构建、管理和评估，实现品牌价值的持续增长。</div></div><div class="faq-item"><div class="faq-q"><span>企业品牌银行解决什么问题？</span><span class="faq-toggle">+</span></div><div class="faq-a">解决品牌资产"说不清、管不住、难增值"的核心问题。</div></div></div></section></div>
-<div id="sub-knowledge-whitepaper" class="sub-page"><section class="content-section"><div class="container"><h2>白皮书</h2><p class="intro-text">深度研究报告。</p></div></section></div>
-<div id="sub-knowledge-insights" class="sub-page"><section class="content-section"><div class="container"><h2>行业洞察</h2><p class="intro-text">品牌资产管理前沿趋势。</p></div></section></div>
+
+<div id="sub-thinktank-whitepapers" class="sub-page active">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Whitepapers</div>
+  <h2>白皮书与研究</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">集和品牌资产管理研究院出品。深度研究报告，为企业品牌决策提供权威依据。</p>
+</div>
+
+<div class="know-grid">
+<div class="know-card"><div class="kc-type">白皮书</div><h4>品牌升级白皮书</h4><p>从一次性方案到系统性资产管理。详解品牌升级的本质不是换标识，是建立可持续的品牌资产管理系统。</p></div>
+<div class="know-card"><div class="kc-type">白皮书</div><h4>上市集团品牌资产管理白皮书</h4><p>15年600亿到1万亿：上市集团品牌资产管理的标杆实践。越秀集团15年深度案例全景呈现。</p></div>
+<div class="know-card"><div class="kc-type">白皮书</div><h4>品牌资产量化白皮书</h4><p>从说不清到可量化、可管理、可传承。让品牌资产进入董事会决策层——BCI 评估体系详解。</p></div>
+<div class="know-card"><div class="kc-type">白皮书</div><h4>AI时代的品牌资产管理</h4><p>从流量运营到认知资产。三层认知资产架构，企业AI品牌资产建设五步法，AI时代品牌信息主权策略。</p></div>
+<div class="know-card"><div class="kc-type">研究报告</div><h4>九维品牌资产管理对标研究</h4><p>集和九维体系 vs 宁高宁方法论/越秀实践/华为海尔招商局等中国领先企业/Aaker Keller Interbrand 国际理论。</p></div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-thinktank-policy" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Policy Insights</div>
+  <h2>政策洞察</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">三大国家政策信号正在重塑品牌管理的战略地位——从"锦上添花"变成了"企业必修课"。</p>
+</div>
+
+<div class="policy-grid">
+<div class="policy-card"><div class="pc-layer">国家战略层</div><h4>国资委 · 品牌价值纳入考核</h4><p>国务院国资委将品牌价值纳入央企负责人经营业绩考核（2025年7月）。品牌资产管理从"可选项"变为"必答题"。</p></div>
+<div class="policy-card"><div class="pc-layer">十五五规划</div><h4>品牌资产可以"入账"</h4><p>十五五规划首次将无形资产投资写入国家战略（2026年3月）。"品牌可以入账"——品牌资产货币化正式进入政策议程。</p></div>
+<div class="policy-card"><div class="pc-layer">AI监管</div><h4>AI时代的信息主权竞争</h4><p>国广研2026 AI品牌资产白皮书：近80%用户"先问AI再决策"。品牌在AI世界的存在感，正在成为新的竞争维度。</p></div>
+</div>
+<div class="policy-grid mt-32" style="grid-template-columns:repeat(2,1fr)">
+<div class="policy-card"><div class="pc-layer">部委执行</div><h4>工信部 · 中国消费名品</h4><p>"中国消费名品"形成机制 + "AI+三品"专项行动。品牌诊断、动态复核、AI赋能品牌建设，国牌焕新进入执行阶段。</p></div>
+<div class="policy-card"><div class="pc-layer">区域政策</div><h4>海珠区 · AI大模型落地</h4><p>AI+营销场景补贴最高500万，双链融合最高2100万/年。区域政策为品牌AI基建提供实质性支持。</p></div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-thinktank-qa" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Brand Q&A</div>
+  <h2>品牌问答</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">企业品牌管理的高频问题，一次讲清楚。</p>
+</div>
+
+<div class="faq-item open" style="margin-top:32px;border-top:1px solid var(--gray-border)">
+<div class="faq-q"><span>品牌升级和换 VI 有什么区别？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">换 VI 解决的是"长什么样"——视觉好不好看、形象够不够新。品牌资产管理解决的是"企业是什么、为什么被选择、如何持续增值"。换 VI 是面子工程，品牌资产管理是从根基到系统的顶层设计。很多企业花几百万换标识，品牌该有的问题一个没少——因为问题不在视觉，在系统。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q"><span>集团为什么需要品牌架构？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">业务越复杂，越需要明确母子品牌关系、命名与授权边界。没有品牌架构的集团，每一笔传播投入都在各自为政——每年花几千万，品牌反而越做越散。品牌架构解决的是"谁是谁、谁管谁、谁和谁是什么关系"。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q"><span>AI 为什么会影响品牌信任？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">AI 正在替客户先回答"你是谁"。当用户在搜索品牌时，AI 引擎直接生成答案——如果企业没有建立权威、一致的公开信源，AI 就在用二手信息、过时信息、甚至竞争对手的信息定义你的品牌。品牌在 AI 世界的信息主权，正在成为品牌信任的新战场。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q"><span>品牌资产管理需要多久才能看到效果？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">品牌资产管理不是一次性项目——是按十年计的复利投资。系统建设期通常 4-12 个月（取决于品牌问题的深度和企业的配合度）。品牌内核清晰化、架构体系化、资产可量化——这些在系统交付时就能看到。信任资产积累和 AI 品牌信息主权建立，需要持续运营。越秀 15 年，品牌资产 19 倍增长——品牌资产管理的时间越长，复利效应越大。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q"><span>哪些企业需要品牌资产管理？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">上市集团、行业龙头、大规模企业——具体来说，年营收 5 亿以上的企业，当出现以下任一信号时就需要：品牌形象与企业实力不匹配、多业务板块品牌各自为政、市场估值低于企业真实实力、负面舆情持续扩散、创始人面临退休传承。五种场景本质上都是品牌不同维度的资产在发出"报警信号"。</div>
+</div>
+</div>
+</section>
+</div>
+
+<div id="sub-thinktank-knowledge" class="sub-page">
+<section class="content-section">
+<div class="container">
+<div class="section-header" style="text-align:left;margin-bottom:40px">
+  <div class="section-tag">Industry Knowledge</div>
+  <h2>行业知识库</h2>
+  <div class="section-rule" style="margin:16px 0 12px"></div>
+  <p class="intro-text" style="max-width:680px">品牌资产管理前沿趋势、行业研究、深度内容。</p>
+</div>
+
+<div class="know-grid">
+<div class="know-card"><div class="kc-type">行业研究</div><h4>中国品牌资产管理行业格局</h4><p>品牌资产管理赛道全景分析——从设计公司、广告公司到战略咨询，谁在真正做品牌资产管理。</p></div>
+<div class="know-card"><div class="kc-type">国牌焕新</div><h4>国牌研究社 · 老字号焕新系列</h4><p>同仁堂·百丽·回力·凯乐石——国货品牌焕发新生的路径与方法论。</p></div>
+<div class="know-card"><div class="kc-type">方法论</div><h4>品牌方法论实验室</h4><p>什么是品牌资产管理、系统如何建设、品牌基因如何解码——从底层原理到实践方法。</p></div>
+<div class="know-card"><div class="kc-type">决策工具</div><h4>品牌决策参考</h4><p>品牌咨询选型标准、定价分析、合同指南——为企业品牌决策者提供实操参考。</p></div>
+<div class="know-card"><div class="kc-type">商业内参</div><h4>商业决策内参</h4><p>ROI 对比、集团品牌管理、选型清单——面向高管层的品牌投资决策参考。</p></div>
+<div class="know-card"><div class="kc-type">案例研究</div><h4>越秀集团深度案例</h4><p>15年600亿到万亿级的品牌资产管理全景——从集团品牌架构到子品牌叙事、从文化资产到社会影响力。</p></div>
+</div>
+</div>
+</section>
+</div>
+
 </div>
 
 <!-- ============ PAGE 7: ABOUT ============ -->
@@ -962,9 +1239,9 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand"><div class="fb-name">集和 <span class="fb-red">BICO</span> 企业品牌银行</div><p>深耕品牌资产管理咨询 23 年。为中国杰出企业，筑品牌资产长城。</p></div>
-      <div class="footer-col"><h5>业务体系</h5><a href="javascript:" onclick="showSub('business','tiers')">三级阶梯</a><a href="javascript:" onclick="showSub('business','process')">三步走方法论</a><a href="javascript:" onclick="showSub('business','ongoing')">持续服务</a></div>
-      <div class="footer-col"><h5>品牌银行系统</h5><a href="javascript:" onclick="showSub('system','overview')">系统总览</a><a href="javascript:" onclick="showSub('system','nine-d')">九维资产库</a><a href="javascript:" onclick="showSub('system','trust-tower')">五层信任塔</a><a href="javascript:" onclick="showSub('system','bci')">BCI 资产表</a></div>
-      <div class="footer-col"><h5>关于</h5><a href="javascript:" onclick="showPage('cases')">代表案例</a><a href="javascript:" onclick="showSub('about','intro')">集和介绍</a><a href="javascript:" onclick="showSub('about','gongkai')">龚凯</a><a href="javascript:" onclick="showPage('invest')">投资方案</a></div>
+      <div class="footer-col"><h5>服务</h5><a href="javascript:" onclick="showPage('approach')">解决之道</a><a href="javascript:" onclick="showSub('approach','method')">三步走方法</a><a href="javascript:" onclick="showPage('invest')">投资方案</a></div>
+      <div class="footer-col"><h5>产品</h5><a href="javascript:" onclick="showPage('aiai')">集智AI</a><a href="javascript:" onclick="showSub('aiai','agents')">三智能体</a><a href="javascript:" onclick="showSub('aiai','modules')">聚核飞评</a></div>
+      <div class="footer-col"><h5>关于</h5><a href="javascript:" onclick="showPage('cases')">代表案例</a><a href="javascript:" onclick="showSub('about','intro')">集和介绍</a><a href="javascript:" onclick="showSub('about','gongkai')">龚凯</a><a href="javascript:" onclick="showPage('thinktank')">品牌智库</a></div>
     </div>
     <div class="footer-bottom"><span>© 2026 集和品牌咨询 · BICO Brand Bank</span><span>中国品牌资产管理的代表者</span></div>
   </div>
@@ -979,6 +1256,7 @@ function showPage(pageId){
   var nl=document.getElementById('nav-'+pageId);
   if(nl)nl.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
+  // re-init first sub
   var subs=pg?pg.querySelectorAll('.sub-page'):[];
   if(subs.length>0){subs.forEach(function(s){s.classList.remove('active')});subs[0].classList.add('active')}
   var snl=pg?pg.querySelectorAll('.sub-nav-inner a'):[];
@@ -997,11 +1275,9 @@ function showSub(pageId,subId){
   document.querySelectorAll('.nav-links li a').forEach(function(a){a.classList.remove('active')});
   var nl=document.getElementById('nav-'+pageId);if(nl)nl.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
+  document.querySelectorAll('.nav-links.open').forEach(function(m){m.classList.remove('open')});
 }
-document.addEventListener('click',function(e){
-  var faq=e.target.closest('.faq-item');
-  if(faq){faq.classList.toggle('open');var tog=faq.querySelector('.faq-toggle');if(tog)tog.textContent=faq.classList.contains('open')?'−':'+';}
-});
 </script>
+
 </body>
 </html>
