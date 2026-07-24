@@ -123,7 +123,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);bor
 .hero-text{position:relative;z-index:2}
 .hero-primary{font-family:var(--font-serif);font-size:72px;font-weight:700;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:12px}
 .hero-subtitle{font-family:var(--font-serif);font-size:42px;font-weight:500;color:rgba(255,255,255,0.8);line-height:1.1;letter-spacing:-0.5px;margin-bottom:24px}
-.hero-anchor{font-family:var(--font-serif);font-size:20px;font-weight:500;color:rgba(255,255,255,0.92);line-height:1.6;margin-bottom:20px;max-width:600px;font-style:italic}
 .hero-rule{width:56px;height:2px;background:rgba(255,255,255,0.3);margin:24px 0}
 .hero-brand{font-size:15px;color:rgba(255,255,255,0.5);letter-spacing:2px;margin-bottom:32px}
 .hero-brand .brand-highlight{color:#fff;font-weight:600}
@@ -160,6 +159,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);bor
   .hero-metrics .hm-item+.hm-item{padding-left:0}
   .hm-num{font-size:28px}
 }
+
+/* ========== ANCHOR QUOTE ========== */
+.anchor-quote{font-family:var(--font-serif);font-size:22px;font-weight:500;color:var(--red);text-align:center;line-height:1.6;max-width:600px;margin:0 auto 40px;font-style:italic}
+
+/* ========== MORE CASES ========== */
+.more-cases{border-top:1px solid var(--gray-border);padding-top:28px;margin-top:36px;text-align:center}
+.more-cases .mc-label{font-size:10px;font-weight:600;letter-spacing:2px;color:var(--gray-light);text-transform:uppercase;margin-bottom:16px}
+.more-cases .mc-list{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px}
+.more-cases .mc-item{font-family:var(--font-serif);font-size:18px;color:var(--gray-mid);font-weight:500;padding:0 4px;cursor:pointer;transition:var(--transition)}
+.more-cases .mc-item:hover{color:var(--red)}
+@media(max-width:600px){.more-cases .mc-list{gap:6px 16px}.more-cases .mc-item{font-size:15px}}
 
 /* ========== CASE CARDS ========== */
 .bg-light{background:var(--off-white)}
@@ -382,7 +392,6 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
         <h1 class="hero-primary">集和·中国品牌资产管理的<br>代表者</h1>
         <p class="hero-subtitle">万亿级品牌资产管理典范</p>
         <div class="hero-rule"></div>
-        <p class="hero-anchor">让品牌成为可看见、可度量、可传承、可增值的核心资产。</p>
         <p class="hero-audience">
           为 <span class="aud-em">上市集团 · 行业龙头 · 大规模企业</span><br>
           系统性解决品牌资产管理的复杂难题
@@ -447,6 +456,18 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
         <div class="cc-tags"><span class="tag-red">350年国牌老字号</span><span>品牌焕新</span></div>
         <div class="cc-more">查看案例 →</div>
       </div>
+      <div class="more-cases">
+        <div class="mc-label">更多案例</div>
+        <div class="mc-list">
+          <span class="mc-item">广汽埃安</span>
+          <span class="mc-item">良品铺子</span>
+          <span class="mc-item">三一重工</span>
+          <span class="mc-item">万洋集团</span>
+          <span class="mc-item">福达集团</span>
+          <span class="mc-item">SHEIN</span>
+          <span class="mc-item">华润三九</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -459,6 +480,7 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
       <h2>领先一个时代</h2>
       <p style="max-width:520px;font-size:17px;color:var(--gray-dark);line-height:1.7;margin:0 auto">开创中国品牌资产管理 23 年，为中国杰出企业筑品牌资产长城。</p>
     </div>
+    <div class="anchor-quote">让品牌成为可看见、可度量、可传承、可增值的核心资产。</div>
     <div class="tb-wrap" style="margin-top:32px">
       <table>
         <thead><tr><th style="width:14%">类型</th><th style="width:36%">他们做什么</th><th style="width:50%">集和做什么</th></tr></thead>
