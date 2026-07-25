@@ -166,12 +166,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);bor
 @media(max-width:900px){.case-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
 
 /* ========== MORE CASES ========== */
-.more-cases{border-top:1px solid var(--gray-border);padding-top:28px;margin-top:36px;text-align:center}
+.more-cases{border-top:1px solid var(--gray-border);padding-top:36px;margin-top:36px;text-align:center}
 .more-cases .mc-label{font-size:10px;font-weight:600;letter-spacing:2px;color:var(--gray-light);text-transform:uppercase;margin-bottom:16px}
-.more-cases .mc-list{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px}
-.more-cases .mc-item{font-family:var(--font-serif);font-size:18px;color:var(--gray-mid);font-weight:500;padding:0 4px;cursor:pointer;transition:var(--transition)}
-.more-cases .mc-item:hover{color:var(--red)}
-@media(max-width:600px){.more-cases .mc-list{gap:6px 16px}.more-cases .mc-item{font-size:15px}}
+.more-cases .mc-stats{font-family:var(--font-serif);font-size:28px;font-weight:600;color:var(--gray-deep);line-height:1.3;margin-bottom:4px}
+.more-cases .mc-stats-sub{font-size:14px;color:var(--gray-mid);margin-bottom:20px}
+.more-cases .mc-tagline{font-family:var(--font-serif);font-size:24px;font-weight:700;color:var(--red);letter-spacing:2px;margin-bottom:28px;line-height:1.4}
+.mc-scroll-wrap{width:100%;overflow:hidden;position:relative}
+.mc-scroll-wrap::before,.mc-scroll-wrap::after{content:'';position:absolute;top:0;width:60px;height:100%;z-index:2;pointer-events:none}
+.mc-scroll-wrap::before{left:0;background:linear-gradient(to right,var(--off-white),transparent)}
+.mc-scroll-wrap::after{right:0;background:linear-gradient(to left,var(--off-white),transparent)}
+.mc-scroll{display:flex;gap:48px;animation:mcMarquee 28s linear infinite;width:max-content;padding:8px 0}
+.mc-scroll:hover{animation-play-state:paused}
+.mc-scroll .mc-item{font-family:var(--font-serif);font-size:20px;color:var(--gray-mid);font-weight:500;white-space:nowrap;transition:var(--transition);cursor:default}
+.mc-scroll .mc-item:hover{color:var(--red)}
+.mc-scroll .mc-dot{color:var(--gray-light);font-size:8px;display:flex;align-items:center}
+@keyframes mcMarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:600px){.more-cases .mc-stats{font-size:22px}.more-cases .mc-tagline{font-size:18px}.mc-scroll{gap:32px}.mc-scroll .mc-item{font-size:16px}}
 
 /* ========== SCENARIO GRID (homepage) ========== */
 .scenario-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
@@ -197,17 +207,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);bor
 @media(max-width:768px){.if-step{padding:32px 24px}}
 
 /* ========== ERA CARDS ========== */
-.era-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:48px 0}
-.era-card{border:1px solid var(--gray-border);border-radius:var(--radius);padding:36px 28px;position:relative;background:#fff;transition:var(--transition)}
+.era-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:48px 0}
+.era-card{border:1px solid var(--gray-border);border-radius:var(--radius);padding:44px 32px;position:relative;background:#fff;transition:var(--transition)}
 .era-card:hover{border-color:var(--red);box-shadow:var(--shadow-sm)}
-.era-card .ec-era{font-size:11px;font-weight:600;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:4px}
-.era-card .ec-version{font-family:var(--font-serif);font-size:13px;color:var(--gray-mid);margin-bottom:12px;font-style:italic}
-.era-card h4{font-family:var(--font-serif);font-size:20px;margin-bottom:10px}
-.era-card p{font-size:13.5px;color:var(--gray-dark);line-height:1.7;margin-bottom:4px}
+.era-card .ec-era{font-size:14px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:4px}
+.era-card .ec-version{font-family:var(--font-serif);font-size:15px;color:var(--gray-mid);margin-bottom:16px;font-style:italic}
+.era-card h4{font-family:var(--font-serif);font-size:24px;margin-bottom:12px}
+.era-card p{font-size:14px;color:var(--gray-dark);line-height:1.8;margin-bottom:4px}
 .era-card .ec-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;color:var(--red);border:1px solid var(--red);border-radius:3px;padding:2px 10px;margin-top:8px}
-.ec-num{font-family:var(--font-serif);font-size:40px;font-weight:700;color:rgba(184,32,36,0.08);position:absolute;top:12px;right:16px;line-height:1;pointer-events:none}
+.ec-num{font-family:var(--font-serif);font-size:48px;font-weight:700;color:rgba(184,32,36,0.08);position:absolute;top:16px;right:20px;line-height:1;pointer-events:none}
 @media(max-width:900px){.era-grid{grid-template-columns:1fr;gap:16px}}
-.ec-divider{width:100%;height:1px;background:var(--gray-border);margin:8px 0 16px}
+.ec-divider{width:100%;height:1px;background:var(--gray-border);margin:12px 0 20px}
 
 /* ========== BUTTONS ========== */
 .btn{display:inline-block;padding:12px 32px;font-size:14px;font-weight:600;border-radius:var(--radius-sm);transition:var(--transition);cursor:pointer;letter-spacing:0.5px;border:none;text-align:center}
@@ -478,7 +488,7 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
     <div class="case-section-intro">
       <div class="case-subtitle">他们都选择了集和</div>
       <h2>代表案例</h2>
-      <p>上市集团 · 行业龙头 · 大规模企业的共同选择</p>
+      <p>上市集团 · 行业龙头 · 老字号国牌 · 500强企业的共同选择</p>
     </div>
     <div class="case-grid">
       <div class="case-card" onclick="showSub('cases','yuexiu')">
@@ -507,16 +517,30 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
       </div>
       <div class="more-cases">
         <div class="mc-label">更多案例</div>
-        <div class="mc-list">
-          <span class="mc-item">广汽埃安</span>
-          <span class="mc-item">良品铺子</span>
-          <span class="mc-item">三一重工</span>
-          <span class="mc-item">汤臣倍健</span>
-          <span class="mc-item">片仔癀</span>
-          <span class="mc-item">七匹狼</span>
-          <span class="mc-item">洽洽</span>
-          <span class="mc-item">广州地铁</span>
-          <span class="mc-item">美的</span>
+        <div class="mc-stats">23年 · 100+ 上市公司 · 2500+ 项目落地</div>
+        <div class="mc-tagline">为中国杰出企业，筑品牌资产长城</div>
+        <div class="mc-scroll-wrap">
+          <div class="mc-scroll">
+            <span class="mc-item">广汽埃安</span><span class="mc-dot">●</span>
+            <span class="mc-item">良品铺子</span><span class="mc-dot">●</span>
+            <span class="mc-item">三一重工</span><span class="mc-dot">●</span>
+            <span class="mc-item">汤臣倍健</span><span class="mc-dot">●</span>
+            <span class="mc-item">片仔癀</span><span class="mc-dot">●</span>
+            <span class="mc-item">七匹狼</span><span class="mc-dot">●</span>
+            <span class="mc-item">洽洽</span><span class="mc-dot">●</span>
+            <span class="mc-item">广州地铁</span><span class="mc-dot">●</span>
+            <span class="mc-item">美的</span><span class="mc-dot">●</span>
+            <span class="mc-item">金利来</span><span class="mc-dot">●</span>
+            <span class="mc-item">罗莱家纺</span><span class="mc-dot">●</span>
+            <span class="mc-item">爱玛</span><span class="mc-dot">●</span>
+            <span class="mc-item">九号</span><span class="mc-dot">●</span>
+            <span class="mc-item">洁柔</span><span class="mc-dot">●</span>
+            <span class="mc-item">益禾堂</span><span class="mc-dot">●</span>
+            <span class="mc-item">腾讯</span><span class="mc-dot">●</span>
+            <span class="mc-item">无限极</span><span class="mc-dot">●</span>
+            <span class="mc-item">intel</span><span class="mc-dot">●</span>
+            <span class="mc-item">迪士尼</span>
+          </div>
         </div>
       </div>
     </div>
@@ -530,11 +554,13 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
       <div class="section-tag">Differentiation</div>
       <h2>有何不同</h2>
       <div class="section-rule" style="margin:16px auto"></div>
-      <p class="diff-lead">与设计公司、广告公司、营销公司、战略咨询公司——<em>完全不同</em>。</p>
+      <p class="diff-lead" style="font-size:18px;color:var(--gray-deep);line-height:1.8;max-width:680px;margin:0 auto 12px">23年前，当行业还把品牌当成"一个Logo、一套VI、一句口号"时，集和就开创了中国品牌资产管理这个品类。</p>
+      <p class="diff-lead" style="font-size:16px;color:var(--gray-dark);line-height:1.7;max-width:680px;margin:0 auto 8px"><strong>中国品牌资产管理的代表者</strong> · 深耕品牌资产管理咨询23年 · 中国最早注册成立的品牌咨询公司之一</p>
+      <p class="diff-lead" style="font-size:16px;color:var(--gray-dark);line-height:1.7;max-width:680px;margin:0 auto">我们不做单点服务——我们为品牌建立银行级的资产管理系统。以下是与传统服务商的根本不同：</p>
     </div>
     <div class="tb-wrap">
       <table>
-        <thead><tr><th style="width:14%">类型</th><th style="width:36%">他们做什么</th><th style="width:50%">集和做什么</th></tr></thead>
+        <thead><tr><th style="width:14%">类型</th><th style="width:36%">他们做什么</th><th style="width:50%">集和·品牌资产管理做什么</th></tr></thead>
         <tbody>
           <tr><td>设计公司</td><td>品牌"长什么样"——视觉与形象</td><td style="color:var(--gray-deep);font-weight:500">品牌"是什么·为什么·怎么管"——从根基到系统</td></tr>
           <tr><td>广告公司</td><td>品牌"怎么说"——传播与创意</td><td style="color:var(--gray-deep);font-weight:500">品牌"怎么建·怎么管理·怎么增值"——全生命周期</td></tr>
@@ -551,9 +577,10 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
   <div class="container">
     <div class="section-header">
       <div class="section-tag">Five Scenarios</div>
-      <h2>五大场景 · 你的品牌面临哪个问题？</h2>
+      <h2>五大场景 · 你的企业正在经历哪一个？</h2>
       <div class="section-rule"></div>
-      <p>企业做到一定规模，都会遇到品牌问题。但问题不只有一种样子。</p>
+      <p>企业做到一定规模，品牌问题就会自动找上门。表面看是不同的困扰——品牌跟不上、管理管不住、市场上不去、舆情压不住、传承接不住。<br>本质是同一个问题：<strong>品牌被做过很多次，却从没被当作资产长期管理。</strong></p>
+      <p style="font-size:14px;color:var(--red);font-weight:500;margin-top:8px">看看你的企业属于哪一种——</p>
     </div>
     <div class="scenario-grid">
       <div class="scenario-card">
@@ -605,9 +632,9 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
       <div class="ip-badge"><span class="ip-star">✦</span> 自主独创 · 中国第一套品牌资产管理方法论体系 <span class="ip-star">✦</span></div>
     </div>
     <div class="era-grid">
-      <div class="era-card"><span class="ec-num">①</span><span class="ec-era">品牌书时代</span><div class="ec-version">品牌银行 1.0 · 1990s–2000s</div><div class="ec-divider"></div><h4>品牌宪章</h4><p>为三一重工创立品牌书，开创行业先河。从无品牌到"品质改变世界"，奠定全球工程机械领导地位。</p></div>
+      <div class="era-card"><span class="ec-num">①</span><span class="ec-era">形象管理时代</span><div class="ec-version">品牌银行 1.0 · 1990s–2000s</div><div class="ec-divider"></div><h4>品牌宪章</h4><p>为三一重工创立品牌书，开创行业先河。从无品牌到"品质改变世界"，奠定全球工程机械领导地位。</p></div>
       <div class="era-card"><span class="ec-num">②</span><span class="ec-era">系统管理时代</span><div class="ec-version">品牌银行 2.0 · 2000s–2020s</div><div class="ec-divider"></div><h4>资产管理系统</h4><p>创立双锥价值链方法论。15 年陪伴越秀从 600 亿到万亿级，服务 100+ 上市公司、2500+ 项目，定义中国品牌资产管理标准。</p></div>
-      <div class="era-card" style="border-color:var(--red);background:var(--red-light)"><span class="ec-num" style="color:rgba(184,32,36,0.15)">③</span><span class="ec-era" style="color:var(--red)">AI 时代</span><div class="ec-version" style="color:var(--gray-dark)">品牌银行 3.0 · 2020s–</div><div class="ec-divider"></div><h4 style="color:var(--red)">AI 智能品牌资产管理</h4><p>领导研发 Brand OS 2.0——将 23 年方法论编译为 AI 原生品牌资产管理系统。让品牌从"人工维护"升级为"智能运维"，实现品牌资产的自动化管理与持续增值。</p><span class="ec-badge">进行中</span></div>
+      <div class="era-card" style="border-color:var(--red);background:var(--red-light)"><span class="ec-num" style="color:rgba(184,32,36,0.15)">③</span><span class="ec-era" style="color:var(--red)">AI 智能时代</span><div class="ec-version" style="color:var(--gray-dark)">品牌银行 3.0 · 2020s–</div><div class="ec-divider"></div><h4 style="color:var(--red)">AI 智能品牌资产管理</h4><p>领导研发 Brand OS 2.0——将 23 年方法论编译为 AI 原生品牌资产管理系统。让品牌从"人工维护"升级为"智能运维"，实现品牌资产的自动化管理与持续增值。</p><span class="ec-badge">进行中</span></div>
     </div>
   </div>
 </section>
@@ -616,31 +643,55 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 <section class="bg-light">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">How We Deliver</div>
+      <div class="section-tag">Investment & Return</div>
       <h2>投资与回报</h2>
       <div class="section-rule"></div>
-      <p>品牌资产管理系统不是一次性投入——是按十年计的复利投资。</p>
+      <p>品牌资产管理系统不是一次性投入——是按十年计的复利投资。投资了什么，就得到什么。</p>
     </div>
-    <div class="invest-flow">
-      <div class="if-step">
-        <div class="if-tag">Step 01 · 打地基</div>
-        <div class="if-num">01</div>
-        <h4>定方向·定战略</h4>
-        <p>九维资产库诊断，从 9 个维度评估品牌资产健康状况。战略锚定、文化基因提取、品类定位——先看清问题在哪，再决定做多深。</p>
-      </div>
-      <div class="if-step">
-        <div class="if-tag">Step 02 · 建系统</div>
-        <div class="if-num">02</div>
-        <h4>品牌资产管理系统</h4>
-        <p>品牌基因六要素 · 双锥价值链 · 五层信任塔 · BCI 资产表 · AI 品牌基建。让品牌从"个人经验"变成"组织系统"，可管理、可复制、可传承。</p>
-      </div>
-      <div class="if-step">
-        <div class="if-tag">Step 03 · 立标准</div>
-        <div class="if-num">03</div>
-        <h4>持续裂变增长</h4>
-        <p>产品标准·品牌标准·落地标准→放入 AI 核心大脑。五层信任塔 + GEO 内容引擎，驱动品牌资产持续增值。越秀 15 年，品牌资产 19 倍增长。</p>
-      </div>
+
+    <div class="tb-wrap">
+      <table>
+        <thead><tr><th style="width:8%"></th><th style="width:16%">投资（做什么）</th><th style="width:38%">做了什么事</th><th style="width:38%">得到什么回报</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="font-size:24px;font-weight:700;color:var(--red);font-family:var(--font-serif);text-align:center">01</td>
+            <td style="font-weight:700;font-size:16px;color:var(--gray-deep)">打地基<br><span style="font-weight:400;font-size:12px;color:var(--gray-mid)">定方向·定战略</span></td>
+            <td>九维资产库诊断 · 管理层深度访谈 · 行业与竞品研究 · 文化基因提取 · 品类定位 · 品牌内核定义 · 战略锚定</td>
+            <td style="color:var(--gray-deep)">
+              <strong>✅ 品牌内核清晰化</strong> — 管理层对"品牌是谁"有一致认知<br>
+              <strong>✅ 战略锚定</strong> — 品牌方向不随人员更替漂移<br>
+              <strong>✅ 问题透明化</strong> — 看清品牌资产家底：哪里值钱、哪里漏了、哪里该投
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:24px;font-weight:700;color:var(--red);font-family:var(--font-serif);text-align:center">02</td>
+            <td style="font-weight:700;font-size:16px;color:var(--gray-deep)">建系统<br><span style="font-weight:400;font-size:12px;color:var(--gray-mid)">品牌资产管理系统</span></td>
+            <td>品牌基因六要素 · 双锥价值链 · 九维资产库 · 五层信任塔 · BCI 资产表 · 品牌架构与宪法 · AI 品牌基建部署</td>
+            <td style="color:var(--gray-deep)">
+              <strong>✅ 品牌架构体系化</strong> — 多业务有序扩展，新品牌"即插即用"<br>
+              <strong>✅ 品牌资产可量化</strong> — BCI基线+九维资产表，品牌从"感觉"进入"数据"管理<br>
+              <strong>✅ AI信息主权建立</strong> — 品牌定义权不被AI随意拼凑
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:24px;font-weight:700;color:var(--red);font-family:var(--font-serif);text-align:center">03</td>
+            <td style="font-weight:700;font-size:16px;color:var(--gray-deep)">立标准<br><span style="font-weight:400;font-size:12px;color:var(--gray-mid)">持续裂变增长</span></td>
+            <td>产品标准·品牌标准·落地标准 → 放入AI核心大脑 · GEO内容引擎持续生产 · 五层信任塔建设 · 年度品牌资产运维</td>
+            <td style="color:var(--gray-deep)">
+              <strong>✅ 品牌可复制</strong> — 标准驱动增长，不依赖个人经验<br>
+              <strong>✅ 信任资产增值</strong> — 品牌溢价来自信任存款的利息<br>
+              <strong>✅ 持续裂变</strong> — 越秀15年验证：品牌资产19倍增长
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <div style="margin-top:48px;padding:36px;background:var(--red);border-radius:var(--radius);text-align:center">
+      <p style="font-family:var(--font-serif);font-size:22px;font-weight:600;color:#fff;line-height:1.6;margin-bottom:8px">最终，品牌从"说不清的无形资产"<br>转化为可看见·可度量·可传承·可增值的核心资产</p>
+      <p style="font-family:var(--font-serif);font-size:18px;color:rgba(255,255,255,0.7);font-style:italic">投资越久 · 越值钱 — 品牌资产是按十年计的复利</p>
+    </div>
+
     <div style="text-align:center;margin-top:40px">
       <a class="btn btn-primary" href="javascript:" onclick="showPage('invest')">查看投资方案</a>
     </div>
@@ -1228,7 +1279,7 @@ footer{background:var(--gray-deep);padding:56px 0 32px}
 <a href="javascript:" onclick="showSub('about','contact')">联系我们</a>
 </div></div>
 <div id="sub-about-intro" class="sub-page active"><section class="content-section"><div class="container"><div class="section-tag" style="margin-bottom:4px">Category Creator</div><h2 style="font-size:40px;margin-bottom:4px">领先一个时代</h2><p style="font-family:var(--font-serif);font-size:20px;color:var(--gray-mid);margin-bottom:20px">中国品牌资产管理的开创者 · 集和 BICO</p><div class="section-rule" style="margin:0 0 24px"></div><p class="intro-text" style="font-size:17px;max-width:700px">深耕品牌资产管理咨询 23 年。为中国杰出企业，筑品牌资产长城。</p><div class="tb-wrap" style="margin-top:40px"><table><thead><tr><th style="width:14%">类型</th><th style="width:36%">他们做什么</th><th style="width:50%">集和做什么</th></tr></thead><tbody><tr><td>设计公司</td><td>品牌"长什么样"——视觉与形象</td><td style="color:var(--gray-deep);font-weight:500">品牌"是什么·为什么·怎么管"——从根基到系统</td></tr><tr><td>广告公司</td><td>品牌"怎么说"——传播与创意</td><td style="color:var(--gray-deep);font-weight:500">品牌"怎么建·怎么管理·怎么增值"——全生命周期</td></tr><tr><td>营销公司</td><td>品牌"怎么卖"——渠道与转化</td><td style="color:var(--gray-deep);font-weight:500">品牌"怎么成为核心资产"——从成本到价值</td></tr><tr class="highlight-row"><td>战略咨询</td><td>业务战略——市场·竞争·增长</td><td style="font-weight:600">品牌战略 + 品牌资产 + 品牌系统——品牌的顶层设计</td></tr></tbody></table></div><div class="metrics-row mt-48"><div class="metric-item"><div class="mi-num">23<span class="mi-unit">年</span></div><div class="mi-label">深耕品牌资产管理</div></div><div class="metric-item"><div class="mi-num">100<span class="mi-unit">+</span></div><div class="mi-label">上市公司服务经验</div></div><div class="metric-item"><div class="mi-num red">2500<span class="mi-unit" style="color:var(--red)">+</span></div><div class="mi-label">项目实战</div></div><div class="metric-item"><div class="mi-num">15<span class="mi-unit">年</span></div><div class="mi-label">最长客户陪伴</div></div></div></div></section></div>
-<div id="sub-about-gongkai" class="sub-page"><section class="content-section"><div class="container"><div class="section-tag" style="margin-bottom:4px">首席品牌资产学家 · 理论体系奠基人</div><h2 style="font-size:36px;margin-bottom:4px">BICO 企业品牌银行 <span style="color:var(--red)">总设计师</span></h2><div class="section-rule" style="margin:16px 0 20px"></div><p style="font-family:var(--font-serif);font-size:20px;color:var(--gray-deep);line-height:1.6;margin-bottom:12px;max-width:680px">像首席经济学家定义经济规律，他定义了品牌资产的管理规律。</p><p class="intro-text" style="font-size:18px;max-width:700px">23 年只做一件事——让品牌成为可看见、可度量、<br>可传承、可增值的核心资产。</p><div class="era-grid"><div class="era-card"><span class="ec-num">①</span><span class="ec-era">品牌书时代</span><div class="ec-version">品牌银行 1.0 · 1990s–2000s</div><div class="ec-divider"></div><h4>品牌宪章</h4><p>为三一重工创立品牌书，开创行业先河。从无品牌到"品质改变世界"，奠定全球工程机械领导地位。</p></div><div class="era-card"><span class="ec-num">②</span><span class="ec-era">系统管理时代</span><div class="ec-version">品牌银行 2.0 · 2000s–2020s</div><div class="ec-divider"></div><h4>资产管理系统</h4><p>创立双锥价值链方法论。15 年陪伴越秀从 600 亿到万亿级，服务 100+ 上市公司、2500+ 项目，定义中国品牌资产管理标准。</p></div><div class="era-card" style="border-color:var(--red);background:var(--red-light)"><span class="ec-num" style="color:rgba(184,32,36,0.15)">③</span><span class="ec-era" style="color:var(--red)">AI 时代</span><div class="ec-version" style="color:var(--gray-dark)">品牌银行 3.0 · 2020s–</div><div class="ec-divider"></div><h4 style="color:var(--red)">AI 智能品牌资产管理</h4><p>领导研发 Brand OS 2.0——将 23 年方法论编译为 AI 原生品牌资产管理系统。让品牌从"人工维护"升级为"智能运维"，实现品牌资产的自动化管理与持续增值。</p><span class="ec-badge">进行中</span></div></div><div style="padding:32px 0 8px;border-top:1px solid var(--gray-border);margin-top:8px"><p style="font-size:15px;color:var(--gray-mid);max-width:680px;line-height:1.9">他设计的不是 Logo，不是广告，不是营销活动。<br>他设计的是——让品牌资产 <strong>可量化·可管理·可增值·可入账</strong> 的银行级管理系统。</p></div><div class="metrics-row mt-32"><div class="metric-item"><div class="mi-num">23<span class="mi-unit">年</span></div><div class="mi-label">深耕品牌资产管理</div></div><div class="metric-item"><div class="mi-num">100<span class="mi-unit">+</span></div><div class="mi-label">上市公司服务经验</div></div><div class="metric-item"><div class="mi-num red">2500<span class="mi-unit" style="color:var(--red)">+</span></div><div class="mi-label">项目实战</div></div><div class="metric-item"><div class="mi-num">15<span class="mi-unit">年</span></div><div class="mi-label">最长客户陪伴</div></div></div></div></section></div>
+<div id="sub-about-gongkai" class="sub-page"><section class="content-section"><div class="container"><div class="section-tag" style="margin-bottom:4px">首席品牌资产学家 · 理论体系奠基人</div><h2 style="font-size:36px;margin-bottom:4px">BICO 企业品牌银行 <span style="color:var(--red)">总设计师</span></h2><div class="section-rule" style="margin:16px 0 20px"></div><p style="font-family:var(--font-serif);font-size:20px;color:var(--gray-deep);line-height:1.6;margin-bottom:12px;max-width:680px">像首席经济学家定义经济规律，他定义了品牌资产的管理规律。</p><p class="intro-text" style="font-size:18px;max-width:700px">23 年只做一件事——让品牌成为可看见、可度量、<br>可传承、可增值的核心资产。</p><div class="era-grid"><div class="era-card"><span class="ec-num">①</span><span class="ec-era">形象管理时代</span><div class="ec-version">品牌银行 1.0 · 1990s–2000s</div><div class="ec-divider"></div><h4>品牌宪章</h4><p>为三一重工创立品牌书，开创行业先河。从无品牌到"品质改变世界"，奠定全球工程机械领导地位。</p></div><div class="era-card"><span class="ec-num">②</span><span class="ec-era">系统管理时代</span><div class="ec-version">品牌银行 2.0 · 2000s–2020s</div><div class="ec-divider"></div><h4>资产管理系统</h4><p>创立双锥价值链方法论。15 年陪伴越秀从 600 亿到万亿级，服务 100+ 上市公司、2500+ 项目，定义中国品牌资产管理标准。</p></div><div class="era-card" style="border-color:var(--red);background:var(--red-light)"><span class="ec-num" style="color:rgba(184,32,36,0.15)">③</span><span class="ec-era" style="color:var(--red)">AI 智能时代</span><div class="ec-version" style="color:var(--gray-dark)">品牌银行 3.0 · 2020s–</div><div class="ec-divider"></div><h4 style="color:var(--red)">AI 智能品牌资产管理</h4><p>领导研发 Brand OS 2.0——将 23 年方法论编译为 AI 原生品牌资产管理系统。让品牌从"人工维护"升级为"智能运维"，实现品牌资产的自动化管理与持续增值。</p><span class="ec-badge">进行中</span></div></div><div style="padding:32px 0 8px;border-top:1px solid var(--gray-border);margin-top:8px"><p style="font-size:15px;color:var(--gray-mid);max-width:680px;line-height:1.9">他设计的不是 Logo，不是广告，不是营销活动。<br>他设计的是——让品牌资产 <strong>可量化·可管理·可增值·可入账</strong> 的银行级管理系统。</p></div><div class="metrics-row mt-32"><div class="metric-item"><div class="mi-num">23<span class="mi-unit">年</span></div><div class="mi-label">深耕品牌资产管理</div></div><div class="metric-item"><div class="mi-num">100<span class="mi-unit">+</span></div><div class="mi-label">上市公司服务经验</div></div><div class="metric-item"><div class="mi-num red">2500<span class="mi-unit" style="color:var(--red)">+</span></div><div class="mi-label">项目实战</div></div><div class="metric-item"><div class="mi-num">15<span class="mi-unit">年</span></div><div class="mi-label">最长客户陪伴</div></div></div></div></section></div>
 <div id="sub-about-team" class="sub-page"><section class="content-section"><div class="container"><h2>核心团队</h2><div class="team-grid mt-32"><div class="team-card"><div class="tc-avatar"><span>龚</span></div><h4>龚凯</h4><div class="tc-title">创始人 · 顶层战略</div><p>方法论核心 · 行业影响力</p></div><div class="team-card"><div class="tc-avatar"><span>AI</span></div><h4>AI 基建团队</h4><div class="tc-title">品牌资产管理智能化</div><p>Brand OS · AI 品牌基建</p></div><div class="team-card"><div class="tc-avatar"><span>PM</span></div><h4>项目管理</h4><div class="tc-title">商务对接与交付管理</div><p>客户对接 · 项目管控</p></div></div></div></section></div>
 <div id="sub-about-partners" class="sub-page"><section class="content-section"><div class="container"><h2>合作伙伴</h2><div class="partner-row mt-32"><span class="partner-item">军庆设计</span><span class="partner-item">战略伙伴</span><span class="partner-item">技术伙伴</span></div></div></section></div>
 <div id="sub-about-contact" class="sub-page"><section class="content-section"><div class="container"><h2>联系我们</h2><p class="intro-text">预约品牌资产诊断，开启品牌资产管理之旅</p><div style="max-width:480px;padding:40px;border:1px solid var(--gray-border);border-radius:var(--radius);margin-top:32px"><p style="font-size:14px;color:var(--gray-dark);margin-bottom:8px">电话：400-XXX-XXXX</p><p style="font-size:14px;color:var(--gray-dark);margin-bottom:8px">邮箱：contact@bicobrand.com</p><div style="margin-top:24px"><a class="btn btn-primary" href="javascript:" onclick="showPage('invest')">预约咨询</a></div></div></div></section></div>
